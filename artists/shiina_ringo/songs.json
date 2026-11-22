@@ -22579,5 +22579,1386 @@
     ],
     "lyrics_verified": true,
     "lyrics_source": "utanet_verified"
+  },
+  {
+    "id": "song_demo_kudamono_no_heya",
+    "title": "果物の部屋",
+    "release_year": 1998,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "都市と孤独",
+      "ジェンダーと身体"
+    ],
+    "motifs": [
+      "夜・闇・月",
+      "身体部位",
+      "花・植物",
+      "地名・駅・路線"
+    ],
+    "places": [
+      "池袋"
+    ],
+    "linguistic_features": [
+      "口語・独白体",
+      "多言語・外国語詞",
+      "比喩・象徴表現"
+    ],
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "sentiment_mood": [
+      "退廃的・官能的",
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープおよび初期ライブ（「学舎エクスタシー」等）で披露された未音源化曲。のちに『日出処』（2014年）収録の「静かなる逆襲」へメロディが受け継がれた原曲。",
+    "related_songs": [
+      {
+        "target_id": "song_shizukanaru_gyakushuu",
+        "relation": "PROTOTYPE_OF",
+        "note": "未音源化デモ曲「果物の部屋」のメロディを改作して「静かなる逆襲」（2014年）として発表"
+      }
+    ],
+    "lyric_tokens": [
+      {
+        "token": "一人",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "女",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "手",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "池袋",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "男",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "白",
+        "category": "色彩",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "目",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "花",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "部屋",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "髪",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_shiroi_e_to_guitar",
+    "title": "白い絵とギター",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "別れと喪失",
+      "青春と記憶",
+      "愛と執着"
+    ],
+    "motifs": [
+      "季節・自然",
+      "色彩",
+      "音楽・楽器"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体",
+      "比喩・象徴表現"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "静謐・祈り"
+    ],
+    "tie_up": null,
+    "summary": "デビュー前の初期デモテープ（DEMO1/DEMO3）に収録された未発表曲。降り始めた雪と遠ざかる足音、泣くギターの情景を描く。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "token": "泣く",
+        "category": "感情・概念・思想",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "雪",
+        "category": "自然・時間・空間",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "ギター",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "一人",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "白",
+        "category": "色彩",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "耳",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "足",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_sanso_wo_kudasai",
+    "title": "酸素をください",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "生と死",
+      "自己とアイデンティティ"
+    ],
+    "motifs": [
+      "医療・病・薬",
+      "身体部位"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "情熱的・衝動的",
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "高校時代の初期デモテープ（DEMO1）に収録された未発表曲。息苦しさと生の渇望を「酸素をください」と叫ぶ初期衝動の一曲。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "病",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "誰か",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_denaosu_kara",
+    "title": "出直すから",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "自己とアイデンティティ",
+      "青春と記憶"
+    ],
+    "motifs": [
+      "季節・自然"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープ（DEMO1）に収録された未発表曲。地球にぶら下がっているような感覚と再出発を歌う。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "地球",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_anoko_wo_mae_ni_shite",
+    "title": "あのコを前にして",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "別れと喪失",
+      "青春と記憶"
+    ],
+    "motifs": [
+      "身体部位",
+      "恋愛・心中・情念"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "皮肉・風刺"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープ（DEMO1/DEMO3）収録の未発表曲。恋敵（「あのコ」）への複雑な感情と失恋の痛みを独白体で描く。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "目",
+        "category": "身体・感覚・医療",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "token": "生きる",
+        "category": "感情・概念・思想",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "嘘",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "死",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "言葉",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "道",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_juwaki_no_naka",
+    "title": "受話器の中",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "別れと喪失"
+    ],
+    "motifs": [
+      "身体部位",
+      "季節・自然"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体",
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "情熱的・衝動的"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープ（DEMO1/DEMO3）収録の未発表曲。電話の受話器越しでしか触れられない恋人への焦燥を歌う。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 5,
+        "count": 5
+      },
+      {
+        "token": "本当",
+        "category": "感情・概念・思想",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "忘れる",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "手",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "目",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "電話",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_lay_down",
+    "title": "LAY DOWN",
+    "release_year": 1997,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "青春と記憶"
+    ],
+    "motifs": [
+      "夜・闇・月",
+      "季節・自然"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "en"
+    ],
+    "sentiment_mood": [
+      "情熱的・衝動的",
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "デビュー前のデモテープ（DEMO2/DEMO5）に収録された全編英語詞の未発表ロックナンバー。",
+    "related_songs": [],
+    "lyric_tokens": [],
+    "lyrics_verified": true,
+    "lyrics_source": "english_lyrics_verified"
+  },
+  {
+    "id": "song_demo_orgel",
+    "title": "オルゴール",
+    "release_year": 1997,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "青春と記憶",
+      "別れと喪失"
+    ],
+    "motifs": [
+      "音楽・楽器"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "静謐・祈り"
+    ],
+    "tie_up": null,
+    "summary": "デビュー前のデモテープ（DEMO5）に収録されていた初期の未発表バラード曲。",
+    "related_songs": [],
+    "lyric_tokens": [],
+    "lyrics_verified": false,
+    "lyrics_source": "title_only"
+  },
+  {
+    "id": "song_demo_headphone",
+    "title": "ヘッドフォン（デモ原曲）",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "都市と孤独",
+      "別れと喪失",
+      "青春と記憶"
+    ],
+    "motifs": [
+      "音楽・楽器",
+      "雨・水・海",
+      "季節・自然"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体",
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "静謐・祈り"
+    ],
+    "tie_up": null,
+    "summary": "高校時代のデモテープ（DEMO1）に収録された「茜さす 帰路照らされど…」の初期デモ原曲。英語詞ヴァースを含む初期形態。",
+    "related_songs": [
+      {
+        "target_id": "song_akanesasu_kiro_terasaredo",
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「ヘッドフォン」を改題・改作して『無罪モラトリアム』収録曲「茜さす 帰路照らされど…」へ発展"
+      }
+    ],
+    "lyric_tokens": [
+      {
+        "token": "涙",
+        "category": "身体・感覚・医療",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "約束",
+        "category": "感情・概念・思想",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "耳",
+        "category": "身体・感覚・医療",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "キス",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "二人",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "今日",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "少女",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "明日",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "歌",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "海",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "道",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "頬",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_daijoubu",
+    "title": "大丈夫（デモ原曲）",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "自己とアイデンティティ",
+      "生と死",
+      "青春と記憶"
+    ],
+    "motifs": [
+      "雨・水・海",
+      "身体部位",
+      "動物・生き物"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "情熱的・衝動的"
+    ],
+    "tie_up": null,
+    "summary": "高校時代のデモテープ（DEMO1）に収録された、のちの『勝訴ストリップ』1曲目「虚言症」の原曲。",
+    "related_songs": [
+      {
+        "target_id": "song_kyogenshou",
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「大丈夫」を改題し、『勝訴ストリップ』の幕開け「虚言症」として発表"
+      }
+    ],
+    "lyric_tokens": [
+      {
+        "token": "君",
+        "category": "人称・関係",
+        "weight": 6,
+        "count": 6
+      },
+      {
+        "token": "生きる",
+        "category": "感情・概念・思想",
+        "weight": 6,
+        "count": 6
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 5,
+        "count": 5
+      },
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "token": "一人",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "歌",
+        "category": "都市・事物・文化",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "目",
+        "category": "身体・感覚・医療",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "傷",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "少女",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "手",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "瞳",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "雨",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "風",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "髪",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "魚",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_hatsuiku_hatsuga",
+    "title": "発芽",
+    "release_year": 2000,
+    "activity_type": "unreleased_demo",
+    "performer": "発育ステータス",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "発育ステータス 御起立ジャポン"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "反骨と自由",
+      "社会と風刺"
+    ],
+    "motifs": [
+      "花・植物",
+      "音楽・楽器"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "掛詞・言葉遊び・韻"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "挑発的・攻撃的",
+      "軽妙・ユーモア"
+    ],
+    "tie_up": null,
+    "summary": "シークレットバンド「発育ステータス」のライブ映像作品『御起立ジャポン』1曲目。音階唱（そらどしどれそ）に漢字を当てた実験作。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "時間",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "死",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_hatsuiku_gaichu_kujo",
+    "title": "害虫駆除",
+    "release_year": 2000,
+    "activity_type": "unreleased_demo",
+    "performer": "発育ステータス",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "発育ステータス 御起立ジャポン"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "反骨と自由",
+      "愛と執着"
+    ],
+    "motifs": [
+      "花・植物",
+      "身体部位"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "挑発的・攻撃的",
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "発育ステータス『御起立ジャポン』収録曲。一言で崩れ去る人間関係の脆さをパンクサウンドに乗せる。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "みんな",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "勝負",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "手",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "気持ち",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_hatsuiku_takaitakai",
+    "title": "たかいたかい",
+    "release_year": 2000,
+    "activity_type": "unreleased_demo",
+    "performer": "発育ステータス",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎",
+      "村田純子"
+    ],
+    "albums": [
+      "発育ステータス 御起立ジャポン"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "社会と風刺",
+      "都市と孤独",
+      "ジェンダーと身体"
+    ],
+    "motifs": [
+      "地名・駅・路線",
+      "色彩",
+      "金銭・欲望・勝負"
+    ],
+    "places": [
+      "福岡"
+    ],
+    "linguistic_features": [
+      "掛詞・言葉遊び・韻",
+      "演劇的・キャラクター視点"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "皮肉・風刺",
+      "挑発的・攻撃的"
+    ],
+    "tie_up": null,
+    "summary": "発育ステータス『御起立ジャポン』収録曲（村田純子との共作曲）。福岡の月給や職安通いを織り交ぜたユニークな当て字ロック。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "声",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "笑う",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "色",
+        "category": "色彩",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "髪",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "黒",
+        "category": "色彩",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_hatsuiku_haenuki",
+    "title": "生え抜き",
+    "release_year": 2000,
+    "activity_type": "unreleased_demo",
+    "performer": "発育ステータス",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "発育ステータス 御起立ジャポン"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "生と死"
+    ],
+    "motifs": [
+      "花・植物",
+      "季節・自然"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "退廃的・官能的",
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "発育ステータス『御起立ジャポン』収録曲。極めて短い言葉で緊迫した情念を切り取るナンバー。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_hatsuiku_sakasetemite",
+    "title": "咲かせてみて",
+    "release_year": 2000,
+    "activity_type": "unreleased_demo",
+    "performer": "発育ステータス",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "発育ステータス 御起立ジャポン"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "ジェンダーと身体",
+      "愛と執着"
+    ],
+    "motifs": [
+      "身体部位",
+      "花・植物"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体",
+      "演劇的・キャラクター視点"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "挑発的・攻撃的",
+      "皮肉・風刺"
+    ],
+    "tie_up": null,
+    "summary": "発育ステータス『御起立ジャポン』収録曲。男女の駆け引きと身体性を赤裸々かつシニカルに歌う。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "男",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "二人",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "痛み",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_hatsuiku_konya_dafu",
+    "title": "今夜だふ",
+    "release_year": 2000,
+    "activity_type": "unreleased_demo",
+    "performer": "発育ステータス",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎",
+      "田渕ひさ子"
+    ],
+    "albums": [
+      "絶頂集",
+      "発育ステータス 御起立ジャポン"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "日常と生活"
+    ],
+    "motifs": [
+      "夜・闇・月",
+      "身体部位"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "退廃的・官能的",
+      "挑発的・攻撃的"
+    ],
+    "tie_up": null,
+    "summary": "シングル『絶頂集』および『御起立ジャポン』収録（『私と放電』未収録のレア音源）。田渕ひさ子との共作曲。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "僕",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "君",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "今夜",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "家",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "愛",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "明日",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "時間",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "顔",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_hatsuiku_mebana_yue_obana",
+    "title": "雌花 故 雄花",
+    "release_year": 2000,
+    "activity_type": "unreleased_demo",
+    "performer": "発育ステータス",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "発育ステータス 御起立ジャポン"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "生と死",
+      "ジェンダーと身体",
+      "日本の美意識"
+    ],
+    "motifs": [
+      "花・植物",
+      "色彩"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "旧仮名遣い・文語調",
+      "比喩・象徴表現"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "静謐・祈り",
+      "情熱的・衝動的"
+    ],
+    "tie_up": null,
+    "summary": "発育ステータス『御起立ジャポン』終盤の重厚な楽曲。雌花と雄花に生命の根源と対称性を託す。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "花",
+        "category": "自然・時間・空間",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "命",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "色",
+        "category": "色彩",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
   }
 ]

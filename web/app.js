@@ -28,16 +28,18 @@
   };
 
   const ACTIVITY_META = {
-    solo:          { label: "ソロ名義",       color: "#b82925" },
-    tokyo_jihen:   { label: "東京事変",       color: "#4d5b6e" },
-    collaboration: { label: "コラボ・客演",   color: "#b89130" },
-    written_for:   { label: "楽曲提供",       color: "#487872" },
+    solo:            { label: "ソロ名義",       color: "#b82925" },
+    tokyo_jihen:     { label: "東京事変",       color: "#4d5b6e" },
+    collaboration:   { label: "コラボ・客演",   color: "#b89130" },
+    written_for:     { label: "楽曲提供",       color: "#487872" },
+    unreleased_demo: { label: "未発表・デモ等", color: "#c86432" },
   };
 
   const RELATION_LABELS = {
     SYMMETRY_PAIR: "対称構造ペア (シンメトリー)",
     THEMATIC_PAIR: "テーマ対",
     SELF_REMAKE:   "セルフカバー・再構築",
+    PROTOTYPE_OF:  "デモ原曲 → 完成曲",
     MOTIF_LINEAGE: "モチーフの系譜",
     SERIES_PAIR:   "シリーズ・連作ペア",
     RELATED:       "関連曲",
@@ -1063,6 +1065,7 @@
         const shortLabel =
           relTag === "SYMMETRY_PAIR" ? "対称" :
           relTag === "SELF_REMAKE" ? "再構築" :
+          relTag === "PROTOTYPE_OF" ? "原曲" :
           relTag === "SERIES_PAIR" ? "連作" :
           relTag === "MOTIF_LINEAGE" ? "系譜" : "対";
         ctx.save();

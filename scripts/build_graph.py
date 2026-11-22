@@ -40,6 +40,7 @@ ACTIVITY_LABELS = {
     "tokyo_jihen": "東京事変",
     "collaboration": "コラボレーション・デュエット",
     "written_for": "楽曲提供",
+    "unreleased_demo": "未発表・デモ・限定音源",
 }
 
 
