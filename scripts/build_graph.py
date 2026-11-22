@@ -387,9 +387,11 @@ class GraphBuilder:
                     ],
                 }
             )
-            # Keep top 4 strongest co-occurrences per token so graph remains structured and readable
-            for other, cs, cw in co_list[:4]:
-                if cs >= 2 or len(co_list) <= 3:
+            # Keep top 4 strongest co-occurrences per token so graph remains structured and readable.
+            # Even when a token appears in only 1-2 songs (cs == 1), keep its top 3 co-occurrences
+            # so low-frequency tokens never become isolated without edges.
+            for idx_co, (other, cs, cw) in enumerate(co_list[:4]):
+                if cs >= 2 or idx_co < 3:
                     pair = (tok, other) if tok < other else (other, tok)
                     selected_co_pairs.add(pair)
 

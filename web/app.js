@@ -146,6 +146,7 @@
     // Distribution interval settings (custom year bins or era)
     distMode: "years",
     distStepYears: 3,
+    refreshInspectorScreening: null,
 
     // Camera
     camX: 0,
@@ -362,6 +363,7 @@
         if (ev.target.checked) state.enabledActivities.add(key);
         else state.enabledActivities.delete(key);
         rebuildVisibleGraph(true);
+        if (state.refreshInspectorScreening) state.refreshInspectorScreening();
       });
       elActivityFilters.appendChild(label);
     }
@@ -445,9 +447,14 @@
 
     // Tune minTokenSongs sensibly when switching presets
     if (presetKey === "lyrics_songs" && state.minTokenSongs < 12) {
-      state.minTokenSongs = 12;
-      elMinTokenSongsSlider.value = 12;
-      elMinTokenSongsLabel.textContent = "12曲以上";
+      const selSc =
+        state.selectedNode && state.selectedNode.type === "Token"
+          ? state.selectedNode.dynSongCount || state.selectedNode.properties.song_count || 12
+          : 12;
+      const targetMin = Math.max(1, Math.min(12, selSc));
+      state.minTokenSongs = targetMin;
+      elMinTokenSongsSlider.value = targetMin;
+      elMinTokenSongsLabel.textContent = `${targetMin}曲以上`;
     } else if (presetKey === "lyrics_cooccur" && state.minTokenSongs > 8) {
       state.minTokenSongs = 5;
       elMinTokenSongsSlider.value = 5;
@@ -476,8 +483,10 @@
 
     // 1. Filter Song nodes by activity and year range
     const validSongIds = new Set();
+    let totalSongsCount = 0;
     for (const n of state.nodeById.values()) {
       if (n.type === "Song") {
+        totalSongsCount += 1;
         const y = n.properties.release_year || state.dataYearMin;
         const act = n.properties.activity_type || "solo";
         if (state.enabledActivities.has(act) && y >= state.yearMin && y <= state.yearMax) {
@@ -486,17 +495,97 @@
       }
     }
 
-    // 2. Dynamically compute each Token's frequency & song_count within currently filtered songs!
-    //    If year range or activity filter changes, node sizes react dynamically!
+    const isPeriodOrActivityFiltered =
+      state.yearMin > state.dataYearMin ||
+      state.yearMax < state.dataYearMax ||
+      state.enabledActivities.size < Object.keys(ACTIVITY_META).length;
+
+    // 2. Dynamically compute each Token's frequency, song_count, and co-occurrence within currently filtered songs!
     const dynTokenFreq = new Map();
     const dynTokenSongs = new Map();
+    const tokensByValidSong = new Map(); // songId -> Array<{id, weight}>
+    const dynCoNeighbors = new Map(); // tokenId -> Array<{otherId, songs, weight}>
+    let dynCoEdges = [];
+
     const hasSongTokenEdges = state.allEdges.some((e) => e.type === "CONTAINS_TOKEN");
     if (hasSongTokenEdges) {
       for (const e of state.allEdges) {
         if (e.type !== "CONTAINS_TOKEN") continue;
         if (!validSongIds.has(e.source)) continue;
-        dynTokenFreq.set(e.target, (dynTokenFreq.get(e.target) || 0) + (e.weight || 1));
+        const w = e.weight || 1;
+        dynTokenFreq.set(e.target, (dynTokenFreq.get(e.target) || 0) + w);
         dynTokenSongs.set(e.target, (dynTokenSongs.get(e.target) || 0) + 1);
+        if (!tokensByValidSong.has(e.source)) tokensByValidSong.set(e.source, []);
+        tokensByValidSong.get(e.source).push({ id: e.target, weight: w });
+      }
+
+      // Compute pairwise co-occurrences across validSongIds so narrow year intervals or rare tokens always connect
+      const pairSongs = new Map();
+      const pairWeight = new Map();
+      for (const tokList of tokensByValidSong.values()) {
+        for (let i = 0; i < tokList.length; i++) {
+          const a = tokList[i];
+          for (let j = i + 1; j < tokList.length; j++) {
+            const b = tokList[j];
+            const k1 = a.id < b.id ? a.id : b.id;
+            const k2 = a.id < b.id ? b.id : a.id;
+            const key = `${k1}|${k2}`;
+            pairSongs.set(key, (pairSongs.get(key) || 0) + 1);
+            pairWeight.set(key, (pairWeight.get(key) || 0) + Math.min(a.weight, b.weight));
+          }
+        }
+      }
+
+      for (const [key, cs] of pairSongs.entries()) {
+        const [id1, id2] = key.split("|");
+        const cw = pairWeight.get(key) || cs;
+        if (!dynCoNeighbors.has(id1)) dynCoNeighbors.set(id1, []);
+        if (!dynCoNeighbors.has(id2)) dynCoNeighbors.set(id2, []);
+        dynCoNeighbors.get(id1).push({ otherId: id2, songs: cs, weight: cw });
+        dynCoNeighbors.get(id2).push({ otherId: id1, songs: cs, weight: cw });
+      }
+
+      for (const list of dynCoNeighbors.values()) {
+        list.sort((a, b) => b.songs - a.songs || b.weight - a.weight);
+      }
+
+      const selectedCoKeys = new Set();
+      for (const [tid, list] of dynCoNeighbors.entries()) {
+        const isFocusTok =
+          (state.selectedNode && state.selectedNode.id === tid) || state.egoRootId === tid;
+        const limit = isFocusTok ? 12 : 4;
+        for (let i = 0; i < Math.min(limit, list.length); i++) {
+          const item = list[i];
+          if (
+            isPeriodOrActivityFiltered ||
+            isFocusTok ||
+            item.songs >= 2 ||
+            i < 3
+          ) {
+            const k1 = tid < item.otherId ? tid : item.otherId;
+            const k2 = tid < item.otherId ? item.otherId : tid;
+            selectedCoKeys.add(`${k1}|${k2}`);
+          }
+        }
+      }
+      for (const [key, cs] of pairSongs.entries()) {
+        if (cs >= (isPeriodOrActivityFiltered ? 2 : 6)) {
+          selectedCoKeys.add(key);
+        }
+      }
+
+      for (const key of selectedCoKeys) {
+        const [id1, id2] = key.split("|");
+        const cs = pairSongs.get(key) || 1;
+        const cw = pairWeight.get(key) || cs;
+        dynCoEdges.push({
+          id: `dynco_${id1}_${id2}`,
+          source: id1,
+          target: id2,
+          type: "CO_OCCURS_WITH",
+          weight: cs,
+          properties: { cooccurrence_songs: cs, cooccurrence_weight: cw },
+        });
       }
     } else {
       // Standalone lyrics_knowledge_graph.json without Song nodes
@@ -508,6 +597,28 @@
       }
     }
 
+    // Adaptive minimum token song threshold:
+    // When narrowed to a short period/activity or when few tokens meet state.minTokenSongs,
+    // automatically scale down the threshold (down to 1) so the knowledge graph is always output.
+    const filterRatio = totalSongsCount > 0 ? validSongIds.size / totalSongsCount : 1;
+    let effectiveMinTokenSongs = isPeriodOrActivityFiltered
+      ? Math.max(1, Math.floor(state.minTokenSongs * filterRatio))
+      : state.minTokenSongs;
+
+    while (effectiveMinTokenSongs > 1) {
+      let passingTokens = 0;
+      for (const n of state.nodeById.values()) {
+        if (n.type !== "Token") continue;
+        const cat = n.properties.category || "その他";
+        if (!state.enabledTokenCategories.has(cat)) continue;
+        if ((dynTokenSongs.get(n.id) || 0) >= effectiveMinTokenSongs) {
+          passingTokens += 1;
+        }
+      }
+      if (passingTokens >= 10) break;
+      effectiveMinTokenSongs -= 1;
+    }
+
     // 3. Build candidate node set
     if (state.egoRootId && state.nodeById.has(state.egoRootId)) {
       const root = state.nodeById.get(state.egoRootId);
@@ -517,8 +628,19 @@
         const otherId = e.source === root.id ? e.target : e.source;
         const other = state.nodeById.get(otherId);
         if (!other) continue;
-        if (other.type === "Song" && !validSongIds.has(other.id)) continue;
-        candidateNodes.set(other.id, other);
+        if (other.type === "Song") {
+          if (validSongIds.has(other.id)) candidateNodes.set(other.id, other);
+        } else if (other.type === "Token" && hasSongTokenEdges && isPeriodOrActivityFiltered) {
+          if ((dynTokenSongs.get(other.id) || 0) >= 1) candidateNodes.set(other.id, other);
+        } else {
+          candidateNodes.set(other.id, other);
+        }
+      }
+      if (root.type === "Token" && dynCoNeighbors.has(root.id)) {
+        for (const nb of dynCoNeighbors.get(root.id).slice(0, 12)) {
+          const other = state.nodeById.get(nb.otherId);
+          if (other) candidateNodes.set(other.id, other);
+        }
       }
       elEgoBanner.classList.remove("hidden");
       elEgoBannerText.textContent = `近傍モード: 「${root.label}」周辺のつながり`;
@@ -528,7 +650,9 @@
       if (presetCfg.onlyRelatedSongs) {
         for (const e of state.allEdges) {
           if (e.type !== "RELATED_SONG") continue;
-          if (validSongIds.has(e.source) && validSongIds.has(e.target)) {
+          const matchBoth = validSongIds.has(e.source) && validSongIds.has(e.target);
+          const matchEither = validSongIds.has(e.source) || validSongIds.has(e.target);
+          if (isPeriodOrActivityFiltered ? matchEither : matchBoth) {
             candidateNodes.set(e.source, state.nodeById.get(e.source));
             candidateNodes.set(e.target, state.nodeById.get(e.target));
           }
@@ -541,19 +665,46 @@
           } else if (n.type === "Token") {
             const cat = n.properties.category || "その他";
             const sc = dynTokenSongs.get(n.id) || 0;
-            if (state.enabledTokenCategories.has(cat) && sc >= state.minTokenSongs) {
+            if (state.enabledTokenCategories.has(cat) && sc >= effectiveMinTokenSongs) {
               candidateNodes.set(n.id, n);
             }
           } else {
             candidateNodes.set(n.id, n);
           }
         }
+
+        // Always ensure the currently selected node and its active period neighbors are included even if low frequency (1-4 songs)
+        if (state.selectedNode && state.nodeById.has(state.selectedNode.id)) {
+          const sel = state.nodeById.get(state.selectedNode.id);
+          if (state.enabledTypes.has(sel.type)) {
+            if (sel.type === "Token") {
+              const selSc = dynTokenSongs.get(sel.id) || 0;
+              if (selSc >= 1 || !isPeriodOrActivityFiltered) {
+                candidateNodes.set(sel.id, sel);
+                const coList = dynCoNeighbors.get(sel.id) || [];
+                for (const nb of coList.slice(0, 10)) {
+                  const other = state.nodeById.get(nb.otherId);
+                  if (other && state.enabledTokenCategories.has(other.properties.category || "その他")) {
+                    candidateNodes.set(other.id, other);
+                  }
+                }
+              }
+            } else if (sel.type !== "Song" || validSongIds.has(sel.id)) {
+              candidateNodes.set(sel.id, sel);
+            }
+          }
+        }
       }
     }
 
-    // 4. Collect visible edges
+    // 4. Collect visible edges (use dynamic co-occurrence edges when period/activity filtered or for low-count selected tokens)
     let visibleEdges = [];
-    for (const e of state.allEdges) {
+    const nonCoEdges = hasSongTokenEdges
+      ? state.allEdges.filter((e) => e.type !== "CO_OCCURS_WITH")
+      : state.allEdges;
+    const edgePool = hasSongTokenEdges ? nonCoEdges.concat(dynCoEdges) : state.allEdges;
+
+    for (const e of edgePool) {
       if (presetCfg.onlyRelatedSongs && !state.egoRootId && e.type !== "RELATED_SONG") continue;
       if (presetCfg.onlyCooccurrence && !state.egoRootId && e.type !== "CO_OCCURS_WITH") continue;
       if (state.preset === "lyrics_songs" && !state.egoRootId && e.type === "CO_OCCURS_WITH") continue;
@@ -585,6 +736,11 @@
         finalMap.set(n.id, n);
         continue;
       }
+      if (state.selectedNode && n.id === state.selectedNode.id && (n.type !== "Token" || (dynTokenSongs.get(n.id) || 0) >= 1)) {
+        finalNodes.push(n);
+        finalMap.set(n.id, n);
+        continue;
+      }
       if (n.type === "Token" && presetCfg.onlyCooccurrence) {
         finalNodes.push(n);
         finalMap.set(n.id, n);
@@ -594,6 +750,19 @@
       if (presetCfg.onlyConnectedSongs && !state.egoRootId && n.type === "Song" && !connectedIds.has(n.id)) continue;
       finalNodes.push(n);
       finalMap.set(n.id, n);
+    }
+
+    // Fallback: if filtering resulted in 0 nodes while valid songs exist, include valid songs or active tokens so graph is never empty
+    if (finalNodes.length === 0 && validSongIds.size > 0) {
+      for (const n of candidateNodes.values()) {
+        if (n.type === "Song" && validSongIds.has(n.id)) {
+          finalNodes.push(n);
+          finalMap.set(n.id, n);
+        } else if (n.type === "Token" && (dynTokenSongs.get(n.id) || 0) >= 1) {
+          finalNodes.push(n);
+          finalMap.set(n.id, n);
+        }
+      }
     }
 
     visibleEdges = visibleEdges.filter((e) => finalMap.has(e.source) && finalMap.has(e.target));
@@ -1432,14 +1601,44 @@
     const rawNode = state.nodeById.get(nodeId);
     if (!rawNode) return;
 
+    state.selectedNode = rawNode;
+
     if (!state.visibleNodeMap.has(nodeId)) {
       if (state.egoRootId) state.egoRootId = null;
 
       if (rawNode.type === "Token") {
-        // Lower minTokenSongs if needed and ensure category is enabled
-        const sc = rawNode.properties.song_count || 1;
+        // Check if token has any songs in current year/activity filter; if 0, expand filter to include its songs
+        const edges = state.adjacency.get(rawNode.id) || [];
+        let activeMatches = 0;
+        let minSongY = Infinity;
+        let maxSongY = -Infinity;
+        const tokenActs = new Set();
+        for (const e of edges) {
+          if (e.type !== "CONTAINS_TOKEN") continue;
+          const s = state.nodeById.get(e.source);
+          if (!s || s.type !== "Song") continue;
+          const ry = s.properties.release_year || state.dataYearMin;
+          const act = s.properties.activity_type || "solo";
+          if (ry < minSongY) minSongY = ry;
+          if (ry > maxSongY) maxSongY = ry;
+          tokenActs.add(act);
+          if (state.enabledActivities.has(act) && ry >= state.yearMin && ry <= state.yearMax) {
+            activeMatches += 1;
+          }
+        }
+        if (activeMatches === 0 && minSongY <= maxSongY) {
+          for (const a of tokenActs) state.enabledActivities.add(a);
+          if (minSongY < state.yearMin) { state.yearMin = minSongY; elYearMin.value = minSongY; }
+          if (maxSongY > state.yearMax) { state.yearMax = maxSongY; elYearMax.value = maxSongY; }
+          elYearRangeLabel.textContent = `${state.yearMin} – ${state.yearMax}`;
+          elActivityFilters.querySelectorAll("input").forEach((cb) => {
+            cb.checked = state.enabledActivities.has(cb.dataset.activity);
+          });
+          activeMatches = rawNode.properties.song_count || 1;
+        }
+        const sc = Math.max(1, activeMatches || rawNode.properties.song_count || 1);
         if (sc < state.minTokenSongs) {
-          state.minTokenSongs = Math.max(1, sc);
+          state.minTokenSongs = sc;
           elMinTokenSongsSlider.value = state.minTokenSongs;
           elMinTokenSongsLabel.textContent = `${state.minTokenSongs}曲以上`;
         }
@@ -1587,15 +1786,24 @@
     `;
   }
 
-  function mountDistributionWidget(songEntries, barColor, isWeightedToken = false) {
+  function mountDistributionWidget(songEntries, barColor, isWeightedToken = false, onFilterChange = null) {
     const card = document.getElementById("distCard");
     const body = document.getElementById("distBarsBody");
     const customInput = document.getElementById("distCustomYearsInput");
-    if (!card || !body) return;
+    if (!card || !body) {
+      state.refreshInspectorScreening = onFilterChange || null;
+      return;
+    }
 
     const renderBars = () => {
       const isEra = state.distMode === "era";
       const step = Math.max(1, Math.min(30, parseInt(state.distStepYears, 10) || 3));
+
+      // Filter entries by currently enabled activities (keep full year timeline so user can compare & switch intervals)
+      const activeEntries = songEntries.filter((item) => {
+        const act = item.node.properties.activity_type || "solo";
+        return state.enabledActivities.has(act);
+      });
 
       // Update active button classes
       card.querySelectorAll(".dist-preset-btn").forEach((btn) => {
@@ -1612,7 +1820,7 @@
         const eraMap = new Map();
         const erasList = (state.artistProfile && state.artistProfile.eras) || [];
         for (const er of erasList) eraMap.set(er.label, { label: er.label, freq: 0, songs: 0, period: er.period });
-        for (const item of songEntries) {
+        for (const item of activeEntries) {
           const eraName = item.node.properties.era || "その他";
           if (!eraMap.has(eraName)) eraMap.set(eraName, { label: eraName, freq: 0, songs: 0, period: null });
           const rec = eraMap.get(eraName);
@@ -1626,8 +1834,16 @@
           .map((b) => {
             const val = isWeightedToken ? Math.round(b.freq) : b.songs;
             const subTxt = isWeightedToken ? `${val}回 (${b.songs}曲)` : `${b.songs}曲`;
+            let isCurrentFilter = false;
+            if (b.period && b.period.includes("-")) {
+              const [py1, py2] = b.period.split("-").map((x) => parseInt(x, 10));
+              isCurrentFilter =
+                (state.yearMin !== state.dataYearMin || state.yearMax !== state.dataYearMax) &&
+                state.yearMin === py1 &&
+                state.yearMax === py2;
+            }
             return `
-              <div class="mini-bar-row" data-bin-period="${escapeHtml(b.period || "")}" title="${escapeHtml(b.label)}: ${subTxt}">
+              <div class="mini-bar-row ${isCurrentFilter ? "active-bin" : ""}" data-bin-period="${escapeHtml(b.period || "")}" title="${escapeHtml(b.label)}: ${subTxt}（クリックでこの期間に絞り込み）">
                 <div class="mini-bar-label">${escapeHtml(b.label.split(" ")[0])}</div>
                 <div class="bar-track"><div class="bar-fill" style="width:${(val / maxVal) * 100}%;background:${barColor}"></div></div>
                 <div class="bar-val">${isWeightedToken ? `${val}回` : `${b.songs}曲`}</div>
@@ -1656,7 +1872,7 @@
         bins.push({ yStart: y, yEnd, label, freq: 0, songs: 0 });
       }
 
-      for (const item of songEntries) {
+      for (const item of activeEntries) {
         const ry = item.node.properties.release_year;
         if (!ry || ry < minY || ry > maxY) continue;
         const idx = Math.min(bins.length - 1, Math.floor((ry - minY) / step));
@@ -1716,7 +1932,24 @@
       });
     }
 
+    state.refreshInspectorScreening = () => {
+      renderBars();
+      if (onFilterChange) onFilterChange();
+    };
+
     renderBars();
+    if (onFilterChange) onFilterChange();
+  }
+
+  function resetYearFilterRange() {
+    state.yearMin = state.dataYearMin;
+    state.yearMax = state.dataYearMax;
+    elYearMin.value = state.yearMin;
+    elYearMax.value = state.yearMax;
+    elYearRangeLabel.textContent = `${state.yearMin} – ${state.yearMax}`;
+    rebuildVisibleGraph(true);
+    fitToView();
+    if (state.refreshInspectorScreening) state.refreshInspectorScreening();
   }
 
   function toggleYearFilterRange(y1, y2, afterCb) {
@@ -1730,8 +1963,13 @@
     elYearMin.value = state.yearMin;
     elYearMax.value = state.yearMax;
     elYearRangeLabel.textContent = `${state.yearMin} – ${state.yearMax}`;
-    rebuildVisibleGraph(false);
-    if (afterCb) afterCb();
+    rebuildVisibleGraph(true);
+    fitToView();
+    if (state.refreshInspectorScreening) {
+      state.refreshInspectorScreening();
+    } else if (afterCb) {
+      afterCb();
+    }
   }
   // =========================================================================
   // Right Inspector Rendering
@@ -1795,10 +2033,11 @@
     for (const n of state.nodeById.values()) {
       if (n.type === "Song") allSongEntries.push({ node: n, weight: 1 });
     }
+    allSongEntries.sort((a, b) => (a.node.properties.release_year || 0) - (b.node.properties.release_year || 0));
 
     elInspectorBody.innerHTML = `
       <div class="node-title">${escapeHtml(state.rawGraph.meta.artist_name)}</div>
-      <div class="node-subtitle">
+      <div class="node-subtitle" id="overviewSubtitle">
         ${profile.name_en ? escapeHtml(profile.name_en) + " · " : ""}
         楽曲 ${stats.total_songs || 0}曲 ／ 歌詞ワード ${(stats.node_counts_by_type && stats.node_counts_by_type.Token) || 0}語
       </div>
@@ -1807,6 +2046,13 @@
         <p class="summary-text">${escapeHtml((PRESETS[state.preset] && PRESETS[state.preset].description) || "カスタム表示モードです。")}</p>
       </div>
       ${buildDistributionHtml("発表楽曲数の年数区間分布")}
+      <div class="detail-card" id="overviewScreenedSongsCard" style="display:none;">
+        <div class="section-header" style="margin-bottom:6px;">
+          <h4 id="overviewScreenedSongsHeader" style="margin:0;">選択期間の楽曲</h4>
+          <button type="button" class="text-btn" id="btnResetOverviewPeriod">全期間に戻す</button>
+        </div>
+        <div class="connected-list" id="overviewScreenedSongsList"></div>
+      </div>
       ${topTokensHtml ? `
       <div class="detail-card">
         <h4>最頻出の歌詞ワード（クリックでフォーカス）</h4>
@@ -1824,7 +2070,45 @@
       </div>` : ""}
     `;
 
-    mountDistributionWidget(allSongEntries, "#c93b33", false);
+    const updateOverviewScreened = () => {
+      const isYearFiltered = state.yearMin > state.dataYearMin || state.yearMax < state.dataYearMax;
+      const cardEl = document.getElementById("overviewScreenedSongsCard");
+      const headerEl = document.getElementById("overviewScreenedSongsHeader");
+      const listEl = document.getElementById("overviewScreenedSongsList");
+      if (!cardEl || !headerEl || !listEl) return;
+
+      if (!isYearFiltered) {
+        cardEl.style.display = "none";
+        return;
+      }
+
+      const screened = allSongEntries.filter(({ node: s }) => {
+        const ry = s.properties.release_year || state.dataYearMin;
+        const act = s.properties.activity_type || "solo";
+        return state.enabledActivities.has(act) && ry >= state.yearMin && ry <= state.yearMax;
+      });
+      cardEl.style.display = "";
+      headerEl.textContent = `選択期間の楽曲 (${screened.length} / 全${allSongEntries.length}曲 · ${state.yearMin}–${state.yearMax}年)`;
+      listEl.innerHTML =
+        screened
+          .map(
+            ({ node: s }) => `
+            <div class="connected-item" data-jump-id="${s.id}">
+              <span class="connected-item-title">${escapeHtml(s.label)}</span>
+              <span class="connected-item-sub">${s.properties.release_year} · ${escapeHtml(s.properties.performer)}</span>
+            </div>`
+          )
+          .join("") || '<p class="hint-text">選択期間に該当する楽曲はありません。</p>';
+
+      listEl.querySelectorAll("[data-jump-id]").forEach((el) => {
+        el.addEventListener("click", () => focusNodeById(el.dataset.jumpId));
+      });
+    };
+
+    const btnResetOv = document.getElementById("btnResetOverviewPeriod");
+    if (btnResetOv) btnResetOv.addEventListener("click", resetYearFilterRange);
+
+    mountDistributionWidget(allSongEntries, "#c93b33", false, updateOverviewScreened);
     bindInspectorJumpHandlers();
   }
 
@@ -1832,10 +2116,8 @@
     const p = node.properties;
     const cat = p.category || "その他";
     const col = getNodeColor(node);
-    const totalFreq = node.dynFreq ?? p.total_frequency ?? 0;
-    const songCount = node.dynSongCount ?? p.song_count ?? 0;
 
-    // Collect connected songs sorted by weight desc then release_year
+    // Collect all connected songs sorted by weight desc then release_year
     const edges = state.adjacency.get(node.id) || [];
     const songs = [];
     for (const e of edges) {
@@ -1847,45 +2129,8 @@
     }
     songs.sort((a, b) => b.weight - a.weight || (a.node.properties.release_year || 0) - (b.node.properties.release_year || 0));
 
-    // Era distribution bars
-    const eraCounts = p.era_counts || {};
-    const eraEntries = Object.entries(eraCounts);
-    const maxEra = Math.max(1, ...eraEntries.map(([, v]) => v));
-    const eraBarsHtml = eraEntries
-      .map(
-        ([eraName, cnt]) => `
-        <div class="mini-bar-row">
-          <div class="mini-bar-label" title="${escapeHtml(eraName)}">${escapeHtml(eraName.split(" ")[0])}</div>
-          <div class="bar-track"><div class="bar-fill" style="width:${(cnt / maxEra) * 100}%;background:${col}"></div></div>
-          <div class="bar-val">${cnt}</div>
-        </div>`
-      )
-      .join("");
-
-    // Top co-occurring tokens
-    const coList = p.top_cooccurrences || [];
-    const coChipsHtml = coList
-      .map((co) => {
-        let targetCol = "#f43f5e";
-        for (const n of state.nodeById.values()) {
-          if (n.type === "Token" && n.label === co.token) {
-            targetCol = getNodeColor(n);
-            break;
-          }
-        }
-        return `<button class="chip" data-jump-label="${escapeHtml(co.token)}" data-jump-type="Token"><span class="color-dot" style="background:${targetCol}"></span>${escapeHtml(co.token)} (${co.song_count})</button>`;
-      })
-      .join("");
-
-    const songsHtml = songs
-      .map(
-        ({ node: s, weight }) => `
-        <div class="connected-item" data-jump-id="${s.id}">
-          <span class="connected-item-title">${escapeHtml(s.label)}</span>
-          <span class="connected-item-sub">${s.properties.release_year} · ${Math.round(weight)}回出現</span>
-        </div>`
-      )
-      .join("");
+    const allSongCount = songs.length || p.song_count || 0;
+    const allTotalFreq = songs.reduce((acc, item) => acc + (item.weight || 1), 0) || p.total_frequency || 0;
 
     elInspectorBody.innerHTML = `
       <div class="node-title">${escapeHtml(node.label)}</div>
@@ -1893,12 +2138,12 @@
 
       <div class="kpi-grid">
         <div class="kpi-box">
-          <div class="kpi-val">${songCount}<span style="font-size:12px;font-weight:500;color:#94a3b8"> 曲</span></div>
-          <div class="kpi-label">登場する楽曲数</div>
+          <div class="kpi-val" id="kpiSongCount">${allSongCount}<span style="font-size:12px;font-weight:500;color:#94a3b8"> 曲</span></div>
+          <div class="kpi-label" id="kpiSongLabel">登場する楽曲数</div>
         </div>
         <div class="kpi-box">
-          <div class="kpi-val">${totalFreq}<span style="font-size:12px;font-weight:500;color:#94a3b8"> 回</span></div>
-          <div class="kpi-label">歌詞中の総出現回数</div>
+          <div class="kpi-val" id="kpiTotalFreq">${Math.round(allTotalFreq)}<span style="font-size:12px;font-weight:500;color:#94a3b8"> 回</span></div>
+          <div class="kpi-label" id="kpiFreqLabel">歌詞中の総出現回数</div>
         </div>
       </div>
 
@@ -1907,21 +2152,155 @@
         <button class="secondary-btn" id="btnOverviewBack">概要へ戻る</button>
       </div>
 
-      ${coChipsHtml ? `
-      <div class="detail-card">
-        <h4>一緒によく出る単語（共起 TOP10）</h4>
-        <div class="chip-list">${coChipsHtml}</div>
-      </div>` : ""}
+      <div class="detail-card" id="inspectorCoCard">
+        <h4 id="inspectorCoHeader">一緒によく出る単語（共起 TOP10）</h4>
+        <div class="chip-list" id="inspectorCoChips"></div>
+      </div>
 
       ${buildDistributionHtml("出現分布（年数区間 / 活動期）")}
 
       <div class="detail-card">
-        <h4>この単語が登場する楽曲 (${songs.length}曲)</h4>
-        <div class="connected-list">${songsHtml || '<p class="hint-text">該当する楽曲はありません。</p>'}</div>
+        <div class="section-header" style="margin-bottom:6px;">
+          <h4 id="inspectorSongsHeader" style="margin:0;">この単語が登場する楽曲 (${songs.length}曲)</h4>
+          <button type="button" class="text-btn hidden" id="btnResetInspectorPeriod">全期間に戻す</button>
+        </div>
+        <div class="connected-list" id="inspectorSongsList"></div>
       </div>
     `;
 
-    mountDistributionWidget(songs, col, true);
+    const updateScreenedTokenView = () => {
+      const isYearFiltered = state.yearMin > state.dataYearMin || state.yearMax < state.dataYearMax;
+      const isActFiltered = state.enabledActivities.size < Object.keys(ACTIVITY_META).length;
+      const isFiltered = isYearFiltered || isActFiltered;
+
+      const filteredSongs = songs.filter(({ node: s }) => {
+        const ry = s.properties.release_year || state.dataYearMin;
+        const act = s.properties.activity_type || "solo";
+        return state.enabledActivities.has(act) && ry >= state.yearMin && ry <= state.yearMax;
+      });
+
+      const screenedSongCount = filteredSongs.length;
+      const screenedFreq = filteredSongs.reduce((acc, item) => acc + (item.weight || 1), 0);
+
+      // Update KPI boxes
+      const elKpiSong = document.getElementById("kpiSongCount");
+      const elKpiSongLbl = document.getElementById("kpiSongLabel");
+      const elKpiFreq = document.getElementById("kpiTotalFreq");
+      const elKpiFreqLbl = document.getElementById("kpiFreqLabel");
+      if (elKpiSong && elKpiSongLbl && elKpiFreq && elKpiFreqLbl) {
+        if (isFiltered) {
+          elKpiSong.innerHTML = `${screenedSongCount}<span style="font-size:12px;font-weight:500;color:#94a3b8"> / ${allSongCount}曲</span>`;
+          elKpiSongLbl.textContent = isYearFiltered ? `登場曲数 (${state.yearMin}–${state.yearMax}年)` : "登場曲数 (絞り込み中)";
+          elKpiFreq.innerHTML = `${Math.round(screenedFreq)}<span style="font-size:12px;font-weight:500;color:#94a3b8"> / ${Math.round(allTotalFreq)}回</span>`;
+          elKpiFreqLbl.textContent = isYearFiltered ? `出現回数 (${state.yearMin}–${state.yearMax}年)` : "出現回数 (絞り込み中)";
+        } else {
+          elKpiSong.innerHTML = `${allSongCount}<span style="font-size:12px;font-weight:500;color:#94a3b8"> 曲</span>`;
+          elKpiSongLbl.textContent = "登場する楽曲数";
+          elKpiFreq.innerHTML = `${Math.round(allTotalFreq)}<span style="font-size:12px;font-weight:500;color:#94a3b8"> 回</span>`;
+          elKpiFreqLbl.textContent = "歌詞中の総出現回数";
+        }
+      }
+
+      // Update Co-occurring words (screened to filteredSongs when filtered)
+      const coCardEl = document.getElementById("inspectorCoCard");
+      const coHeaderEl = document.getElementById("inspectorCoHeader");
+      const coChipsEl = document.getElementById("inspectorCoChips");
+      if (coCardEl && coHeaderEl && coChipsEl) {
+        let displayCoList = [];
+        if (isFiltered) {
+          const coCounter = new Map();
+          const coWeight = new Map();
+          for (const { node: s, weight: selfW } of filteredSongs) {
+            const sEdges = state.adjacency.get(s.id) || [];
+            for (const se of sEdges) {
+              if (se.type !== "CONTAINS_TOKEN" || se.target === node.id) continue;
+              const otherTok = state.nodeById.get(se.target);
+              if (!otherTok || otherTok.type !== "Token") continue;
+              coCounter.set(otherTok.label, (coCounter.get(otherTok.label) || 0) + 1);
+              coWeight.set(otherTok.label, (coWeight.get(otherTok.label) || 0) + Math.min(selfW, se.weight || 1));
+            }
+          }
+          displayCoList = Array.from(coCounter.entries())
+            .map(([token, song_count]) => ({ token, song_count, weight: coWeight.get(token) || song_count }))
+            .sort((a, b) => b.song_count - a.song_count || b.weight - a.weight || a.token.localeCompare(b.token))
+            .slice(0, 10);
+          coHeaderEl.textContent = isYearFiltered
+            ? `一緒に出る単語（${state.yearMin}–${state.yearMax}年 TOP10）`
+            : "一緒に出る単語（絞り込み期間 TOP10）";
+        } else {
+          displayCoList = p.top_cooccurrences || [];
+          coHeaderEl.textContent = "一緒によく出る単語（共起 TOP10）";
+        }
+
+        if (displayCoList.length === 0) {
+          coChipsEl.innerHTML = '<span class="hint-text">選択期間内で共起する単語はありません。</span>';
+        } else {
+          coChipsEl.innerHTML = displayCoList
+            .map((co) => {
+              let targetCol = "#c93b33";
+              for (const n of state.nodeById.values()) {
+                if (n.type === "Token" && n.label === co.token) {
+                  targetCol = getNodeColor(n);
+                  break;
+                }
+              }
+              return `<button class="chip" data-jump-label="${escapeHtml(co.token)}" data-jump-type="Token"><span class="color-dot" style="background:${targetCol}"></span>${escapeHtml(co.token)} (${co.song_count})</button>`;
+            })
+            .join("");
+
+          coChipsEl.querySelectorAll("[data-jump-label]").forEach((el) => {
+            el.addEventListener("click", () => {
+              const lbl = el.dataset.jumpLabel;
+              const type = el.dataset.jumpType;
+              for (const n of state.nodeById.values()) {
+                if (n.label === lbl && (!type || n.type === type)) {
+                  focusNodeById(n.id);
+                  break;
+                }
+              }
+            });
+          });
+        }
+      }
+
+      // Update Screened Songs List & Header
+      const songsHeaderEl = document.getElementById("inspectorSongsHeader");
+      const songsListEl = document.getElementById("inspectorSongsList");
+      const btnResetEl = document.getElementById("btnResetInspectorPeriod");
+      if (songsHeaderEl && songsListEl) {
+        if (isFiltered) {
+          const periodLabel = isYearFiltered ? ` · ${state.yearMin}–${state.yearMax}年` : "";
+          songsHeaderEl.textContent = `この単語が登場する楽曲 (${filteredSongs.length} / 全${songs.length}曲${periodLabel})`;
+          if (btnResetEl) btnResetEl.classList.toggle("hidden", !isYearFiltered);
+        } else {
+          songsHeaderEl.textContent = `この単語が登場する楽曲 (${songs.length}曲)`;
+          if (btnResetEl) btnResetEl.classList.add("hidden");
+        }
+
+        songsListEl.innerHTML =
+          filteredSongs
+            .map(
+              ({ node: s, weight }) => `
+              <div class="connected-item" data-jump-id="${s.id}">
+                <span class="connected-item-title">${escapeHtml(s.label)}</span>
+                <span class="connected-item-sub">${s.properties.release_year} · ${Math.round(weight)}回出現</span>
+              </div>`
+            )
+            .join("") ||
+          `<p class="hint-text">選択中の期間（${state.yearMin}–${state.yearMax}年）・条件に該当する楽曲はありません。</p>`;
+
+        songsListEl.querySelectorAll("[data-jump-id]").forEach((el) => {
+          el.addEventListener("click", () => focusNodeById(el.dataset.jumpId));
+        });
+      }
+    };
+
+    const btnResetPeriod = document.getElementById("btnResetInspectorPeriod");
+    if (btnResetPeriod) {
+      btnResetPeriod.addEventListener("click", resetYearFilterRange);
+    }
+
+    mountDistributionWidget(songs, col, true, updateScreenedTokenView);
     document.getElementById("btnEgoFromInspector").addEventListener("click", () => enterEgoMode(node.id));
     document.getElementById("btnOverviewBack").addEventListener("click", () => {
       state.selectedNode = null;
@@ -1931,6 +2310,7 @@
   }
 
   function renderSongInspector(node) {
+    state.refreshInspectorScreening = null;
     const p = node.properties;
     const edges = state.adjacency.get(node.id) || [];
 
@@ -2061,16 +2441,6 @@
 
     connectedSongs.sort((a, b) => (a.properties.release_year || 0) - (b.properties.release_year || 0));
 
-    const songItemsHtml = connectedSongs
-      .map(
-        (s) => `
-        <div class="connected-item" data-jump-id="${s.id}">
-          <span class="connected-item-title">${escapeHtml(s.label)}</span>
-          <span class="connected-item-sub">${s.properties.release_year} · ${escapeHtml(s.properties.performer)}</span>
-        </div>`
-      )
-      .join("");
-
     const roleLine =
       node.type === "Artist" && node.properties.roles && node.properties.roles.length
         ? `役割: ${node.properties.roles.join(" / ")}`
@@ -2098,17 +2468,71 @@
       ${connectedSongs.length > 0 ? buildDistributionHtml("出現分布（年数区間 / 活動期）") : ""}
 
       <div class="detail-card">
-        <h4>関連する楽曲一覧 (${connectedSongs.length}曲 / 年代順)</h4>
-        <div class="connected-list">${songItemsHtml || '<p class="hint-text">該当する楽曲はありません。</p>'}</div>
+        <div class="section-header" style="margin-bottom:6px;">
+          <h4 id="inspectorSongsHeader" style="margin:0;">関連する楽曲一覧 (${connectedSongs.length}曲 / 年代順)</h4>
+          <button type="button" class="text-btn hidden" id="btnResetInspectorPeriod">全期間に戻す</button>
+        </div>
+        <div class="connected-list" id="inspectorSongsList"></div>
       </div>
     `;
+
+    const updateScreenedHubView = () => {
+      const isYearFiltered = state.yearMin > state.dataYearMin || state.yearMax < state.dataYearMax;
+      const isActFiltered = state.enabledActivities.size < Object.keys(ACTIVITY_META).length;
+      const isFiltered = isYearFiltered || isActFiltered;
+
+      const filteredSongs = connectedSongs.filter((s) => {
+        const ry = s.properties.release_year || state.dataYearMin;
+        const act = s.properties.activity_type || "solo";
+        return state.enabledActivities.has(act) && ry >= state.yearMin && ry <= state.yearMax;
+      });
+
+      const songsHeaderEl = document.getElementById("inspectorSongsHeader");
+      const songsListEl = document.getElementById("inspectorSongsList");
+      const btnResetEl = document.getElementById("btnResetInspectorPeriod");
+      if (songsHeaderEl && songsListEl) {
+        if (isFiltered) {
+          const periodLabel = isYearFiltered ? ` · ${state.yearMin}–${state.yearMax}年` : "";
+          songsHeaderEl.textContent = `関連する楽曲一覧 (${filteredSongs.length} / 全${connectedSongs.length}曲${periodLabel})`;
+          if (btnResetEl) btnResetEl.classList.toggle("hidden", !isYearFiltered);
+        } else {
+          songsHeaderEl.textContent = `関連する楽曲一覧 (${connectedSongs.length}曲 / 年代順)`;
+          if (btnResetEl) btnResetEl.classList.add("hidden");
+        }
+
+        songsListEl.innerHTML =
+          filteredSongs
+            .map(
+              (s) => `
+              <div class="connected-item" data-jump-id="${s.id}">
+                <span class="connected-item-title">${escapeHtml(s.label)}</span>
+                <span class="connected-item-sub">${s.properties.release_year} · ${escapeHtml(s.properties.performer)}</span>
+              </div>`
+            )
+            .join("") ||
+          `<p class="hint-text">選択中の期間（${state.yearMin}–${state.yearMax}年）・条件に該当する楽曲はありません。</p>`;
+
+        songsListEl.querySelectorAll("[data-jump-id]").forEach((el) => {
+          el.addEventListener("click", () => focusNodeById(el.dataset.jumpId));
+        });
+      }
+    };
+
+    const btnResetPeriod = document.getElementById("btnResetInspectorPeriod");
+    if (btnResetPeriod) {
+      btnResetPeriod.addEventListener("click", resetYearFilterRange);
+    }
 
     if (connectedSongs.length > 0) {
       mountDistributionWidget(
         connectedSongs.map((s) => ({ node: s, weight: 1 })),
         getNodeColor(node),
-        false
+        false,
+        updateScreenedHubView
       );
+    } else {
+      state.refreshInspectorScreening = null;
+      updateScreenedHubView();
     }
     document.getElementById("btnEgoFromInspector").addEventListener("click", () => enterEgoMode(node.id));
     document.getElementById("btnOverviewBack").addEventListener("click", () => {
@@ -2290,7 +2714,8 @@
       state.yearMin = minV;
       state.yearMax = maxV;
       elYearRangeLabel.textContent = `${minV} – ${maxV}`;
-      rebuildVisibleGraph(false);
+      rebuildVisibleGraph(true);
+      if (state.refreshInspectorScreening) state.refreshInspectorScreening();
       if (state.running) state.alpha = Math.max(state.alpha, 0.35);
     };
     elYearMin.addEventListener("input", onYearChange);
@@ -2312,6 +2737,7 @@
       elTokenCategoryFilters.querySelectorAll("input").forEach((cb) => (cb.checked = true));
       for (const n of state.nodeById.values()) { n.fx = null; n.fy = null; }
       applyPreset("lyrics_cooccur");
+      if (state.refreshInspectorScreening) state.refreshInspectorScreening();
     });
 
     // Layout settings
