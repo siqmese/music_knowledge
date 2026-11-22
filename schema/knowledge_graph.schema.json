@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://music-knowledge-graph.local/schema/knowledge_graph.schema.json",
+  "title": "Artist Lyricist Knowledge Graph Schema",
+  "description": "歌手（作詞家）ごとに楽曲と歌詞のテーマ・モチーフ・地名・文体・人脈を構造化するための共通JSONスキーマ",
+  "type": "object",
+  "required": ["meta", "stats", "nodes", "edges"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["artist_id", "artist_name", "generated_at", "schema_version"],
+      "properties": {
+        "artist_id": { "type": "string" },
+        "artist_name": { "type": "string" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "schema_version": { "type": "string" },
+        "description": { "type": "string" },
+        "copyright_note": { "type": "string" }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "total_songs": { "type": "integer" },
+        "total_nodes": { "type": "integer" },
+        "total_edges": { "type": "integer" },
+        "node_counts_by_type": { "type": "object" },
+        "edge_counts_by_type": { "type": "object" },
+        "top_themes": { "type": "array" },
+        "top_motifs": { "type": "array" },
+        "top_places": { "type": "array" },
+        "top_styles": { "type": "array" },
+        "top_tokens": { "type": "array" },
+        "top_cooccurrences": { "type": "array" },
+        "songs_by_activity_type": { "type": "object" },
+        "songs_by_decade": { "type": "object" }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "label"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Artist",
+              "Song",
+              "Album",
+              "Theme",
+              "Motif",
+              "Place",
+              "Style",
+              "Mood",
+              "Era",
+              "Language",
+              "Token"
+            ]
+          },
+          "label": { "type": "string" },
+          "properties": { "type": "object" }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "source", "target", "type"],
+        "properties": {
+          "id": { "type": "string" },
+          "source": { "type": "string" },
+          "target": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "LYRICIST_OF",
+              "COMPOSER_OF",
+              "PERFORMED_BY",
+              "WRITTEN_FOR",
+              "COLLABORATED_WITH",
+              "INCLUDED_IN",
+              "BELONGS_TO_ERA",
+              "HAS_THEME",
+              "HAS_MOTIF",
+              "MENTIONS_PLACE",
+              "USES_STYLE",
+              "HAS_MOOD",
+              "WRITTEN_IN_LANGUAGE",
+              "RELATED_SONG",
+              "CONTAINS_TOKEN",
+              "CO_OCCURS_WITH"
+            ]
+          },
+          "weight": { "type": "number" },
+          "properties": { "type": "object" }
+        }
+      }
+    }
+  }
+}

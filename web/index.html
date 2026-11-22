@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>作詞語彙・楽曲構造図譜 — Lyricist Knowledge Atlas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header & Mode Navigation -->
+  <header class="topbar">
+    <div class="topbar-main">
+      <div class="topbar-left">
+        <button id="btnToggleLeft" class="tool-btn" title="絞り込み条件パネル開閉">条件</button>
+        <div class="brand">
+          <span class="brand-title">作詞語彙・楽曲構造図譜</span>
+        </div>
+        <div class="artist-picker">
+          <label for="artistSelect" class="sr-only">作家を選択</label>
+          <select id="artistSelect" class="select-input"></select>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="語彙・曲名・地名を検索..." autocomplete="off" />
+          <div id="searchResults" class="search-dropdown hidden"></div>
+        </div>
+        <button id="btnArtistOverview" class="tool-btn" title="作家概要・年数区間分布を表示">概要</button>
+        <button id="btnStats" class="tool-btn" title="統計一覧を表示">統計</button>
+        <button id="btnFit" class="tool-btn hide-xs" title="全体表示 (F)">全体</button>
+        <button id="btnPause" class="tool-btn active hide-xs" title="配置固定 / 動的計算切替 (Space)">固定中</button>
+        <button id="btnExportPng" class="tool-btn hide-xs" title="図版をPNG画像として書き出す">保存</button>
+      </div>
+    </div>
+
+    <nav class="preset-bar" id="presetTabs" role="tablist" aria-label="図譜モード切替">
+      <button class="preset-tab active" data-preset="lyrics_cooccur">1. 歌詞語彙（共起）</button>
+      <button class="preset-tab" data-preset="lyrics_songs">2. 楽曲 × 語彙</button>
+      <button class="preset-tab" data-preset="worldview">3. 主題 × モチーフ</button>
+      <button class="preset-tab" data-preset="relations">4. 対称・曲間連関</button>
+      <button class="preset-tab" data-preset="places">5. 地名図譜</button>
+      <button class="preset-tab" data-preset="artists">6. 人物・提供関係</button>
+      <button class="preset-tab" data-preset="styles">7. 文体・修辞</button>
+      <button class="preset-tab" data-preset="all">8. 全要素</button>
+    </nav>
+  </header>
+
+  <!-- Main Workspace -->
+  <div class="workspace">
+    <!-- Left Control Column -->
+    <aside id="leftPanel" class="sidebar left-sidebar">
+      <div class="panel-section">
+        <div class="section-header">
+          <h3>サイズ別配色（出現規模）</h3>
+        </div>
+        <div class="tier-legend-table">
+          <div class="tier-row"><span class="tier-swatch tier-5"></span><span class="tier-name">特大（最頻出核語）</span><span class="tier-code">深緋</span></div>
+          <div class="tier-row"><span class="tier-swatch tier-4"></span><span class="tier-name">大（高頻度・主要）</span><span class="tier-code">代赭</span></div>
+          <div class="tier-row"><span class="tier-swatch tier-3"></span><span class="tier-name">中（中核語彙・要素）</span><span class="tier-code">黄土</span></div>
+          <div class="tier-row"><span class="tier-swatch tier-2"></span><span class="tier-name">小（周辺語彙・要素）</span><span class="tier-code">青磁</span></div>
+          <div class="tier-row"><span class="tier-swatch tier-1"></span><span class="tier-name">極小（個別曲・少数語）</span><span class="tier-code">藍鼠</span></div>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="section-header">
+          <h3>歌詞ワード絞り込み</h3>
+          <span id="minTokenSongsLabel" class="range-label">5曲以上</span>
+        </div>
+        <div class="slider-row">
+          <span>最小曲数</span>
+          <input id="minTokenSongsSlider" type="range" min="1" max="30" value="5" />
+        </div>
+        <div id="tokenCategoryFilters" class="checkbox-list" style="margin-top:8px;"></div>
+      </div>
+
+      <div class="panel-section">
+        <div class="section-header">
+          <h3>発表名義・活動区分</h3>
+          <button id="btnResetFilters" class="text-btn">初期化</button>
+        </div>
+        <div id="activityFilters" class="checkbox-list"></div>
+      </div>
+
+      <div class="panel-section">
+        <div class="section-header">
+          <h3>発表年代</h3>
+          <span id="yearRangeLabel" class="range-label">1998 – 2026</span>
+        </div>
+        <div class="year-sliders">
+          <div class="slider-row">
+            <span>開始年</span>
+            <input id="yearMin" type="range" min="1998" max="2026" value="1998" />
+          </div>
+          <div class="slider-row">
+            <span>終了年</span>
+            <input id="yearMax" type="range" min="1998" max="2026" value="2026" />
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="section-header">
+          <h3>要素種別</h3>
+        </div>
+        <div id="nodeTypeFilters" class="type-legend-list"></div>
+      </div>
+
+      <div class="panel-section">
+        <div class="section-header">
+          <h3>図版調整</h3>
+        </div>
+        <div class="control-row">
+          <label for="labelMode">文字表記</label>
+          <select id="labelMode" class="select-input small">
+            <option value="smart" selected>自動（倍率連動）</option>
+            <option value="hubs">主要要素のみ</option>
+            <option value="all">すべて表記</option>
+          </select>
+        </div>
+        <div class="slider-row compact">
+          <span>要素間隔</span>
+          <input id="repulsionSlider" type="range" min="80" max="420" value="230" />
+        </div>
+        <div class="slider-row compact">
+          <span>結線濃度</span>
+          <input id="edgeAlphaSlider" type="range" min="4" max="60" value="18" />
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="section-header">
+          <h3>外部データ読込</h3>
+        </div>
+        <label class="file-upload-btn">
+          <span>JSONファイルを選択</span>
+          <input id="jsonFileInput" type="file" accept=".json" hidden />
+        </label>
+      </div>
+    </aside>
+
+    <!-- Center Diagram Stage -->
+    <main class="canvas-stage" id="canvasStage">
+      <canvas id="graphCanvas"></canvas>
+
+      <!-- Ego Network Active Banner -->
+      <div id="egoBanner" class="floating-banner hidden">
+        <span id="egoBannerText">近傍図譜を表示中</span>
+        <button id="btnExitEgo" class="banner-btn">全体図譜へ戻る</button>
+      </div>
+
+      <!-- Hover Tooltip -->
+      <div id="tooltip" class="tooltip hidden"></div>
+
+      <!-- Top-Right Canvas Controls (never overlaps bottom status bar) -->
+      <div class="zoom-controls" aria-label="キャンバス操作">
+        <button id="btnZoomIn" class="zoom-btn" title="拡大">+</button>
+        <button id="btnZoomOut" class="zoom-btn" title="縮小">−</button>
+        <button id="btnFitCanvas" class="zoom-btn" title="全体表示">全体</button>
+        <button id="btnReheat" class="zoom-btn" title="再整列">整列</button>
+      </div>
+
+      <!-- Bottom Status & Quick Overview Bar -->
+      <div class="canvas-hud">
+        <div class="hud-stats">
+          <span>要素 <strong id="hudNodes">0</strong></span>
+          <span class="sep">/</span>
+          <span>結線 <strong id="hudEdges">0</strong></span>
+          <span class="sep">/</span>
+          <span>曲 <strong id="hudSongs">0</strong></span>
+        </div>
+        <button id="btnHudOverview" class="hud-overview-btn">作家概要・出現分布 ▲</button>
+      </div>
+    </main>
+
+    <!-- Right Inspector / Bottom Sheet -->
+    <aside id="rightPanel" class="sidebar right-sidebar">
+      <div class="inspector-header">
+        <span id="inspectorTypeBadge" class="type-badge">解説・索引</span>
+        <button id="btnCloseRight" class="tool-btn small-btn" title="閉じる">閉じる</button>
+      </div>
+      <div id="inspectorBody" class="inspector-body"></div>
+    </aside>
+  </div>
+
+  <!-- Stats Index Modal -->
+  <div id="statsModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="statsBackdrop"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="statsTitle">語彙・楽曲構造 統計索引</h2>
+          <p id="statsSubtitle" class="modal-sub"></p>
+        </div>
+        <button id="btnCloseStats" class="tool-btn">閉じる</button>
+      </div>
+      <div id="statsContent" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="data/bundle.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

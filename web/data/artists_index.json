@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "shiina_ringo",
+    "id": "artist_shiina_ringo",
+    "name": "椎名林檎",
+    "name_en": "Sheena Ringo",
+    "debut_year": 1998,
+    "total_songs": 222,
+    "total_nodes": 546,
+    "total_edges": 6345,
+    "graph_path": "../artists/shiina_ringo/knowledge_graph.json",
+    "artist_path": "../artists/shiina_ringo/artist.json"
+  }
+]
