@@ -3,50 +3,50 @@
     "artist_id": "artist_shiina_ringo",
     "artist_name": "椎名林檎",
     "artist_slug": "shiina_ringo",
-    "generated_at": "2026-11-22T17:39:38.578167+00:00",
+    "generated_at": "2026-11-22T18:03:12.165918+00:00",
     "schema_version": "1.0.0",
     "description": "椎名林檎が作詞した楽曲と歌詞語彙の構造化ナレッジグラフ（ノード＆エッジ形式）",
     "copyright_note": "著作権保護のため歌詞全文は収録せず、楽曲メタデータおよび歌詞から抽出した頻出単語トークン・共起関係・テーマ・モチーフ・地名・文体特徴・曲間関係のみを構造化しています。"
   },
   "stats": {
-    "total_songs": 239,
-    "total_nodes": 570,
-    "total_edges": 6811,
+    "total_songs": 253,
+    "total_nodes": 595,
+    "total_edges": 7040,
     "node_counts_by_type": {
-      "Album": 25,
+      "Album": 26,
       "Artist": 50,
       "Era": 4,
       "Language": 4,
-      "Mood": 8,
-      "Motif": 18,
+      "Mood": 11,
+      "Motif": 23,
       "Place": 14,
-      "Song": 239,
-      "Style": 9,
-      "Theme": 15,
+      "Song": 253,
+      "Style": 10,
+      "Theme": 16,
       "Token": 184
     },
     "edge_counts_by_type": {
-      "BELONGS_TO_ERA": 239,
+      "BELONGS_TO_ERA": 253,
       "COLLABORATED_WITH": 45,
-      "COMPOSER_OF": 251,
-      "CONTAINS_TOKEN": 2108,
-      "CO_OCCURS_WITH": 695,
-      "HAS_MOOD": 476,
-      "HAS_MOTIF": 652,
-      "HAS_THEME": 695,
-      "INCLUDED_IN": 285,
-      "LYRICIST_OF": 245,
-      "MENTIONS_PLACE": 40,
-      "PERFORMED_BY": 269,
-      "RELATED_SONG": 33,
-      "USES_STYLE": 485,
+      "COMPOSER_OF": 265,
+      "CONTAINS_TOKEN": 2137,
+      "CO_OCCURS_WITH": 694,
+      "HAS_MOOD": 503,
+      "HAS_MOTIF": 679,
+      "HAS_THEME": 725,
+      "INCLUDED_IN": 299,
+      "LYRICIST_OF": 259,
+      "MENTIONS_PLACE": 41,
+      "PERFORMED_BY": 283,
+      "RELATED_SONG": 40,
+      "USES_STYLE": 505,
       "WRITTEN_FOR": 27,
-      "WRITTEN_IN_LANGUAGE": 266
+      "WRITTEN_IN_LANGUAGE": 285
     },
     "top_themes": [
       {
         "label": "愛と執着",
-        "count": 102
+        "count": 105
       },
       {
         "label": "時間と無常",
@@ -58,11 +58,11 @@
       },
       {
         "label": "自己とアイデンティティ",
-        "count": 54
+        "count": 60
       },
       {
         "label": "反骨と自由",
-        "count": 52
+        "count": 55
       },
       {
         "label": "ジェンダーと身体",
@@ -70,15 +70,15 @@
       },
       {
         "label": "日常と生活",
-        "count": 45
+        "count": 50
       },
       {
         "label": "社会と風刺",
-        "count": 40
+        "count": 42
       },
       {
         "label": "都市と孤独",
-        "count": 39
+        "count": 41
       },
       {
         "label": "祝福と祝祭",
@@ -89,12 +89,12 @@
         "count": 36
       },
       {
-        "label": "別れと喪失",
-        "count": 28
+        "label": "青春と記憶",
+        "count": 33
       },
       {
-        "label": "青春と記憶",
-        "count": 26
+        "label": "別れと喪失",
+        "count": 29
       },
       {
         "label": "仕事と労働",
@@ -103,12 +103,16 @@
       {
         "label": "罪と救済",
         "count": 24
+      },
+      {
+        "label": "音楽と芸術",
+        "count": 1
       }
     ],
     "top_motifs": [
       {
         "label": "季節・自然",
-        "count": 77
+        "count": 78
       },
       {
         "label": "光・太陽・閃光",
@@ -120,23 +124,23 @@
       },
       {
         "label": "演劇・虚構・仮面",
-        "count": 58
+        "count": 59
       },
       {
         "label": "身体部位",
-        "count": 52
+        "count": 55
       },
       {
         "label": "恋愛・心中・情念",
-        "count": 42
+        "count": 44
       },
       {
         "label": "金銭・欲望・勝負",
-        "count": 38
+        "count": 39
       },
       {
         "label": "色彩",
-        "count": 37
+        "count": 38
       },
       {
         "label": "鏡・分身・対称性",
@@ -145,6 +149,10 @@
       {
         "label": "花・植物",
         "count": 28
+      },
+      {
+        "label": "音楽・楽器",
+        "count": 27
       },
       {
         "label": "仏教・神仏・祈り",
@@ -159,16 +167,12 @@
         "count": 24
       },
       {
-        "label": "音楽・楽器",
-        "count": 22
-      },
-      {
         "label": "雨・水・海",
         "count": 21
       },
       {
         "label": "地名・駅・路線",
-        "count": 19
+        "count": 20
       },
       {
         "label": "医療・病・薬",
@@ -177,6 +181,26 @@
       {
         "label": "動物・生き物",
         "count": 14
+      },
+      {
+        "label": "日常・生活空間",
+        "count": 7
+      },
+      {
+        "label": "都市風景",
+        "count": 2
+      },
+      {
+        "label": "煙草・酒・嗜好品",
+        "count": 1
+      },
+      {
+        "label": "乗り物・移動",
+        "count": 1
+      },
+      {
+        "label": "時間・時計・季節",
+        "count": 1
       }
     ],
     "top_places": [
@@ -194,7 +218,7 @@
       },
       {
         "label": "銀座",
-        "count": 3
+        "count": 4
       },
       {
         "label": "後楽園",
@@ -240,11 +264,11 @@
     "top_styles": [
       {
         "label": "口語・独白体",
-        "count": 111
+        "count": 120
       },
       {
         "label": "比喩・象徴表現",
-        "count": 87
+        "count": 88
       },
       {
         "label": "掛詞・言葉遊び・韻",
@@ -256,15 +280,15 @@
       },
       {
         "label": "演劇的・キャラクター視点",
-        "count": 48
+        "count": 49
+      },
+      {
+        "label": "多言語・外国語詞",
+        "count": 31
       },
       {
         "label": "対称構造(シンメトリー)",
         "count": 25
-      },
-      {
-        "label": "多言語・外国語詞",
-        "count": 23
       },
       {
         "label": "対話・掛け合い構造",
@@ -273,19 +297,23 @@
       {
         "label": "タイトル文字数統一",
         "count": 15
+      },
+      {
+        "label": "四字熟語・漢語調",
+        "count": 1
       }
     ],
     "top_tokens": [
       {
         "label": "貴方",
-        "count": 212,
-        "song_count": 78,
+        "count": 218,
+        "song_count": 81,
         "category": "人称・関係"
       },
       {
         "label": "私",
-        "count": 207,
-        "song_count": 73,
+        "count": 210,
+        "song_count": 75,
         "category": "人称・関係"
       },
       {
@@ -302,26 +330,32 @@
       },
       {
         "label": "今日",
-        "count": 85,
-        "song_count": 60,
+        "count": 86,
+        "song_count": 61,
         "category": "自然・時間・空間"
       },
       {
         "label": "愛",
-        "count": 81,
-        "song_count": 49,
+        "count": 82,
+        "song_count": 50,
         "category": "感情・概念・思想"
       },
       {
         "label": "今",
-        "count": 79,
-        "song_count": 47,
+        "count": 81,
+        "song_count": 49,
         "category": "自然・時間・空間"
       },
       {
         "label": "生きる",
-        "count": 73,
-        "song_count": 48,
+        "count": 74,
+        "song_count": 49,
+        "category": "感情・概念・思想"
+      },
+      {
+        "label": "世界",
+        "count": 56,
+        "song_count": 43,
         "category": "感情・概念・思想"
       },
       {
@@ -331,16 +365,16 @@
         "category": "人称・関係"
       },
       {
-        "label": "世界",
-        "count": 54,
-        "song_count": 41,
-        "category": "感情・概念・思想"
-      },
-      {
         "label": "命",
         "count": 51,
         "song_count": 39,
         "category": "感情・概念・思想"
+      },
+      {
+        "label": "手",
+        "count": 50,
+        "song_count": 44,
+        "category": "身体・感覚・医療"
       },
       {
         "label": "本当",
@@ -349,15 +383,9 @@
         "category": "感情・概念・思想"
       },
       {
-        "label": "手",
-        "count": 49,
-        "song_count": 43,
-        "category": "身体・感覚・医療"
-      },
-      {
         "label": "みんな",
-        "count": 46,
-        "song_count": 34,
+        "count": 47,
+        "song_count": 35,
         "category": "人称・関係"
       },
       {
@@ -397,15 +425,15 @@
         "category": "自然・時間・空間"
       },
       {
-        "label": "泣く",
+        "label": "嘘",
         "count": 33,
-        "song_count": 28,
+        "song_count": 29,
         "category": "感情・概念・思想"
       },
       {
-        "label": "嘘",
-        "count": 31,
-        "song_count": 27,
+        "label": "泣く",
+        "count": 33,
+        "song_count": 28,
         "category": "感情・概念・思想"
       },
       {
@@ -415,15 +443,15 @@
         "category": "人称・関係"
       },
       {
-        "label": "死",
+        "label": "夢",
         "count": 31,
-        "song_count": 16,
+        "song_count": 23,
         "category": "感情・概念・思想"
       },
       {
-        "label": "夢",
-        "count": 30,
-        "song_count": 22,
+        "label": "死",
+        "count": 31,
+        "song_count": 16,
         "category": "感情・概念・思想"
       },
       {
@@ -440,8 +468,8 @@
       },
       {
         "label": "顔",
-        "count": 26,
-        "song_count": 24,
+        "count": 27,
+        "song_count": 25,
         "category": "身体・感覚・医療"
       },
       {
@@ -505,15 +533,15 @@
         "category": "色彩"
       },
       {
-        "label": "人間",
-        "count": 21,
-        "song_count": 14,
+        "label": "誰か",
+        "count": 22,
+        "song_count": 17,
         "category": "人称・関係"
       },
       {
-        "label": "誰か",
+        "label": "人間",
         "count": 21,
-        "song_count": 16,
+        "song_count": 14,
         "category": "人称・関係"
       },
       {
@@ -521,6 +549,12 @@
         "count": 20,
         "song_count": 17,
         "category": "身体・感覚・医療"
+      },
+      {
+        "label": "色",
+        "count": 20,
+        "song_count": 17,
+        "category": "色彩"
       },
       {
         "label": "雨",
@@ -547,12 +581,6 @@
         "category": "自然・時間・空間"
       },
       {
-        "label": "色",
-        "count": 19,
-        "song_count": 16,
-        "category": "色彩"
-      },
-      {
         "label": "風",
         "count": 19,
         "song_count": 15,
@@ -572,9 +600,21 @@
       },
       {
         "label": "気持ち",
-        "count": 17,
-        "song_count": 14,
+        "count": 18,
+        "song_count": 15,
         "category": "感情・概念・思想"
+      },
+      {
+        "label": "頭",
+        "count": 18,
+        "song_count": 17,
+        "category": "身体・感覚・医療"
+      },
+      {
+        "label": "大人",
+        "count": 18,
+        "song_count": 16,
+        "category": "人称・関係"
       },
       {
         "label": "夏",
@@ -601,12 +641,6 @@
         "category": "身体・感覚・医療"
       },
       {
-        "label": "頭",
-        "count": 17,
-        "song_count": 16,
-        "category": "身体・感覚・医療"
-      },
-      {
         "label": "孤独",
         "count": 17,
         "song_count": 14,
@@ -617,12 +651,6 @@
         "count": 17,
         "song_count": 14,
         "category": "自然・時間・空間"
-      },
-      {
-        "label": "大人",
-        "count": 17,
-        "song_count": 15,
-        "category": "人称・関係"
       },
       {
         "label": "心",
@@ -697,6 +725,12 @@
         "category": "感情・概念・思想"
       },
       {
+        "label": "日本",
+        "count": 13,
+        "song_count": 11,
+        "category": "都市・事物・文化"
+      },
+      {
         "label": "季節",
         "count": 13,
         "song_count": 12,
@@ -715,12 +749,6 @@
         "category": "身体・感覚・医療"
       },
       {
-        "label": "日本",
-        "count": 12,
-        "song_count": 10,
-        "category": "都市・事物・文化"
-      },
-      {
         "label": "昨日",
         "count": 12,
         "song_count": 8,
@@ -737,6 +765,12 @@
         "count": 11,
         "song_count": 9,
         "category": "色彩"
+      },
+      {
+        "label": "電車",
+        "count": 11,
+        "song_count": 9,
+        "category": "都市・事物・文化"
       },
       {
         "label": "痛み",
@@ -763,9 +797,9 @@
         "category": "感情・概念・思想"
       },
       {
-        "label": "電車",
+        "label": "街",
         "count": 10,
-        "song_count": 8,
+        "song_count": 6,
         "category": "都市・事物・文化"
       },
       {
@@ -785,12 +819,6 @@
         "count": 10,
         "song_count": 9,
         "category": "感情・概念・思想"
-      },
-      {
-        "label": "街",
-        "count": 9,
-        "song_count": 5,
-        "category": "都市・事物・文化"
       },
       {
         "label": "キス",
@@ -925,6 +953,12 @@
         "category": "都市・事物・文化"
       },
       {
+        "label": "煙草",
+        "count": 6,
+        "song_count": 5,
+        "category": "都市・事物・文化"
+      },
+      {
         "label": "無常",
         "count": 6,
         "song_count": 5,
@@ -955,6 +989,12 @@
         "category": "身体・感覚・医療"
       },
       {
+        "label": "銀座",
+        "count": 5,
+        "song_count": 4,
+        "category": "都市・事物・文化"
+      },
+      {
         "label": "音楽",
         "count": 5,
         "song_count": 4,
@@ -983,12 +1023,6 @@
         "count": 5,
         "song_count": 3,
         "category": "感情・概念・思想"
-      },
-      {
-        "label": "煙草",
-        "count": 5,
-        "song_count": 4,
-        "category": "都市・事物・文化"
       },
       {
         "label": "車",
@@ -1063,9 +1097,9 @@
         "category": "感情・概念・思想"
       },
       {
-        "label": "銀座",
+        "label": "時計",
         "count": 4,
-        "song_count": 3,
+        "song_count": 4,
         "category": "都市・事物・文化"
       },
       {
@@ -1118,12 +1152,6 @@
       },
       {
         "label": "駅",
-        "count": 3,
-        "song_count": 3,
-        "category": "都市・事物・文化"
-      },
-      {
-        "label": "時計",
         "count": 3,
         "song_count": 3,
         "category": "都市・事物・文化"
@@ -1420,6 +1448,15 @@
       },
       {
         "pair": [
+          "今",
+          "私"
+        ],
+        "label": "今 × 私",
+        "count": 18,
+        "weight": 28
+      },
+      {
+        "pair": [
           "今日",
           "生きる"
         ],
@@ -1430,20 +1467,20 @@
       {
         "pair": [
           "今",
-          "私"
-        ],
-        "label": "今 × 私",
-        "count": 17,
-        "weight": 27
-      },
-      {
-        "pair": [
-          "今",
           "貴方"
         ],
         "label": "今 × 貴方",
         "count": 17,
         "weight": 22
+      },
+      {
+        "pair": [
+          "愛",
+          "貴方"
+        ],
+        "label": "愛 × 貴方",
+        "count": 17,
+        "weight": 25
       },
       {
         "pair": [
@@ -1460,6 +1497,15 @@
           "愛"
         ],
         "label": "今日 × 愛",
+        "count": 17,
+        "weight": 20
+      },
+      {
+        "pair": [
+          "生きる",
+          "貴方"
+        ],
+        "label": "生きる × 貴方",
         "count": 17,
         "weight": 20
       },
@@ -1493,18 +1539,9 @@
       {
         "pair": [
           "愛",
-          "貴方"
+          "生きる"
         ],
-        "label": "愛 × 貴方",
-        "count": 16,
-        "weight": 24
-      },
-      {
-        "pair": [
-          "生きる",
-          "貴方"
-        ],
-        "label": "生きる × 貴方",
+        "label": "愛 × 生きる",
         "count": 16,
         "weight": 19
       },
@@ -1519,12 +1556,21 @@
       },
       {
         "pair": [
-          "愛",
-          "生きる"
+          "手",
+          "私"
         ],
-        "label": "愛 × 生きる",
+        "label": "手 × 私",
         "count": 15,
-        "weight": 18
+        "weight": 16
+      },
+      {
+        "pair": [
+          "今",
+          "今日"
+        ],
+        "label": "今 × 今日",
+        "count": 15,
+        "weight": 19
       },
       {
         "pair": [
@@ -1582,30 +1628,12 @@
       },
       {
         "pair": [
-          "手",
-          "私"
-        ],
-        "label": "手 × 私",
-        "count": 14,
-        "weight": 15
-      },
-      {
-        "pair": [
           "本当",
           "私"
         ],
         "label": "本当 × 私",
         "count": 14,
         "weight": 19
-      },
-      {
-        "pair": [
-          "今",
-          "今日"
-        ],
-        "label": "今 × 今日",
-        "count": 14,
-        "weight": 18
       },
       {
         "pair": [
@@ -1655,13 +1683,13 @@
     ],
     "songs_by_activity_type": {
       "collaboration": 28,
-      "solo": 93,
+      "solo": 94,
       "tokyo_jihen": 74,
-      "unreleased_demo": 17,
+      "unreleased_demo": 30,
       "written_for": 27
     },
     "songs_by_decade": {
-      "1990s": 30,
+      "1990s": 44,
       "2000s": 98,
       "2010s": 63,
       "2020s": 48
@@ -1684,7 +1712,7 @@
           "音楽プロデューサー"
         ],
         "is_primary_lyricist": true,
-        "degree": 588
+        "degree": 617
       }
     },
     {
@@ -1694,7 +1722,7 @@
       "properties": {
         "period": "1998-2003",
         "description": "『無罪モラトリアム』『勝訴ストリップ』『加爾基 精液 栗ノ花』に代表される、自傷的・衝動的な身体表現とシンメトリー美の確立期。",
-        "degree": 70
+        "degree": 84
       }
     },
     {
@@ -1776,7 +1804,7 @@
       "type": "Theme",
       "label": "別れと喪失",
       "properties": {
-        "degree": 28
+        "degree": 29
       }
     },
     {
@@ -1784,7 +1812,7 @@
       "type": "Theme",
       "label": "青春と記憶",
       "properties": {
-        "degree": 26
+        "degree": 33
       }
     },
     {
@@ -1792,7 +1820,7 @@
       "type": "Theme",
       "label": "都市と孤独",
       "properties": {
-        "degree": 39
+        "degree": 41
       }
     },
     {
@@ -1800,7 +1828,7 @@
       "type": "Motif",
       "label": "地名・駅・路線",
       "properties": {
-        "degree": 19
+        "degree": 20
       }
     },
     {
@@ -1808,7 +1836,7 @@
       "type": "Motif",
       "label": "季節・自然",
       "properties": {
-        "degree": 77
+        "degree": 78
       }
     },
     {
@@ -1840,7 +1868,7 @@
       "type": "Style",
       "label": "口語・独白体",
       "properties": {
-        "degree": 111
+        "degree": 120
       }
     },
     {
@@ -1848,7 +1876,7 @@
       "type": "Style",
       "label": "比喩・象徴表現",
       "properties": {
-        "degree": 87
+        "degree": 88
       }
     },
     {
@@ -1856,7 +1884,7 @@
       "type": "Mood",
       "label": "切ない・哀愁",
       "properties": {
-        "degree": 87
+        "degree": 96
       }
     },
     {
@@ -1864,7 +1892,7 @@
       "type": "Mood",
       "label": "情熱的・衝動的",
       "properties": {
-        "degree": 70
+        "degree": 73
       }
     },
     {
@@ -1873,7 +1901,7 @@
       "label": "日本語",
       "properties": {
         "code": "ja",
-        "degree": 229
+        "degree": 239
       }
     },
     {
@@ -1951,10 +1979,10 @@
       "label": "私",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 207,
-        "song_count": 73,
+        "total_frequency": 210,
+        "song_count": 75,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 39,
+          "初期ソロ期 (1998-2003)": 41,
           "ソロ中期・楽曲提供期 (2007-2018)": 8,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 10,
           "東京事変・前期〜中期 (2004-2012)": 16
@@ -1977,8 +2005,8 @@
           },
           {
             "token": "今",
-            "song_count": 17,
-            "weight": 27
+            "song_count": 18,
+            "weight": 28
           },
           {
             "token": "愛",
@@ -1991,14 +2019,14 @@
             "weight": 19
           },
           {
+            "token": "手",
+            "song_count": 15,
+            "weight": 16
+          },
+          {
             "token": "本当",
             "song_count": 14,
             "weight": 19
-          },
-          {
-            "token": "手",
-            "song_count": 14,
-            "weight": 15
           },
           {
             "token": "笑う",
@@ -2011,7 +2039,7 @@
             "weight": 15
           }
         ],
-        "degree": 155
+        "degree": 154
       }
     },
     {
@@ -2020,10 +2048,10 @@
       "label": "街",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 9,
-        "song_count": 5,
+        "total_frequency": 10,
+        "song_count": 6,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 3,
+          "初期ソロ期 (1998-2003)": 4,
           "ソロ中期・楽曲提供期 (2007-2018)": 1,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
@@ -2054,6 +2082,11 @@
             "weight": 2
           },
           {
+            "token": "嘘",
+            "song_count": 2,
+            "weight": 2
+          },
+          {
             "token": "子供",
             "song_count": 2,
             "weight": 2
@@ -2069,17 +2102,12 @@
             "weight": 2
           },
           {
-            "token": "青",
-            "song_count": 2,
-            "weight": 2
-          },
-          {
-            "token": "駅",
+            "token": "色",
             "song_count": 2,
             "weight": 2
           }
         ],
-        "degree": 10
+        "degree": 11
       }
     },
     {
@@ -2283,7 +2311,7 @@
             "weight": 11
           }
         ],
-        "degree": 115
+        "degree": 114
       }
     },
     {
@@ -2427,10 +2455,10 @@
       "label": "嘘",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 31,
-        "song_count": 27,
+        "total_frequency": 33,
+        "song_count": 29,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 12,
+          "初期ソロ期 (1998-2003)": 14,
           "ソロ中期・楽曲提供期 (2007-2018)": 4,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 4,
           "東京事変・前期〜中期 (2004-2012)": 7
@@ -2438,26 +2466,26 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 11,
-            "weight": 13
+            "song_count": 12,
+            "weight": 14
           },
           {
             "token": "私",
-            "song_count": 11,
-            "weight": 11
+            "song_count": 12,
+            "weight": 12
           },
           {
             "token": "手",
-            "song_count": 9,
-            "weight": 9
-          },
-          {
-            "token": "一人",
-            "song_count": 7,
-            "weight": 7
+            "song_count": 10,
+            "weight": 10
           },
           {
             "token": "世界",
+            "song_count": 8,
+            "weight": 8
+          },
+          {
+            "token": "一人",
             "song_count": 7,
             "weight": 7
           },
@@ -2487,7 +2515,7 @@
             "weight": 8
           }
         ],
-        "degree": 40
+        "degree": 44
       }
     },
     {
@@ -2562,15 +2590,20 @@
       "label": "愛",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 81,
-        "song_count": 49,
+        "total_frequency": 82,
+        "song_count": 50,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 19,
+          "初期ソロ期 (1998-2003)": 20,
           "ソロ中期・楽曲提供期 (2007-2018)": 9,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 20,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
         "top_cooccurrences": [
+          {
+            "token": "貴方",
+            "song_count": 17,
+            "weight": 25
+          },
           {
             "token": "今日",
             "song_count": 17,
@@ -2582,17 +2615,12 @@
             "weight": 28
           },
           {
-            "token": "貴方",
+            "token": "生きる",
             "song_count": 16,
-            "weight": 24
+            "weight": 19
           },
           {
             "token": "世界",
-            "song_count": 15,
-            "weight": 18
-          },
-          {
-            "token": "生きる",
             "song_count": 15,
             "weight": 18
           },
@@ -2769,10 +2797,10 @@
       "label": "気持ち",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 17,
-        "song_count": 14,
+        "total_frequency": 18,
+        "song_count": 15,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 6,
+          "初期ソロ期 (1998-2003)": 7,
           "ソロ中期・楽曲提供期 (2007-2018)": 3,
           "東京事変・前期〜中期 (2004-2012)": 3,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 2
@@ -2794,18 +2822,23 @@
             "weight": 6
           },
           {
+            "token": "今",
+            "song_count": 5,
+            "weight": 6
+          },
+          {
             "token": "手",
             "song_count": 5,
             "weight": 6
           },
           {
-            "token": "嘘",
+            "token": "みんな",
             "song_count": 5,
             "weight": 5
           },
           {
-            "token": "今",
-            "song_count": 4,
+            "token": "嘘",
+            "song_count": 5,
             "weight": 5
           },
           {
@@ -2819,17 +2852,12 @@
             "weight": 5
           },
           {
-            "token": "みんな",
-            "song_count": 4,
-            "weight": 4
-          },
-          {
-            "token": "泣く",
+            "token": "今日",
             "song_count": 4,
             "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -3412,7 +3440,7 @@
       "type": "Theme",
       "label": "自己とアイデンティティ",
       "properties": {
-        "degree": 54
+        "degree": 60
       }
     },
     {
@@ -3436,7 +3464,7 @@
       "type": "Motif",
       "label": "演劇・虚構・仮面",
       "properties": {
-        "degree": 58
+        "degree": 59
       }
     },
     {
@@ -3444,7 +3472,7 @@
       "type": "Motif",
       "label": "金銭・欲望・勝負",
       "properties": {
-        "degree": 38
+        "degree": 39
       }
     },
     {
@@ -3476,7 +3504,7 @@
       "type": "Style",
       "label": "演劇的・キャラクター視点",
       "properties": {
-        "degree": 48
+        "degree": 49
       }
     },
     {
@@ -3484,7 +3512,7 @@
       "type": "Mood",
       "label": "退廃的・官能的",
       "properties": {
-        "degree": 65
+        "degree": 68
       }
     },
     {
@@ -3492,7 +3520,7 @@
       "type": "Mood",
       "label": "挑発的・攻撃的",
       "properties": {
-        "degree": 56
+        "degree": 60
       }
     },
     {
@@ -3636,10 +3664,10 @@
       "label": "手",
       "properties": {
         "category": "身体・感覚・医療",
-        "total_frequency": 49,
-        "song_count": 43,
+        "total_frequency": 50,
+        "song_count": 44,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 15,
+          "初期ソロ期 (1998-2003)": 16,
           "ソロ中期・楽曲提供期 (2007-2018)": 7,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 6,
           "東京事変・前期〜中期 (2004-2012)": 15
@@ -3647,8 +3675,8 @@
         "top_cooccurrences": [
           {
             "token": "私",
-            "song_count": 14,
-            "weight": 15
+            "song_count": 15,
+            "weight": 16
           },
           {
             "token": "今",
@@ -3671,6 +3699,11 @@
             "weight": 12
           },
           {
+            "token": "嘘",
+            "song_count": 10,
+            "weight": 10
+          },
+          {
             "token": "本当",
             "song_count": 10,
             "weight": 10
@@ -3689,11 +3722,6 @@
             "token": "言葉",
             "song_count": 9,
             "weight": 10
-          },
-          {
-            "token": "今日",
-            "song_count": 9,
-            "weight": 9
           }
         ],
         "degree": 70
@@ -3771,10 +3799,10 @@
       "label": "今",
       "properties": {
         "category": "自然・時間・空間",
-        "total_frequency": 79,
-        "song_count": 47,
+        "total_frequency": 81,
+        "song_count": 49,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 18,
+          "初期ソロ期 (1998-2003)": 20,
           "ソロ中期・楽曲提供期 (2007-2018)": 14,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 7,
           "東京事変・前期〜中期 (2004-2012)": 8
@@ -3782,8 +3810,8 @@
         "top_cooccurrences": [
           {
             "token": "私",
-            "song_count": 17,
-            "weight": 27
+            "song_count": 18,
+            "weight": 28
           },
           {
             "token": "貴方",
@@ -3802,8 +3830,8 @@
           },
           {
             "token": "今日",
-            "song_count": 14,
-            "weight": 18
+            "song_count": 15,
+            "weight": 19
           },
           {
             "token": "世界",
@@ -3831,7 +3859,7 @@
             "weight": 11
           }
         ],
-        "degree": 90
+        "degree": 93
       }
     },
     {
@@ -4681,7 +4709,7 @@
         ],
         "tie_up": null,
         "summary": "東京メトロ丸ノ内線沿線の地名とギター機材（リッケンバッカー、マーシャル等）を織り交ぜた都市的ラブソング。",
-        "degree": 41
+        "degree": 42
       }
     },
     {
@@ -4697,7 +4725,7 @@
       "type": "Theme",
       "label": "愛と執着",
       "properties": {
-        "degree": 102
+        "degree": 105
       }
     },
     {
@@ -4713,7 +4741,7 @@
       "type": "Motif",
       "label": "音楽・楽器",
       "properties": {
-        "degree": 22
+        "degree": 27
       }
     },
     {
@@ -4721,7 +4749,7 @@
       "type": "Motif",
       "label": "身体部位",
       "properties": {
-        "degree": 52
+        "degree": 55
       }
     },
     {
@@ -4737,7 +4765,7 @@
       "type": "Place",
       "label": "銀座",
       "properties": {
-        "degree": 3
+        "degree": 4
       }
     },
     {
@@ -4785,7 +4813,7 @@
       "type": "Mood",
       "label": "軽妙・ユーモア",
       "properties": {
-        "degree": 56
+        "degree": 58
       }
     },
     {
@@ -4794,7 +4822,7 @@
       "label": "英語",
       "properties": {
         "code": "en",
-        "degree": 34
+        "degree": 43
       }
     },
     {
@@ -5273,10 +5301,10 @@
       "label": "銀座",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 4,
-        "song_count": 3,
+        "total_frequency": 5,
+        "song_count": 4,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 1
         },
         "top_cooccurrences": [
@@ -5331,7 +5359,7 @@
             "weight": 1
           }
         ],
-        "degree": 6
+        "degree": 7
       }
     },
     {
@@ -5340,18 +5368,23 @@
       "label": "電車",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 10,
-        "song_count": 8,
+        "total_frequency": 11,
+        "song_count": 9,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 5,
+          "初期ソロ期 (1998-2003)": 6,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 2,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
         "top_cooccurrences": [
           {
             "token": "今日",
-            "song_count": 4,
-            "weight": 5
+            "song_count": 5,
+            "weight": 6
+          },
+          {
+            "token": "夢",
+            "song_count": 3,
+            "weight": 3
           },
           {
             "token": "愛",
@@ -5389,17 +5422,12 @@
             "weight": 3
           },
           {
-            "token": "一人",
-            "song_count": 2,
-            "weight": 2
-          },
-          {
-            "token": "夢",
+            "token": "みんな",
             "song_count": 2,
             "weight": 2
           }
         ],
-        "degree": 14
+        "degree": 15
       }
     },
     {
@@ -5512,7 +5540,7 @@
       "type": "Theme",
       "label": "日常と生活",
       "properties": {
-        "degree": 45
+        "degree": 50
       }
     },
     {
@@ -5520,7 +5548,7 @@
       "type": "Motif",
       "label": "恋愛・心中・情念",
       "properties": {
-        "degree": 42
+        "degree": 44
       }
     },
     {
@@ -5812,7 +5840,7 @@
             "weight": 6
           }
         ],
-        "degree": 32
+        "degree": 31
       }
     },
     {
@@ -5821,10 +5849,10 @@
       "label": "色",
       "properties": {
         "category": "色彩",
-        "total_frequency": 19,
-        "song_count": 16,
+        "total_frequency": 20,
+        "song_count": 17,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 9,
+          "初期ソロ期 (1998-2003)": 10,
           "ソロ中期・楽曲提供期 (2007-2018)": 3,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 1,
           "東京事変・前期〜中期 (2004-2012)": 3
@@ -5832,8 +5860,8 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 9,
-            "weight": 9
+            "song_count": 10,
+            "weight": 10
           },
           {
             "token": "私",
@@ -5881,7 +5909,7 @@
             "weight": 4
           }
         ],
-        "degree": 21
+        "degree": 23
       }
     },
     {
@@ -5958,10 +5986,10 @@
       "label": "顔",
       "properties": {
         "category": "身体・感覚・医療",
-        "total_frequency": 26,
-        "song_count": 24,
+        "total_frequency": 27,
+        "song_count": 25,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 7,
+          "初期ソロ期 (1998-2003)": 8,
           "ソロ中期・楽曲提供期 (2007-2018)": 3,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 9,
           "東京事変・前期〜中期 (2004-2012)": 5
@@ -6018,7 +6046,7 @@
             "weight": 5
           }
         ],
-        "degree": 30
+        "degree": 31
       }
     },
     {
@@ -6096,10 +6124,10 @@
       "label": "生きる",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 73,
-        "song_count": 48,
+        "total_frequency": 74,
+        "song_count": 49,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 6,
+          "初期ソロ期 (1998-2003)": 7,
           "ソロ中期・楽曲提供期 (2007-2018)": 16,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 18,
           "東京事変・前期〜中期 (2004-2012)": 8
@@ -6112,6 +6140,11 @@
           },
           {
             "token": "貴方",
+            "song_count": 17,
+            "weight": 20
+          },
+          {
+            "token": "愛",
             "song_count": 16,
             "weight": 19
           },
@@ -6124,11 +6157,6 @@
             "token": "今",
             "song_count": 15,
             "weight": 23
-          },
-          {
-            "token": "愛",
-            "song_count": 15,
-            "weight": 18
           },
           {
             "token": "一人",
@@ -6156,7 +6184,7 @@
             "weight": 21
           }
         ],
-        "degree": 76
+        "degree": 77
       }
     },
     {
@@ -6191,7 +6219,7 @@
       "type": "Motif",
       "label": "色彩",
       "properties": {
-        "degree": 37
+        "degree": 38
       }
     },
     {
@@ -6413,10 +6441,10 @@
       "label": "今日",
       "properties": {
         "category": "自然・時間・空間",
-        "total_frequency": 85,
-        "song_count": 60,
+        "total_frequency": 86,
+        "song_count": 61,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 14,
+          "初期ソロ期 (1998-2003)": 15,
           "ソロ中期・楽曲提供期 (2007-2018)": 17,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 15,
           "東京事変・前期〜中期 (2004-2012)": 14
@@ -6444,8 +6472,8 @@
           },
           {
             "token": "今",
-            "song_count": 14,
-            "weight": 18
+            "song_count": 15,
+            "weight": 19
           },
           {
             "token": "笑う",
@@ -6473,7 +6501,7 @@
             "weight": 13
           }
         ],
-        "degree": 126
+        "degree": 127
       }
     },
     {
@@ -6851,7 +6879,7 @@
       "type": "Album",
       "label": "私と放電",
       "properties": {
-        "degree": 19
+        "degree": 20
       }
     },
     {
@@ -6859,7 +6887,7 @@
       "type": "Theme",
       "label": "反骨と自由",
       "properties": {
-        "degree": 52
+        "degree": 55
       }
     },
     {
@@ -6868,10 +6896,10 @@
       "label": "貴方",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 212,
-        "song_count": 78,
+        "total_frequency": 218,
+        "song_count": 81,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 29,
+          "初期ソロ期 (1998-2003)": 32,
           "ソロ中期・楽曲提供期 (2007-2018)": 15,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 12,
           "東京事変・前期〜中期 (2004-2012)": 22
@@ -6888,24 +6916,24 @@
             "weight": 30
           },
           {
+            "token": "愛",
+            "song_count": 17,
+            "weight": 25
+          },
+          {
             "token": "今",
             "song_count": 17,
             "weight": 22
           },
           {
+            "token": "生きる",
+            "song_count": 17,
+            "weight": 20
+          },
+          {
             "token": "笑う",
             "song_count": 17,
             "weight": 18
-          },
-          {
-            "token": "愛",
-            "song_count": 16,
-            "weight": 24
-          },
-          {
-            "token": "生きる",
-            "song_count": 16,
-            "weight": 19
           },
           {
             "token": "本当",
@@ -6928,7 +6956,7 @@
             "weight": 14
           }
         ],
-        "degree": 150
+        "degree": 155
       }
     },
     {
@@ -7006,10 +7034,10 @@
       "label": "夢",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 30,
-        "song_count": 22,
+        "total_frequency": 31,
+        "song_count": 23,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 9,
+          "初期ソロ期 (1998-2003)": 10,
           "ソロ中期・楽曲提供期 (2007-2018)": 6,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 4,
           "東京事変・前期〜中期 (2004-2012)": 3
@@ -7021,6 +7049,11 @@
             "weight": 14
           },
           {
+            "token": "今日",
+            "song_count": 9,
+            "weight": 9
+          },
+          {
             "token": "私",
             "song_count": 8,
             "weight": 11
@@ -7029,11 +7062,6 @@
             "token": "愛",
             "song_count": 8,
             "weight": 9
-          },
-          {
-            "token": "今日",
-            "song_count": 8,
-            "weight": 8
           },
           {
             "token": "息",
@@ -7056,17 +7084,17 @@
             "weight": 6
           },
           {
-            "token": "目",
+            "token": "今",
             "song_count": 6,
             "weight": 6
           },
           {
-            "token": "生きる",
-            "song_count": 5,
+            "token": "目",
+            "song_count": 6,
             "weight": 6
           }
         ],
-        "degree": 29
+        "degree": 30
       }
     },
     {
@@ -7553,10 +7581,10 @@
       "label": "誰か",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 21,
-        "song_count": 16,
+        "total_frequency": 22,
+        "song_count": 17,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 4,
+          "初期ソロ期 (1998-2003)": 5,
           "ソロ中期・楽曲提供期 (2007-2018)": 5,
           "東京事変・前期〜中期 (2004-2012)": 2,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 5
@@ -7564,8 +7592,13 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 9,
-            "weight": 12
+            "song_count": 10,
+            "weight": 13
+          },
+          {
+            "token": "嘘",
+            "song_count": 5,
+            "weight": 6
           },
           {
             "token": "私",
@@ -7588,12 +7621,12 @@
             "weight": 5
           },
           {
-            "token": "嘘",
+            "token": "みんな",
             "song_count": 4,
-            "weight": 5
+            "weight": 4
           },
           {
-            "token": "みんな",
+            "token": "世界",
             "song_count": 4,
             "weight": 4
           },
@@ -7606,14 +7639,9 @@
             "token": "命",
             "song_count": 4,
             "weight": 4
-          },
-          {
-            "token": "夢",
-            "song_count": 4,
-            "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -7648,7 +7676,7 @@
       "type": "Theme",
       "label": "社会と風刺",
       "properties": {
-        "degree": 40
+        "degree": 42
       }
     },
     {
@@ -7752,10 +7780,10 @@
       "label": "頭",
       "properties": {
         "category": "身体・感覚・医療",
-        "total_frequency": 17,
-        "song_count": 16,
+        "total_frequency": 18,
+        "song_count": 17,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 4,
+          "初期ソロ期 (1998-2003)": 5,
           "ソロ中期・楽曲提供期 (2007-2018)": 2,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 8,
           "東京事変・前期〜中期 (2004-2012)": 2
@@ -7763,13 +7791,13 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 6,
-            "weight": 7
+            "song_count": 7,
+            "weight": 8
           },
           {
             "token": "愛",
-            "song_count": 6,
-            "weight": 6
+            "song_count": 7,
+            "weight": 7
           },
           {
             "token": "泣く",
@@ -7802,17 +7830,17 @@
             "weight": 4
           },
           {
-            "token": "目",
+            "token": "生きる",
             "song_count": 4,
             "weight": 4
           },
           {
-            "token": "みんな",
-            "song_count": 3,
-            "weight": 3
+            "token": "目",
+            "song_count": 4,
+            "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -8049,7 +8077,7 @@
       "type": "Mood",
       "label": "皮肉・風刺",
       "properties": {
-        "degree": 28
+        "degree": 30
       }
     },
     {
@@ -8196,10 +8224,10 @@
       "label": "日本",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 12,
-        "song_count": 10,
+        "total_frequency": 13,
+        "song_count": 11,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 2,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 3,
           "東京事変・前期〜中期 (2004-2012)": 3
@@ -8209,6 +8237,11 @@
             "token": "今日",
             "song_count": 5,
             "weight": 6
+          },
+          {
+            "token": "貴方",
+            "song_count": 5,
+            "weight": 5
           },
           {
             "token": "愛",
@@ -8231,9 +8264,9 @@
             "weight": 4
           },
           {
-            "token": "貴方",
-            "song_count": 4,
-            "weight": 4
+            "token": "世界",
+            "song_count": 3,
+            "weight": 3
           },
           {
             "token": "嘘",
@@ -8249,14 +8282,9 @@
             "token": "大人",
             "song_count": 3,
             "weight": 3
-          },
-          {
-            "token": "意味",
-            "song_count": 3,
-            "weight": 3
           }
         ],
-        "degree": 14
+        "degree": 15
       }
     },
     {
@@ -8265,10 +8293,10 @@
       "label": "時計",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 3,
-        "song_count": 3,
+        "total_frequency": 4,
+        "song_count": 4,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 1,
+          "初期ソロ期 (1998-2003)": 2,
           "ソロ中期・楽曲提供期 (2007-2018)": 1,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 1
         },
@@ -8324,7 +8352,7 @@
             "weight": 1
           }
         ],
-        "degree": 7
+        "degree": 8
       }
     },
     {
@@ -9724,7 +9752,7 @@
         ],
         "tie_up": null,
         "summary": "カート・コバーン＆コートニー・ラブを引用しつつ、今この瞬間の愛をギブスで固定したいと願う名バラード。",
-        "degree": 25
+        "degree": 26
       }
     },
     {
@@ -10234,7 +10262,7 @@
             "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 19
       }
     },
     {
@@ -10309,23 +10337,33 @@
       "label": "煙草",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 5,
-        "song_count": 4,
+        "total_frequency": 6,
+        "song_count": 5,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 1,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
         "top_cooccurrences": [
+          {
+            "token": "貴方",
+            "song_count": 4,
+            "weight": 5
+          },
           {
             "token": "私",
             "song_count": 3,
             "weight": 4
           },
           {
-            "token": "貴方",
+            "token": "嘘",
             "song_count": 3,
-            "weight": 4
+            "weight": 3
+          },
+          {
+            "token": "色",
+            "song_count": 3,
+            "weight": 3
           },
           {
             "token": "孤独",
@@ -10343,12 +10381,12 @@
             "weight": 3
           },
           {
-            "token": "光",
+            "token": "世界",
             "song_count": 2,
             "weight": 2
           },
           {
-            "token": "嘘",
+            "token": "光",
             "song_count": 2,
             "weight": 2
           },
@@ -10356,19 +10394,9 @@
             "token": "手",
             "song_count": 2,
             "weight": 2
-          },
-          {
-            "token": "本当",
-            "song_count": 2,
-            "weight": 2
-          },
-          {
-            "token": "色",
-            "song_count": 2,
-            "weight": 2
           }
         ],
-        "degree": 8
+        "degree": 9
       }
     },
     {
@@ -11710,24 +11738,29 @@
       "label": "大人",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 17,
-        "song_count": 15,
+        "total_frequency": 18,
+        "song_count": 16,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 4,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 6,
           "東京事変・前期〜中期 (2004-2012)": 3
         },
         "top_cooccurrences": [
           {
+            "token": "世界",
+            "song_count": 7,
+            "weight": 7
+          },
+          {
             "token": "今日",
             "song_count": 7,
             "weight": 7
           },
           {
-            "token": "世界",
+            "token": "貴方",
             "song_count": 6,
-            "weight": 6
+            "weight": 7
           },
           {
             "token": "愛",
@@ -11736,11 +11769,6 @@
           },
           {
             "token": "私",
-            "song_count": 5,
-            "weight": 6
-          },
-          {
-            "token": "貴方",
             "song_count": 5,
             "weight": 6
           },
@@ -11760,17 +11788,17 @@
             "weight": 5
           },
           {
-            "token": "子供",
+            "token": "嘘",
             "song_count": 4,
             "weight": 4
           },
           {
-            "token": "手",
+            "token": "子供",
             "song_count": 4,
             "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -12107,7 +12135,7 @@
       "type": "Style",
       "label": "多言語・外国語詞",
       "properties": {
-        "degree": 23
+        "degree": 31
       }
     },
     {
@@ -13088,12 +13116,12 @@
       "label": "世界",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 54,
-        "song_count": 41,
+        "total_frequency": 56,
+        "song_count": 43,
         "era_counts": {
           "ソロ中期・楽曲提供期 (2007-2018)": 13,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 18,
-          "初期ソロ期 (1998-2003)": 1,
+          "初期ソロ期 (1998-2003)": 3,
           "東京事変・前期〜中期 (2004-2012)": 9
         },
         "top_cooccurrences": [
@@ -13133,6 +13161,11 @@
             "weight": 14
           },
           {
+            "token": "貴方",
+            "song_count": 11,
+            "weight": 12
+          },
+          {
             "token": "本当",
             "song_count": 11,
             "weight": 11
@@ -13141,14 +13174,9 @@
             "token": "君",
             "song_count": 10,
             "weight": 12
-          },
-          {
-            "token": "みんな",
-            "song_count": 10,
-            "weight": 11
           }
         ],
-        "degree": 73
+        "degree": 76
       }
     },
     {
@@ -13436,15 +13464,20 @@
       "label": "みんな",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 46,
-        "song_count": 34,
+        "total_frequency": 47,
+        "song_count": 35,
         "era_counts": {
           "ソロ中期・楽曲提供期 (2007-2018)": 8,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 20,
           "東京事変・前期〜中期 (2004-2012)": 5,
-          "初期ソロ期 (1998-2003)": 1
+          "初期ソロ期 (1998-2003)": 2
         },
         "top_cooccurrences": [
+          {
+            "token": "今日",
+            "song_count": 11,
+            "weight": 13
+          },
           {
             "token": "一人",
             "song_count": 11,
@@ -13454,11 +13487,6 @@
             "token": "愛",
             "song_count": 10,
             "weight": 13
-          },
-          {
-            "token": "今日",
-            "song_count": 10,
-            "weight": 12
           },
           {
             "token": "世界",
@@ -15822,7 +15850,7 @@
         ],
         "tie_up": null,
         "summary": "シングル『ここでキスして。』C/W。リモコンのように自在にならない恋心と日常の距離感を描く。",
-        "degree": 22
+        "degree": 23
       }
     },
     {
@@ -20262,7 +20290,7 @@
         ],
         "tie_up": null,
         "summary": "広末涼子への初期提供曲。人目に晒される少女の素顔とささやかな私生活を爽やかに描く。",
-        "degree": 35
+        "degree": 36
       }
     },
     {
@@ -20309,7 +20337,7 @@
         ],
         "tie_up": null,
         "summary": "ともさかりえへの提供代表曲。ほろ苦く甘いカプチーノに大人になりかけの恋心を重ねる。",
-        "degree": 28
+        "degree": 29
       }
     },
     {
@@ -21461,7 +21489,7 @@
           "歌手"
         ],
         "is_primary_lyricist": false,
-        "degree": 10
+        "degree": 23
       }
     },
     {
@@ -21469,7 +21497,7 @@
       "type": "Album",
       "label": "初期デモテープ",
       "properties": {
-        "degree": 10
+        "degree": 22
       }
     },
     {
@@ -21955,6 +21983,477 @@
         "tie_up": null,
         "summary": "発育ステータス『御起立ジャポン』終盤の重厚な楽曲。雌花と雄花に生命の根源と対称性を託す。",
         "degree": 20
+      }
+    },
+    {
+      "id": "song_17",
+      "type": "Song",
+      "label": "17",
+      "properties": {
+        "release_year": 1999,
+        "activity_type": "solo",
+        "activity_label": "ソロ名義",
+        "performer": "椎名林檎",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "私と放電"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "マキシシングル『幸福論』（1999年12cm盤）カップリングおよび『私と放電』収録の全編英語詞曲。17歳の日常と祈りを軽快なギターポップに乗せて描く。",
+        "degree": 15
+      }
+    },
+    {
+      "id": "motif_4c802ff262",
+      "type": "Motif",
+      "label": "日常・生活空間",
+      "properties": {
+        "degree": 7
+      }
+    },
+    {
+      "id": "mood_a3a0638a2e",
+      "type": "Mood",
+      "label": "爽快・祝祭的",
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "song_demo_how_are_you",
+      "type": "Song",
+      "label": "How Are You？",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "高校時代の初期デモテープ（DEMO1）に収録された英語詞中心の未発表オリジナル曲。",
+        "degree": 12
+      }
+    },
+    {
+      "id": "song_demo_girl",
+      "type": "Song",
+      "label": "GIRL",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja",
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "初期デモテープ（DEMO1）収録の未発表曲。煙草の煙と虹色の嘘が横たわる大人の世界の中で、街に佇む少女の孤独と救済を描く。",
+        "degree": 25
+      }
+    },
+    {
+      "id": "motif_b4c221d1d4",
+      "type": "Motif",
+      "label": "煙草・酒・嗜好品",
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "motif_6ab1080554",
+      "type": "Motif",
+      "label": "都市風景",
+      "properties": {
+        "degree": 2
+      }
+    },
+    {
+      "id": "song_demo_love_plus_peace",
+      "type": "Song",
+      "label": "LOVE plus PEACE",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja",
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "初期デモテープ（DEMO1）収録の未発表曲。年功序列・隠忍自重・巧言令色・縦横無尽といった四字熟語を連ね、偽善や野望を痛烈に風刺する初期ロック。",
+        "degree": 20
+      }
+    },
+    {
+      "id": "style_86d7cc81f8",
+      "type": "Style",
+      "label": "四字熟語・漢語調",
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "song_demo_shampoo",
+      "type": "Song",
+      "label": "シャンプー",
+      "properties": {
+        "release_year": 1997,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja"
+        ],
+        "tie_up": null,
+        "summary": "初期デモテープ（DEMO2）に収録された椎名林檎本人歌唱のデモ曲（のちにともさかりえのアルバム『むらさき。』へ楽曲提供）。バスルームのシャンプーの香りから恋人への不安と信頼を揺れ動く心情で綴る。",
+        "degree": 17
+      }
+    },
+    {
+      "id": "mood_cbb2f4491c",
+      "type": "Mood",
+      "label": "ロマンチック・甘美",
+      "properties": {
+        "degree": 2
+      }
+    },
+    {
+      "id": "song_demo_marvelous_day",
+      "type": "Song",
+      "label": "Marvelous Day",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja",
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "高校時代のデモテープ（DEMO1/DEMO2）収録の未発表曲。電車をわざと見送る16歳の日常と揺れ動く憧れを描く。",
+        "degree": 21
+      }
+    },
+    {
+      "id": "motif_999c765268",
+      "type": "Motif",
+      "label": "乗り物・移動",
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "song_demo_kaigun_politician",
+      "type": "Song",
+      "label": "海軍ポリティシャン（ハイウェイ海軍ポリティシャン）",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja"
+        ],
+        "tie_up": null,
+        "summary": "アマチュア期のバンド「Marvelous Marbles」等で制作された未発表デモ曲。政治家の野心と微笑みの裏側をシニカルに風刺した異色作。",
+        "degree": 16
+      }
+    },
+    {
+      "id": "song_demo_mikan_no_kawa",
+      "type": "Song",
+      "label": "みかんの皮",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモ・ライブ未音源化曲"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja"
+        ],
+        "tie_up": null,
+        "summary": "椎名林檎が7歳の頃に初めて作詞・作曲したとされる原点的な短曲。10周年記念ライブ『Ringo EXPO 08』などでも披露された。",
+        "degree": 13
+      }
+    },
+    {
+      "id": "album_5c425064f7",
+      "type": "Album",
+      "label": "初期デモ・ライブ未音源化曲",
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "song_demo_now_im_seventeen",
+      "type": "Song",
+      "label": "Now I'm Seventeen（17 の原曲）",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "高校時代のデモテープ（DEMO1）に収録された「17」の初期デモ原曲。",
+        "degree": 14
+      }
+    },
+    {
+      "id": "song_demo_a_new_way_to_fly",
+      "type": "Song",
+      "label": "A New Way To Fly（丸ノ内サディスティック の原曲）",
+      "properties": {
+        "release_year": 1997,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "デビュー前に英国滞在時に英語詞で書かれた「丸ノ内サディスティック」の原曲（プロトタイプ）。銀座（Ginza signs）やリッケンバッカー（Ric）、マーシャル（Marshall）など完成曲の核となるモチーフがすでに英語詞で登場し、のちの『Ringo EXPO 08』等の英語詞ヴァースにも組み込まれた。",
+        "degree": 18
+      }
+    },
+    {
+      "id": "theme_dbfa59d5f9",
+      "type": "Theme",
+      "label": "音楽と芸術",
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "song_demo_rimokon",
+      "type": "Song",
+      "label": "リモコン（リモートコントローラー の原曲）",
+      "properties": {
+        "release_year": 1997,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja"
+        ],
+        "tie_up": null,
+        "summary": "デビュー前のデモテープに収録された、3rdシングル『ここでキスして。』c/w曲「リモートコントローラー」の初期デモ原曲。",
+        "degree": 16
+      }
+    },
+    {
+      "id": "mood_64c97b8f41",
+      "type": "Mood",
+      "label": "焦燥・緊迫",
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "song_demo_dont_you_think",
+      "type": "Song",
+      "label": "Don't you think？（ギブス の原曲）",
+      "properties": {
+        "release_year": 1996,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "en",
+          "ja"
+        ],
+        "tie_up": null,
+        "summary": "17歳の頃に書かれた名曲「ギブス」の初期デモ原曲。サビの英語フレーズ「don't U θink? i 罠 B wiθ U」がそのままタイトルになっている。",
+        "degree": 16
+      }
+    },
+    {
+      "id": "song_demo_unconditional_love",
+      "type": "Song",
+      "label": "アンコンディショナル・ラブ（プライベイト の原曲）",
+      "properties": {
+        "release_year": 1997,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja",
+          "en"
+        ],
+        "tie_up": null,
+        "summary": "デビュー前のデモテープに収録された、広末涼子への提供曲（および『逆輸入 ～港湾局～』セルフカバー曲）「プライベイト」の初期デモ原曲。",
+        "degree": 15
+      }
+    },
+    {
+      "id": "song_demo_negative",
+      "type": "Song",
+      "label": "ネガティブ（針のない時計）",
+      "properties": {
+        "release_year": 1997,
+        "activity_type": "unreleased_demo",
+        "activity_label": "未発表・デモ・限定音源",
+        "performer": "椎名林檎（未音源化・デモ）",
+        "lyricist": [
+          "椎名林檎"
+        ],
+        "composer": [
+          "椎名林檎"
+        ],
+        "albums": [
+          "初期デモテープ"
+        ],
+        "era": "初期ソロ期 (1998-2003)",
+        "languages": [
+          "ja"
+        ],
+        "tie_up": null,
+        "summary": "初期デモテープ（DEMO4等）に収録された未音源化デモ曲（「針のない時計」とも呼ばれる）。変化のない日常の反復と倦怠を描く。",
+        "degree": 14
+      }
+    },
+    {
+      "id": "motif_38b3fec88b",
+      "type": "Motif",
+      "label": "時間・時計・季節",
+      "properties": {
+        "degree": 1
       }
     }
   ],
@@ -71204,6 +71703,1818 @@
       "properties": {}
     },
     {
+      "id": "edge_2c6ad5dcdf0c",
+      "source": "artist_shiina_ringo",
+      "target": "song_17",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_6fb0531a86c6",
+      "source": "artist_shiina_ringo",
+      "target": "song_17",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_803540519a25",
+      "source": "song_17",
+      "target": "artist_shiina_ringo",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d45c8e125ce4",
+      "source": "song_17",
+      "target": "album_741f4d68cf",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_0e7daa416176",
+      "source": "song_17",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_58af57ee8f8f",
+      "source": "song_17",
+      "target": "theme_18bc8a2498",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_9f88db786c54",
+      "source": "song_17",
+      "target": "theme_97d174be15",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_0dce254ae044",
+      "source": "song_17",
+      "target": "motif_4c802ff262",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_baaf985ed52a",
+      "source": "song_17",
+      "target": "motif_d04e1381a6",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3738865d568c",
+      "source": "song_17",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_8bcf214ff61e",
+      "source": "song_17",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d5e2cb2aed7c",
+      "source": "song_17",
+      "target": "mood_a3a0638a2e",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_942e216e3922",
+      "source": "song_17",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_66d3109ffaf6",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_how_are_you",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_bc4c5779f56d",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_how_are_you",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f366606970dd",
+      "source": "song_demo_how_are_you",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_04f9f39e482f",
+      "source": "song_demo_how_are_you",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_8396a6c9654d",
+      "source": "song_demo_how_are_you",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a24a85a38ef5",
+      "source": "song_demo_how_are_you",
+      "target": "theme_18bc8a2498",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_974ac11a5946",
+      "source": "song_demo_how_are_you",
+      "target": "theme_97d174be15",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_64a25e3a569c",
+      "source": "song_demo_how_are_you",
+      "target": "motif_d04e1381a6",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3507afc55456",
+      "source": "song_demo_how_are_you",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_0dacc7321f38",
+      "source": "song_demo_how_are_you",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b20718dbd01a",
+      "source": "song_demo_how_are_you",
+      "target": "mood_c27d0fbc30",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_8a05d2ad423f",
+      "source": "song_demo_how_are_you",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f54a116e730a",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_girl",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_faedac52006b",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_girl",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a1d7766c02cb",
+      "source": "song_demo_girl",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f6537e0efa70",
+      "source": "song_demo_girl",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_030393e3bc3a",
+      "source": "song_demo_girl",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2c53b144921e",
+      "source": "song_demo_girl",
+      "target": "theme_018c3479e9",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_29cf6f9a0da1",
+      "source": "song_demo_girl",
+      "target": "theme_18bc8a2498",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f944d0dce85c",
+      "source": "song_demo_girl",
+      "target": "theme_97d174be15",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_c4265e4f7179",
+      "source": "song_demo_girl",
+      "target": "motif_b4c221d1d4",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_bcaf898af9d2",
+      "source": "song_demo_girl",
+      "target": "motif_88b1d5ced1",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_4631f90d596b",
+      "source": "song_demo_girl",
+      "target": "motif_6ab1080554",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_7c898c1a5985",
+      "source": "song_demo_girl",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_7b32fb3b8041",
+      "source": "song_demo_girl",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_200788527f48",
+      "source": "song_demo_girl",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_20eb01854219",
+      "source": "song_demo_girl",
+      "target": "mood_b0a64f3202",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_783e0d412eb1",
+      "source": "song_demo_girl",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e8e18a5f6142",
+      "source": "song_demo_girl",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_be19098c7995",
+      "source": "song_demo_girl",
+      "target": "token_43c464830c",
+      "type": "CONTAINS_TOKEN",
+      "weight": 3.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_28e499127c4c",
+      "source": "song_demo_girl",
+      "target": "token_c086b3008a",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_4d0ad676c69f",
+      "source": "song_demo_girl",
+      "target": "token_58fdbe080e",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_c311ed31faff",
+      "source": "song_demo_girl",
+      "target": "token_a3142f9280",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_992b45688829",
+      "source": "song_demo_girl",
+      "target": "token_e50741fba6",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_c06c396c9ae2",
+      "source": "song_demo_girl",
+      "target": "token_9122c53716",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_10eef3fd4450",
+      "source": "song_demo_girl",
+      "target": "token_39ca614fcb",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_40f47326abfe",
+      "source": "song_demo_girl",
+      "target": "token_7929f2f529",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2b82909f0bea",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_love_plus_peace",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_06b23a82ca7c",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_love_plus_peace",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e270fc67921e",
+      "source": "song_demo_love_plus_peace",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b88d3d45dd72",
+      "source": "song_demo_love_plus_peace",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_479a1efaf9cb",
+      "source": "song_demo_love_plus_peace",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_cc9eb6ccbd6e",
+      "source": "song_demo_love_plus_peace",
+      "target": "theme_949c983245",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_0fe3b5b26181",
+      "source": "song_demo_love_plus_peace",
+      "target": "theme_e582ccc159",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_72487835452a",
+      "source": "song_demo_love_plus_peace",
+      "target": "motif_7e4362cf34",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_93d3185e7b79",
+      "source": "song_demo_love_plus_peace",
+      "target": "motif_defd4e26ba",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2bf1e8fa5a00",
+      "source": "song_demo_love_plus_peace",
+      "target": "style_86d7cc81f8",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_cbf78f06708b",
+      "source": "song_demo_love_plus_peace",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_c717f534ddcb",
+      "source": "song_demo_love_plus_peace",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_8561392f48ad",
+      "source": "song_demo_love_plus_peace",
+      "target": "mood_ea8b0ccfc8",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_22daa1b69ea1",
+      "source": "song_demo_love_plus_peace",
+      "target": "mood_462938d53a",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2757322e2dd8",
+      "source": "song_demo_love_plus_peace",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f64a3a0d463a",
+      "source": "song_demo_love_plus_peace",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a225bdf39fe7",
+      "source": "song_demo_love_plus_peace",
+      "target": "token_43c464830c",
+      "type": "CONTAINS_TOKEN",
+      "weight": 2.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_eb222a170510",
+      "source": "song_demo_love_plus_peace",
+      "target": "token_988e2bd184",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_7c4014873539",
+      "source": "song_demo_love_plus_peace",
+      "target": "token_9487386112",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e83bec6343b8",
+      "source": "song_demo_love_plus_peace",
+      "target": "token_2ce17249e6",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_15f582c94d41",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_shampoo",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_b18049feca8b",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_shampoo",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_c2b1a3aaefab",
+      "source": "song_demo_shampoo",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_1ec4ef393e63",
+      "source": "song_demo_shampoo",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_89dcf68ccbd6",
+      "source": "song_demo_shampoo",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_4c152266dd7b",
+      "source": "song_demo_shampoo",
+      "target": "theme_05620cff27",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_17a3bc05f679",
+      "source": "song_demo_shampoo",
+      "target": "theme_3d9059afd1",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_408001da5a81",
+      "source": "song_demo_shampoo",
+      "target": "motif_4c802ff262",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e48b776283e0",
+      "source": "song_demo_shampoo",
+      "target": "motif_7e4362cf34",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_832d187fe9f0",
+      "source": "song_demo_shampoo",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_fd6d72c76230",
+      "source": "song_demo_shampoo",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a4a8ced8543c",
+      "source": "song_demo_shampoo",
+      "target": "mood_cbb2f4491c",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3e2e32e86717",
+      "source": "song_demo_shampoo",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_253d7ace7b09",
+      "source": "song_demo_shampoo",
+      "target": "token_58fdbe080e",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_781e90d051c0",
+      "source": "song_demo_shampoo",
+      "target": "token_3c7d183f1b",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d09bb63226ae",
+      "source": "song_demo_shampoo",
+      "target": "token_b511e6815b",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f26a432f858d",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_marvelous_day",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_0d37d6cac5f7",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_marvelous_day",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_5cf0b6a28793",
+      "source": "song_demo_marvelous_day",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_887af9536e80",
+      "source": "song_demo_marvelous_day",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f9a039dc52ee",
+      "source": "song_demo_marvelous_day",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a33f946a6e1f",
+      "source": "song_demo_marvelous_day",
+      "target": "theme_18bc8a2498",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_bdf4dcd071be",
+      "source": "song_demo_marvelous_day",
+      "target": "theme_3d9059afd1",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_55521233dec7",
+      "source": "song_demo_marvelous_day",
+      "target": "motif_999c765268",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_da125930e080",
+      "source": "song_demo_marvelous_day",
+      "target": "motif_4c802ff262",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f68595b2114f",
+      "source": "song_demo_marvelous_day",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_692adaef6e2d",
+      "source": "song_demo_marvelous_day",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_ceb45424b46a",
+      "source": "song_demo_marvelous_day",
+      "target": "mood_d128e1e5db",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_492439f18041",
+      "source": "song_demo_marvelous_day",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e64fca755e86",
+      "source": "song_demo_marvelous_day",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d630f039c91e",
+      "source": "song_demo_marvelous_day",
+      "target": "token_6bea39084e",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2c5963e6e13b",
+      "source": "song_demo_marvelous_day",
+      "target": "token_ba4b5ed1ab",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d54174cfb4ae",
+      "source": "song_demo_marvelous_day",
+      "target": "token_296304f1e5",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_121c3c843302",
+      "source": "song_demo_marvelous_day",
+      "target": "token_6f7e368290",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_7e7b09da1f2a",
+      "source": "song_demo_marvelous_day",
+      "target": "token_4482f82ad2",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_057711b8aad0",
+      "source": "song_demo_marvelous_day",
+      "target": "token_41a2aca1ea",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b2134fa04bc5",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_kaigun_politician",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_00d072348891",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_kaigun_politician",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d8578d26bbe7",
+      "source": "song_demo_kaigun_politician",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_842653a56011",
+      "source": "song_demo_kaigun_politician",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f7837a2432f1",
+      "source": "song_demo_kaigun_politician",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_38b84c8aa5c3",
+      "source": "song_demo_kaigun_politician",
+      "target": "theme_949c983245",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f722bab1de2e",
+      "source": "song_demo_kaigun_politician",
+      "target": "theme_e582ccc159",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_eec55863776e",
+      "source": "song_demo_kaigun_politician",
+      "target": "motif_3ccf5cc0dd",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_6894f830f8e8",
+      "source": "song_demo_kaigun_politician",
+      "target": "style_5fcc2ba98d",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b64b294eaa5f",
+      "source": "song_demo_kaigun_politician",
+      "target": "style_01f4f86700",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_16e866e9f0a6",
+      "source": "song_demo_kaigun_politician",
+      "target": "mood_ea8b0ccfc8",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_87a7ea3cda22",
+      "source": "song_demo_kaigun_politician",
+      "target": "mood_462938d53a",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_31db6ef954d2",
+      "source": "song_demo_kaigun_politician",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_4a2698273187",
+      "source": "song_demo_kaigun_politician",
+      "target": "token_c086b3008a",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_0c088762ced2",
+      "source": "song_demo_kaigun_politician",
+      "target": "token_4dbed2e657",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b0acfc21b5f5",
+      "source": "song_demo_kaigun_politician",
+      "target": "token_43c464830c",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_6bd87bd174fc",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_mikan_no_kawa",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_6bc40d5f7c66",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_mikan_no_kawa",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_222b49e7e0f8",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3f56da9811cd",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "album_5c425064f7",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_4ca132a2ff2b",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_0800cc355f29",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "theme_18bc8a2498",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_daa41485cd84",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "theme_3d9059afd1",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b403a8b3739b",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "motif_7e4362cf34",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2ee73f06d124",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "motif_4c802ff262",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e0b52446ea7e",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_21c72186a875",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "mood_d128e1e5db",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_69fd112ce26d",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_68496be6e669",
+      "source": "song_demo_mikan_no_kawa",
+      "target": "token_90db765cb4",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_77db00e3409c",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_now_im_seventeen",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_b97f1e35d83c",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_now_im_seventeen",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d7cd13dbc40c",
+      "source": "song_demo_now_im_seventeen",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_474c553f94e5",
+      "source": "song_demo_now_im_seventeen",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_5538119cfbb7",
+      "source": "song_demo_now_im_seventeen",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_bf2fa68772e4",
+      "source": "song_demo_now_im_seventeen",
+      "target": "theme_18bc8a2498",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_cf7c15f854f9",
+      "source": "song_demo_now_im_seventeen",
+      "target": "theme_97d174be15",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3ce56dc9f223",
+      "source": "song_demo_now_im_seventeen",
+      "target": "motif_4c802ff262",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_99c01d23b390",
+      "source": "song_demo_now_im_seventeen",
+      "target": "motif_d04e1381a6",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a8db0e35b219",
+      "source": "song_demo_now_im_seventeen",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2553a48a2166",
+      "source": "song_demo_now_im_seventeen",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_1badc7c8df92",
+      "source": "song_demo_now_im_seventeen",
+      "target": "mood_c27d0fbc30",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e45a11b6d6f0",
+      "source": "song_demo_now_im_seventeen",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_5f1701d43fc9",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_a_new_way_to_fly",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_d6e91a1e1ce5",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_a_new_way_to_fly",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_41694c729bba",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_5c755680452d",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e34e9c50f4a6",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_606c7920af14",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "theme_018c3479e9",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_6144f5ff290a",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "theme_e582ccc159",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3c70df768627",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "theme_dbfa59d5f9",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_4d1ecb02422e",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "motif_d04e1381a6",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_455367cba4b0",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "motif_7f2e41e214",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_fe4ad3a1f08a",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "motif_6ab1080554",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_00ff9d062050",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "place_8ad685d760",
+      "type": "MENTIONS_PLACE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f01a60e032ef",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a7bec9c50b88",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "mood_b0a64f3202",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d9599e46d236",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "mood_462938d53a",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_443fa7d21653",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_9173f02cd5ea",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "token_8ad685d760",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_70f0647a9e22",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_rimokon",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_9956dae6452e",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_rimokon",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_8ea33ec2e4d6",
+      "source": "song_demo_rimokon",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_003ec4ea2f11",
+      "source": "song_demo_rimokon",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_88c7c6b0ff17",
+      "source": "song_demo_rimokon",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_2b8202a7c50b",
+      "source": "song_demo_rimokon",
+      "target": "theme_3d9059afd1",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_6fd7d5b26f09",
+      "source": "song_demo_rimokon",
+      "target": "theme_97d174be15",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_11e7450b8cbd",
+      "source": "song_demo_rimokon",
+      "target": "motif_4c802ff262",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_73c2b3626e39",
+      "source": "song_demo_rimokon",
+      "target": "motif_d04e1381a6",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_34d0167a8ffb",
+      "source": "song_demo_rimokon",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3da474ebc2a8",
+      "source": "song_demo_rimokon",
+      "target": "mood_64c97b8f41",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f85fc3db78ea",
+      "source": "song_demo_rimokon",
+      "target": "mood_462938d53a",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_7b43c544fcd7",
+      "source": "song_demo_rimokon",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_6124a3340268",
+      "source": "song_demo_rimokon",
+      "target": "token_b511e6815b",
+      "type": "CONTAINS_TOKEN",
+      "weight": 2.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_732fe5ed878e",
+      "source": "song_demo_rimokon",
+      "target": "token_ba4b5ed1ab",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_7eeeafbdf64c",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_dont_you_think",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_61a99b6fdd42",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_dont_you_think",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_83297eae6468",
+      "source": "song_demo_dont_you_think",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b9df72705871",
+      "source": "song_demo_dont_you_think",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3b55afd9baa5",
+      "source": "song_demo_dont_you_think",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_853b4ddc8cc8",
+      "source": "song_demo_dont_you_think",
+      "target": "theme_05620cff27",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_fbd50cb37538",
+      "source": "song_demo_dont_you_think",
+      "target": "theme_b115b35196",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_62932c0f9289",
+      "source": "song_demo_dont_you_think",
+      "target": "motif_5fb33b5424",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_ea83efd1e8cf",
+      "source": "song_demo_dont_you_think",
+      "target": "motif_79441dbf40",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_15a40e468ddf",
+      "source": "song_demo_dont_you_think",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_93fa4ee0781e",
+      "source": "song_demo_dont_you_think",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_9b949af10940",
+      "source": "song_demo_dont_you_think",
+      "target": "mood_c27d0fbc30",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e9849b2b89fe",
+      "source": "song_demo_dont_you_think",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_8de2a06f3d8b",
+      "source": "song_demo_dont_you_think",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_602051b198e6",
+      "source": "song_demo_dont_you_think",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_800f1253f4d6",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_unconditional_love",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_4b024711f944",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_unconditional_love",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_87d4045c1e85",
+      "source": "song_demo_unconditional_love",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_280a3034e3c2",
+      "source": "song_demo_unconditional_love",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_225b968250ef",
+      "source": "song_demo_unconditional_love",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_86a86973f0a2",
+      "source": "song_demo_unconditional_love",
+      "target": "theme_05620cff27",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a1c426acb6cd",
+      "source": "song_demo_unconditional_love",
+      "target": "theme_18bc8a2498",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_643284df52ae",
+      "source": "song_demo_unconditional_love",
+      "target": "motif_5fb33b5424",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_097db43ce5fe",
+      "source": "song_demo_unconditional_love",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_a8608ac6f428",
+      "source": "song_demo_unconditional_love",
+      "target": "style_a7a5927c01",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_1d2aa6b996af",
+      "source": "song_demo_unconditional_love",
+      "target": "mood_cbb2f4491c",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_152bb1ec24fe",
+      "source": "song_demo_unconditional_love",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_430e0317a1df",
+      "source": "song_demo_unconditional_love",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_e96f63975b37",
+      "source": "song_demo_unconditional_love",
+      "target": "lang_en",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_f223e3e41e32",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_negative",
+      "type": "LYRICIST_OF",
+      "weight": 1.0,
+      "properties": {
+        "co_lyricist": false
+      }
+    },
+    {
+      "id": "edge_c02289af6978",
+      "source": "artist_shiina_ringo",
+      "target": "song_demo_negative",
+      "type": "COMPOSER_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_abca6723dd4b",
+      "source": "song_demo_negative",
+      "target": "artist_9284b9be33",
+      "type": "PERFORMED_BY",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_88cecbafdbd6",
+      "source": "song_demo_negative",
+      "target": "album_31488831ce",
+      "type": "INCLUDED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_29f27e53eb78",
+      "source": "song_demo_negative",
+      "target": "era_early_solo",
+      "type": "BELONGS_TO_ERA",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_b86297ae7c6c",
+      "source": "song_demo_negative",
+      "target": "theme_3d9059afd1",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_cfab0ea7e3ab",
+      "source": "song_demo_negative",
+      "target": "theme_97d174be15",
+      "type": "HAS_THEME",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_7d3ce4c3827e",
+      "source": "song_demo_negative",
+      "target": "motif_38b3fec88b",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_fd1cbb375f6a",
+      "source": "song_demo_negative",
+      "target": "motif_4c802ff262",
+      "type": "HAS_MOTIF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_3200e1fdbb0e",
+      "source": "song_demo_negative",
+      "target": "style_e21b06cbd4",
+      "type": "USES_STYLE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_27ab51caf126",
+      "source": "song_demo_negative",
+      "target": "mood_3f193271d0",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_21fbdb9fc110",
+      "source": "song_demo_negative",
+      "target": "mood_b0a64f3202",
+      "type": "HAS_MOOD",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_d82f2325dd0c",
+      "source": "song_demo_negative",
+      "target": "lang_ja",
+      "type": "WRITTEN_IN_LANGUAGE",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "edge_45b2fb107e5a",
+      "source": "song_demo_negative",
+      "target": "token_1662516190",
+      "type": "CONTAINS_TOKEN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
       "id": "edge_6bbc40860767",
       "source": "token_7a77b022c5",
       "target": "token_6bea39084e",
@@ -71351,10 +73662,10 @@
       "source": "token_6bea39084e",
       "target": "token_296304f1e5",
       "type": "CO_OCCURS_WITH",
-      "weight": 10.0,
+      "weight": 11.0,
       "properties": {
-        "cooccurrence_songs": 10,
-        "cooccurrence_weight": 12
+        "cooccurrence_songs": 11,
+        "cooccurrence_weight": 13
       }
     },
     {
@@ -71509,17 +73820,6 @@
       "properties": {
         "cooccurrence_songs": 10,
         "cooccurrence_weight": 10
-      }
-    },
-    {
-      "id": "edge_994771be40ee",
-      "source": "token_6bea39084e",
-      "target": "token_b511e6815b",
-      "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
-      "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 12
       }
     },
     {
@@ -71872,17 +74172,6 @@
       "properties": {
         "cooccurrence_songs": 13,
         "cooccurrence_weight": 13
-      }
-    },
-    {
-      "id": "edge_a40838a2a98b",
-      "source": "token_31746c7e70",
-      "target": "token_58fdbe080e",
-      "type": "CO_OCCURS_WITH",
-      "weight": 7.0,
-      "properties": {
-        "cooccurrence_songs": 7,
-        "cooccurrence_weight": 7
       }
     },
     {
@@ -72513,6 +74802,17 @@
       }
     },
     {
+      "id": "edge_cd7f2b92a84b",
+      "source": "token_c086b3008a",
+      "target": "token_58fdbe080e",
+      "type": "CO_OCCURS_WITH",
+      "weight": 8.0,
+      "properties": {
+        "cooccurrence_songs": 8,
+        "cooccurrence_weight": 8
+      }
+    },
+    {
       "id": "edge_e0b416809104",
       "source": "token_c086b3008a",
       "target": "token_1f02f411cf",
@@ -72528,10 +74828,10 @@
       "source": "token_c086b3008a",
       "target": "token_a3142f9280",
       "type": "CO_OCCURS_WITH",
-      "weight": 6.0,
+      "weight": 7.0,
       "properties": {
-        "cooccurrence_songs": 6,
-        "cooccurrence_weight": 6
+        "cooccurrence_songs": 7,
+        "cooccurrence_weight": 7
       }
     },
     {
@@ -72737,10 +75037,10 @@
       "source": "token_c086b3008a",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 11.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 10
+        "cooccurrence_songs": 11,
+        "cooccurrence_weight": 12
       }
     },
     {
@@ -73067,10 +75367,10 @@
       "source": "token_ba4b5ed1ab",
       "target": "token_296304f1e5",
       "type": "CO_OCCURS_WITH",
-      "weight": 14.0,
+      "weight": 15.0,
       "properties": {
-        "cooccurrence_songs": 14,
-        "cooccurrence_weight": 18
+        "cooccurrence_songs": 15,
+        "cooccurrence_weight": 19
       }
     },
     {
@@ -73228,6 +75528,17 @@
       }
     },
     {
+      "id": "edge_46bdbee48a81",
+      "source": "token_ba4b5ed1ab",
+      "target": "token_4482f82ad2",
+      "type": "CO_OCCURS_WITH",
+      "weight": 5.0,
+      "properties": {
+        "cooccurrence_songs": 5,
+        "cooccurrence_weight": 6
+      }
+    },
+    {
       "id": "edge_d48777b0c18f",
       "source": "token_ba4b5ed1ab",
       "target": "token_63e4479b69",
@@ -73320,10 +75631,10 @@
       "source": "token_ba4b5ed1ab",
       "target": "token_b511e6815b",
       "type": "CO_OCCURS_WITH",
-      "weight": 17.0,
+      "weight": 18.0,
       "properties": {
-        "cooccurrence_songs": 17,
-        "cooccurrence_weight": 27
+        "cooccurrence_songs": 18,
+        "cooccurrence_weight": 28
       }
     },
     {
@@ -73661,10 +75972,10 @@
       "source": "token_296304f1e5",
       "target": "token_6f7e368290",
       "type": "CO_OCCURS_WITH",
-      "weight": 8.0,
+      "weight": 9.0,
       "properties": {
-        "cooccurrence_songs": 8,
-        "cooccurrence_weight": 8
+        "cooccurrence_songs": 9,
+        "cooccurrence_weight": 9
       }
     },
     {
@@ -74178,10 +76489,10 @@
       "source": "token_296304f1e5",
       "target": "token_41a2aca1ea",
       "type": "CO_OCCURS_WITH",
-      "weight": 4.0,
+      "weight": 5.0,
       "properties": {
-        "cooccurrence_songs": 4,
-        "cooccurrence_weight": 5
+        "cooccurrence_songs": 5,
+        "cooccurrence_weight": 6
       }
     },
     {
@@ -75311,10 +77622,10 @@
       "source": "token_58fdbe080e",
       "target": "token_3c7d183f1b",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 10.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 9
+        "cooccurrence_songs": 10,
+        "cooccurrence_weight": 10
       }
     },
     {
@@ -75351,14 +77662,25 @@
       }
     },
     {
+      "id": "edge_d0ac29374d4b",
+      "source": "token_58fdbe080e",
+      "target": "token_e50741fba6",
+      "type": "CO_OCCURS_WITH",
+      "weight": 3.0,
+      "properties": {
+        "cooccurrence_songs": 3,
+        "cooccurrence_weight": 3
+      }
+    },
+    {
       "id": "edge_c1081b137a0a",
       "source": "token_58fdbe080e",
       "target": "token_b511e6815b",
       "type": "CO_OCCURS_WITH",
-      "weight": 11.0,
+      "weight": 12.0,
       "properties": {
-        "cooccurrence_songs": 11,
-        "cooccurrence_weight": 11
+        "cooccurrence_songs": 12,
+        "cooccurrence_weight": 12
       }
     },
     {
@@ -75384,14 +77706,25 @@
       }
     },
     {
+      "id": "edge_34e878634c42",
+      "source": "token_58fdbe080e",
+      "target": "token_7929f2f529",
+      "type": "CO_OCCURS_WITH",
+      "weight": 5.0,
+      "properties": {
+        "cooccurrence_songs": 5,
+        "cooccurrence_weight": 6
+      }
+    },
+    {
       "id": "edge_9c5e7bcb7329",
       "source": "token_58fdbe080e",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 11.0,
+      "weight": 12.0,
       "properties": {
-        "cooccurrence_songs": 11,
-        "cooccurrence_weight": 13
+        "cooccurrence_songs": 12,
+        "cooccurrence_weight": 14
       }
     },
     {
@@ -75648,17 +77981,6 @@
       }
     },
     {
-      "id": "edge_2196da511925",
-      "source": "token_6f7e368290",
-      "target": "token_4dbed2e657",
-      "type": "CO_OCCURS_WITH",
-      "weight": 4.0,
-      "properties": {
-        "cooccurrence_songs": 4,
-        "cooccurrence_weight": 4
-      }
-    },
-    {
       "id": "edge_b6f92a53948c",
       "source": "token_6f7e368290",
       "target": "token_b511e6815b",
@@ -75678,6 +78000,17 @@
       "properties": {
         "cooccurrence_songs": 13,
         "cooccurrence_weight": 14
+      }
+    },
+    {
+      "id": "edge_a1f07653b0a6",
+      "source": "token_6f7e368290",
+      "target": "token_41a2aca1ea",
+      "type": "CO_OCCURS_WITH",
+      "weight": 3.0,
+      "properties": {
+        "cooccurrence_songs": 3,
+        "cooccurrence_weight": 3
       }
     },
     {
@@ -75703,14 +78036,14 @@
       }
     },
     {
-      "id": "edge_c8c643268d86",
+      "id": "edge_5a3124e2a82d",
       "source": "token_a3142f9280",
-      "target": "token_b511e6815b",
+      "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 5.0,
+      "weight": 6.0,
       "properties": {
-        "cooccurrence_songs": 5,
-        "cooccurrence_weight": 6
+        "cooccurrence_songs": 6,
+        "cooccurrence_weight": 7
       }
     },
     {
@@ -75997,17 +78330,6 @@
       "properties": {
         "cooccurrence_songs": 1,
         "cooccurrence_weight": 2
-      }
-    },
-    {
-      "id": "edge_418e17bd483b",
-      "source": "token_f3369639e1",
-      "target": "token_e50741fba6",
-      "type": "CO_OCCURS_WITH",
-      "weight": 2.0,
-      "properties": {
-        "cooccurrence_songs": 2,
-        "cooccurrence_weight": 3
       }
     },
     {
@@ -76499,10 +78821,10 @@
       "source": "token_988e2bd184",
       "target": "token_9487386112",
       "type": "CO_OCCURS_WITH",
-      "weight": 15.0,
+      "weight": 16.0,
       "properties": {
-        "cooccurrence_songs": 15,
-        "cooccurrence_weight": 18
+        "cooccurrence_songs": 16,
+        "cooccurrence_weight": 19
       }
     },
     {
@@ -76583,25 +78905,14 @@
       }
     },
     {
-      "id": "edge_d6c3c7ab2e31",
-      "source": "token_988e2bd184",
-      "target": "token_7929f2f529",
-      "type": "CO_OCCURS_WITH",
-      "weight": 5.0,
-      "properties": {
-        "cooccurrence_songs": 5,
-        "cooccurrence_weight": 5
-      }
-    },
-    {
       "id": "edge_c70c00cea086",
       "source": "token_988e2bd184",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 16.0,
+      "weight": 17.0,
       "properties": {
-        "cooccurrence_songs": 16,
-        "cooccurrence_weight": 24
+        "cooccurrence_songs": 17,
+        "cooccurrence_weight": 25
       }
     },
     {
@@ -76664,10 +78975,10 @@
       "source": "token_988e2bd184",
       "target": "token_2ce17249e6",
       "type": "CO_OCCURS_WITH",
-      "weight": 6.0,
+      "weight": 7.0,
       "properties": {
-        "cooccurrence_songs": 6,
-        "cooccurrence_weight": 6
+        "cooccurrence_songs": 7,
+        "cooccurrence_weight": 7
       }
     },
     {
@@ -76712,17 +79023,6 @@
       "properties": {
         "cooccurrence_songs": 2,
         "cooccurrence_weight": 2
-      }
-    },
-    {
-      "id": "edge_76fdac2de1c1",
-      "source": "token_3c7d183f1b",
-      "target": "token_4482f82ad2",
-      "type": "CO_OCCURS_WITH",
-      "weight": 5.0,
-      "properties": {
-        "cooccurrence_songs": 5,
-        "cooccurrence_weight": 6
       }
     },
     {
@@ -76785,10 +79085,10 @@
       "source": "token_3c7d183f1b",
       "target": "token_b511e6815b",
       "type": "CO_OCCURS_WITH",
-      "weight": 14.0,
+      "weight": 15.0,
       "properties": {
-        "cooccurrence_songs": 14,
-        "cooccurrence_weight": 15
+        "cooccurrence_songs": 15,
+        "cooccurrence_weight": 16
       }
     },
     {
@@ -76964,6 +79264,17 @@
       "weight": 4.0,
       "properties": {
         "cooccurrence_songs": 4,
+        "cooccurrence_weight": 5
+      }
+    },
+    {
+      "id": "edge_6386878dffa9",
+      "source": "token_4dbed2e657",
+      "target": "token_43c464830c",
+      "type": "CO_OCCURS_WITH",
+      "weight": 5.0,
+      "properties": {
+        "cooccurrence_songs": 5,
         "cooccurrence_weight": 5
       }
     },
@@ -77771,13 +80082,13 @@
       }
     },
     {
-      "id": "edge_05cf69acd5f0",
+      "id": "edge_739bd4a96eeb",
       "source": "token_e50741fba6",
-      "target": "token_b7612b71c0",
+      "target": "token_9122c53716",
       "type": "CO_OCCURS_WITH",
-      "weight": 2.0,
+      "weight": 3.0,
       "properties": {
-        "cooccurrence_songs": 2,
+        "cooccurrence_songs": 3,
         "cooccurrence_weight": 3
       }
     },
@@ -77786,10 +80097,10 @@
       "source": "token_e50741fba6",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 3.0,
+      "weight": 4.0,
       "properties": {
-        "cooccurrence_songs": 3,
-        "cooccurrence_weight": 4
+        "cooccurrence_songs": 4,
+        "cooccurrence_weight": 5
       }
     },
     {
@@ -77918,10 +80229,10 @@
       "source": "token_9487386112",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 16.0,
+      "weight": 17.0,
       "properties": {
-        "cooccurrence_songs": 16,
-        "cooccurrence_weight": 19
+        "cooccurrence_songs": 17,
+        "cooccurrence_weight": 20
       }
     },
     {
@@ -78299,17 +80610,6 @@
       }
     },
     {
-      "id": "edge_fa11737e13a9",
-      "source": "token_b511e6815b",
-      "target": "token_41a2aca1ea",
-      "type": "CO_OCCURS_WITH",
-      "weight": 3.0,
-      "properties": {
-        "cooccurrence_songs": 3,
-        "cooccurrence_weight": 3
-      }
-    },
-    {
       "id": "edge_43735a6c05d1",
       "source": "token_b511e6815b",
       "target": "token_1ca69c4be0",
@@ -78556,10 +80856,10 @@
       "source": "token_9122c53716",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 10.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 9
+        "cooccurrence_songs": 10,
+        "cooccurrence_weight": 10
       }
     },
     {
@@ -78633,10 +80933,10 @@
       "source": "token_7929f2f529",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 10.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 12
+        "cooccurrence_songs": 10,
+        "cooccurrence_weight": 13
       }
     },
     {
@@ -78732,10 +81032,10 @@
       "source": "token_43c464830c",
       "target": "token_2ce17249e6",
       "type": "CO_OCCURS_WITH",
-      "weight": 6.0,
+      "weight": 7.0,
       "properties": {
-        "cooccurrence_songs": 6,
-        "cooccurrence_weight": 7
+        "cooccurrence_songs": 7,
+        "cooccurrence_weight": 8
       }
     },
     {
@@ -79209,6 +81509,83 @@
       "properties": {
         "relation": "PROTOTYPE_OF",
         "note": "初期デモ「大丈夫」を改題し、『勝訴ストリップ』の幕開け「虚言症」として発表"
+      }
+    },
+    {
+      "id": "edge_854f98838512",
+      "source": "song_demo_shampoo",
+      "target": "song_prov_cappuccino",
+      "type": "RELATED_SONG",
+      "weight": 1.0,
+      "properties": {
+        "relation": "SERIES_PAIR",
+        "note": "ともさかりえへの初期提供曲群（「カプチーノ」「シャンプー」「少女ロボット」）の1曲"
+      }
+    },
+    {
+      "id": "edge_ad6e327f3dbd",
+      "source": "song_demo_marvelous_day",
+      "target": "song_17",
+      "type": "RELATED_SONG",
+      "weight": 1.0,
+      "properties": {
+        "relation": "MOTIF_LINEAGE",
+        "note": "16歳を描く「Marvelous Day」から17歳を描く「Now I'm Seventeen / 17」へと続くティーンエイジ連作"
+      }
+    },
+    {
+      "id": "edge_d8dacd7bbd13",
+      "source": "song_demo_now_im_seventeen",
+      "target": "song_17",
+      "type": "RELATED_SONG",
+      "weight": 1.0,
+      "properties": {
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「Now I'm Seventeen」をシングル『幸福論』c/w（『私と放電』収録）の「17」として発表"
+      }
+    },
+    {
+      "id": "edge_683c009f9526",
+      "source": "song_demo_a_new_way_to_fly",
+      "target": "song_marunouchi_sadistic",
+      "type": "RELATED_SONG",
+      "weight": 1.0,
+      "properties": {
+        "relation": "PROTOTYPE_OF",
+        "note": "英語詞の原曲「A New Way To Fly」に日本語詞を当てて代表曲「丸ノ内サディスティック」が誕生"
+      }
+    },
+    {
+      "id": "edge_1de15db2af86",
+      "source": "song_demo_rimokon",
+      "target": "song_remote_controller",
+      "type": "RELATED_SONG",
+      "weight": 1.0,
+      "properties": {
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「リモコン」を「リモートコントローラー」（1999年）として完成・音源化"
+      }
+    },
+    {
+      "id": "edge_dacc7958fd08",
+      "source": "song_demo_dont_you_think",
+      "target": "song_gips",
+      "type": "RELATED_SONG",
+      "weight": 1.0,
+      "properties": {
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「Don't you think？」を5thシングル「ギブス」（2000年）として完成・発表"
+      }
+    },
+    {
+      "id": "edge_94eb077dfe4e",
+      "source": "song_demo_unconditional_love",
+      "target": "song_prov_private",
+      "type": "RELATED_SONG",
+      "weight": 1.0,
+      "properties": {
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「アンコンディショナル・ラブ」を改作し、広末涼子への提供曲「プライベイト」（1998年）として発表"
       }
     }
   ]

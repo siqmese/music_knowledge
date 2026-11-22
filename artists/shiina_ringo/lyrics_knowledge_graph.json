@@ -3,26 +3,26 @@
     "artist_id": "artist_shiina_ringo",
     "artist_name": "椎名林檎",
     "artist_slug": "shiina_ringo",
-    "generated_at": "2026-11-22T17:39:38.578167+00:00",
+    "generated_at": "2026-11-22T18:03:12.165918+00:00",
     "schema_version": "1.0.0",
     "description": "椎名林檎の歌詞頻出単語・トークン共起ナレッジグラフ（ノードサイズ＝出現頻度）",
     "copyright_note": "著作権保護のため歌詞全文は収録せず、楽曲メタデータおよび歌詞から抽出した頻出単語トークン・共起関係・テーマ・モチーフ・地名・文体特徴・曲間関係のみを構造化しています。"
   },
   "stats": {
-    "total_songs": 239,
+    "total_songs": 253,
     "total_tokens": 184,
-    "total_cooccurrence_edges": 695,
+    "total_cooccurrence_edges": 694,
     "top_tokens": [
       {
         "label": "貴方",
-        "count": 212,
-        "song_count": 78,
+        "count": 218,
+        "song_count": 81,
         "category": "人称・関係"
       },
       {
         "label": "私",
-        "count": 207,
-        "song_count": 73,
+        "count": 210,
+        "song_count": 75,
         "category": "人称・関係"
       },
       {
@@ -39,26 +39,32 @@
       },
       {
         "label": "今日",
-        "count": 85,
-        "song_count": 60,
+        "count": 86,
+        "song_count": 61,
         "category": "自然・時間・空間"
       },
       {
         "label": "愛",
-        "count": 81,
-        "song_count": 49,
+        "count": 82,
+        "song_count": 50,
         "category": "感情・概念・思想"
       },
       {
         "label": "今",
-        "count": 79,
-        "song_count": 47,
+        "count": 81,
+        "song_count": 49,
         "category": "自然・時間・空間"
       },
       {
         "label": "生きる",
-        "count": 73,
-        "song_count": 48,
+        "count": 74,
+        "song_count": 49,
+        "category": "感情・概念・思想"
+      },
+      {
+        "label": "世界",
+        "count": 56,
+        "song_count": 43,
         "category": "感情・概念・思想"
       },
       {
@@ -68,16 +74,16 @@
         "category": "人称・関係"
       },
       {
-        "label": "世界",
-        "count": 54,
-        "song_count": 41,
-        "category": "感情・概念・思想"
-      },
-      {
         "label": "命",
         "count": 51,
         "song_count": 39,
         "category": "感情・概念・思想"
+      },
+      {
+        "label": "手",
+        "count": 50,
+        "song_count": 44,
+        "category": "身体・感覚・医療"
       },
       {
         "label": "本当",
@@ -86,15 +92,9 @@
         "category": "感情・概念・思想"
       },
       {
-        "label": "手",
-        "count": 49,
-        "song_count": 43,
-        "category": "身体・感覚・医療"
-      },
-      {
         "label": "みんな",
-        "count": 46,
-        "song_count": 34,
+        "count": 47,
+        "song_count": 35,
         "category": "人称・関係"
       },
       {
@@ -134,15 +134,15 @@
         "category": "自然・時間・空間"
       },
       {
-        "label": "泣く",
+        "label": "嘘",
         "count": 33,
-        "song_count": 28,
+        "song_count": 29,
         "category": "感情・概念・思想"
       },
       {
-        "label": "嘘",
-        "count": 31,
-        "song_count": 27,
+        "label": "泣く",
+        "count": 33,
+        "song_count": 28,
         "category": "感情・概念・思想"
       },
       {
@@ -152,15 +152,15 @@
         "category": "人称・関係"
       },
       {
-        "label": "死",
+        "label": "夢",
         "count": 31,
-        "song_count": 16,
+        "song_count": 23,
         "category": "感情・概念・思想"
       },
       {
-        "label": "夢",
-        "count": 30,
-        "song_count": 22,
+        "label": "死",
+        "count": 31,
+        "song_count": 16,
         "category": "感情・概念・思想"
       },
       {
@@ -177,8 +177,8 @@
       },
       {
         "label": "顔",
-        "count": 26,
-        "song_count": 24,
+        "count": 27,
+        "song_count": 25,
         "category": "身体・感覚・医療"
       },
       {
@@ -242,15 +242,15 @@
         "category": "色彩"
       },
       {
-        "label": "人間",
-        "count": 21,
-        "song_count": 14,
+        "label": "誰か",
+        "count": 22,
+        "song_count": 17,
         "category": "人称・関係"
       },
       {
-        "label": "誰か",
+        "label": "人間",
         "count": 21,
-        "song_count": 16,
+        "song_count": 14,
         "category": "人称・関係"
       },
       {
@@ -258,6 +258,12 @@
         "count": 20,
         "song_count": 17,
         "category": "身体・感覚・医療"
+      },
+      {
+        "label": "色",
+        "count": 20,
+        "song_count": 17,
+        "category": "色彩"
       },
       {
         "label": "雨",
@@ -284,12 +290,6 @@
         "category": "自然・時間・空間"
       },
       {
-        "label": "色",
-        "count": 19,
-        "song_count": 16,
-        "category": "色彩"
-      },
-      {
         "label": "風",
         "count": 19,
         "song_count": 15,
@@ -309,8 +309,8 @@
       },
       {
         "label": "気持ち",
-        "count": 17,
-        "song_count": 14,
+        "count": 18,
+        "song_count": 15,
         "category": "感情・概念・思想"
       }
     ],
@@ -353,6 +353,15 @@
       },
       {
         "pair": [
+          "今",
+          "私"
+        ],
+        "label": "今 × 私",
+        "count": 18,
+        "weight": 28
+      },
+      {
+        "pair": [
           "今日",
           "生きる"
         ],
@@ -363,20 +372,20 @@
       {
         "pair": [
           "今",
-          "私"
-        ],
-        "label": "今 × 私",
-        "count": 17,
-        "weight": 27
-      },
-      {
-        "pair": [
-          "今",
           "貴方"
         ],
         "label": "今 × 貴方",
         "count": 17,
         "weight": 22
+      },
+      {
+        "pair": [
+          "愛",
+          "貴方"
+        ],
+        "label": "愛 × 貴方",
+        "count": 17,
+        "weight": 25
       },
       {
         "pair": [
@@ -393,6 +402,15 @@
           "愛"
         ],
         "label": "今日 × 愛",
+        "count": 17,
+        "weight": 20
+      },
+      {
+        "pair": [
+          "生きる",
+          "貴方"
+        ],
+        "label": "生きる × 貴方",
         "count": 17,
         "weight": 20
       },
@@ -426,18 +444,9 @@
       {
         "pair": [
           "愛",
-          "貴方"
+          "生きる"
         ],
-        "label": "愛 × 貴方",
-        "count": 16,
-        "weight": 24
-      },
-      {
-        "pair": [
-          "生きる",
-          "貴方"
-        ],
-        "label": "生きる × 貴方",
+        "label": "愛 × 生きる",
         "count": 16,
         "weight": 19
       },
@@ -452,12 +461,21 @@
       },
       {
         "pair": [
-          "愛",
-          "生きる"
+          "手",
+          "私"
         ],
-        "label": "愛 × 生きる",
+        "label": "手 × 私",
         "count": 15,
-        "weight": 18
+        "weight": 16
+      },
+      {
+        "pair": [
+          "今",
+          "今日"
+        ],
+        "label": "今 × 今日",
+        "count": 15,
+        "weight": 19
       },
       {
         "pair": [
@@ -515,30 +533,12 @@
       },
       {
         "pair": [
-          "手",
-          "私"
-        ],
-        "label": "手 × 私",
-        "count": 14,
-        "weight": 15
-      },
-      {
-        "pair": [
           "本当",
           "私"
         ],
         "label": "本当 × 私",
         "count": 14,
         "weight": 19
-      },
-      {
-        "pair": [
-          "今",
-          "今日"
-        ],
-        "label": "今 × 今日",
-        "count": 14,
-        "weight": 18
       },
       {
         "pair": [
@@ -663,10 +663,10 @@
       "label": "私",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 207,
-        "song_count": 73,
+        "total_frequency": 210,
+        "song_count": 75,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 39,
+          "初期ソロ期 (1998-2003)": 41,
           "ソロ中期・楽曲提供期 (2007-2018)": 8,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 10,
           "東京事変・前期〜中期 (2004-2012)": 16
@@ -689,8 +689,8 @@
           },
           {
             "token": "今",
-            "song_count": 17,
-            "weight": 27
+            "song_count": 18,
+            "weight": 28
           },
           {
             "token": "愛",
@@ -703,14 +703,14 @@
             "weight": 19
           },
           {
+            "token": "手",
+            "song_count": 15,
+            "weight": 16
+          },
+          {
             "token": "本当",
             "song_count": 14,
             "weight": 19
-          },
-          {
-            "token": "手",
-            "song_count": 14,
-            "weight": 15
           },
           {
             "token": "笑う",
@@ -723,7 +723,7 @@
             "weight": 15
           }
         ],
-        "degree": 155
+        "degree": 154
       }
     },
     {
@@ -732,10 +732,10 @@
       "label": "街",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 9,
-        "song_count": 5,
+        "total_frequency": 10,
+        "song_count": 6,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 3,
+          "初期ソロ期 (1998-2003)": 4,
           "ソロ中期・楽曲提供期 (2007-2018)": 1,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
@@ -766,6 +766,11 @@
             "weight": 2
           },
           {
+            "token": "嘘",
+            "song_count": 2,
+            "weight": 2
+          },
+          {
             "token": "子供",
             "song_count": 2,
             "weight": 2
@@ -781,17 +786,12 @@
             "weight": 2
           },
           {
-            "token": "青",
-            "song_count": 2,
-            "weight": 2
-          },
-          {
-            "token": "駅",
+            "token": "色",
             "song_count": 2,
             "weight": 2
           }
         ],
-        "degree": 10
+        "degree": 11
       }
     },
     {
@@ -995,7 +995,7 @@
             "weight": 11
           }
         ],
-        "degree": 115
+        "degree": 114
       }
     },
     {
@@ -1139,10 +1139,10 @@
       "label": "嘘",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 31,
-        "song_count": 27,
+        "total_frequency": 33,
+        "song_count": 29,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 12,
+          "初期ソロ期 (1998-2003)": 14,
           "ソロ中期・楽曲提供期 (2007-2018)": 4,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 4,
           "東京事変・前期〜中期 (2004-2012)": 7
@@ -1150,26 +1150,26 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 11,
-            "weight": 13
+            "song_count": 12,
+            "weight": 14
           },
           {
             "token": "私",
-            "song_count": 11,
-            "weight": 11
+            "song_count": 12,
+            "weight": 12
           },
           {
             "token": "手",
-            "song_count": 9,
-            "weight": 9
-          },
-          {
-            "token": "一人",
-            "song_count": 7,
-            "weight": 7
+            "song_count": 10,
+            "weight": 10
           },
           {
             "token": "世界",
+            "song_count": 8,
+            "weight": 8
+          },
+          {
+            "token": "一人",
             "song_count": 7,
             "weight": 7
           },
@@ -1199,7 +1199,7 @@
             "weight": 8
           }
         ],
-        "degree": 40
+        "degree": 44
       }
     },
     {
@@ -1274,15 +1274,20 @@
       "label": "愛",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 81,
-        "song_count": 49,
+        "total_frequency": 82,
+        "song_count": 50,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 19,
+          "初期ソロ期 (1998-2003)": 20,
           "ソロ中期・楽曲提供期 (2007-2018)": 9,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 20,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
         "top_cooccurrences": [
+          {
+            "token": "貴方",
+            "song_count": 17,
+            "weight": 25
+          },
           {
             "token": "今日",
             "song_count": 17,
@@ -1294,17 +1299,12 @@
             "weight": 28
           },
           {
-            "token": "貴方",
+            "token": "生きる",
             "song_count": 16,
-            "weight": 24
+            "weight": 19
           },
           {
             "token": "世界",
-            "song_count": 15,
-            "weight": 18
-          },
-          {
-            "token": "生きる",
             "song_count": 15,
             "weight": 18
           },
@@ -1481,10 +1481,10 @@
       "label": "気持ち",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 17,
-        "song_count": 14,
+        "total_frequency": 18,
+        "song_count": 15,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 6,
+          "初期ソロ期 (1998-2003)": 7,
           "ソロ中期・楽曲提供期 (2007-2018)": 3,
           "東京事変・前期〜中期 (2004-2012)": 3,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 2
@@ -1506,18 +1506,23 @@
             "weight": 6
           },
           {
+            "token": "今",
+            "song_count": 5,
+            "weight": 6
+          },
+          {
             "token": "手",
             "song_count": 5,
             "weight": 6
           },
           {
-            "token": "嘘",
+            "token": "みんな",
             "song_count": 5,
             "weight": 5
           },
           {
-            "token": "今",
-            "song_count": 4,
+            "token": "嘘",
+            "song_count": 5,
             "weight": 5
           },
           {
@@ -1531,17 +1536,12 @@
             "weight": 5
           },
           {
-            "token": "みんな",
-            "song_count": 4,
-            "weight": 4
-          },
-          {
-            "token": "泣く",
+            "token": "今日",
             "song_count": 4,
             "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -2232,10 +2232,10 @@
       "label": "手",
       "properties": {
         "category": "身体・感覚・医療",
-        "total_frequency": 49,
-        "song_count": 43,
+        "total_frequency": 50,
+        "song_count": 44,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 15,
+          "初期ソロ期 (1998-2003)": 16,
           "ソロ中期・楽曲提供期 (2007-2018)": 7,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 6,
           "東京事変・前期〜中期 (2004-2012)": 15
@@ -2243,8 +2243,8 @@
         "top_cooccurrences": [
           {
             "token": "私",
-            "song_count": 14,
-            "weight": 15
+            "song_count": 15,
+            "weight": 16
           },
           {
             "token": "今",
@@ -2267,6 +2267,11 @@
             "weight": 12
           },
           {
+            "token": "嘘",
+            "song_count": 10,
+            "weight": 10
+          },
+          {
             "token": "本当",
             "song_count": 10,
             "weight": 10
@@ -2285,11 +2290,6 @@
             "token": "言葉",
             "song_count": 9,
             "weight": 10
-          },
-          {
-            "token": "今日",
-            "song_count": 9,
-            "weight": 9
           }
         ],
         "degree": 70
@@ -2367,10 +2367,10 @@
       "label": "今",
       "properties": {
         "category": "自然・時間・空間",
-        "total_frequency": 79,
-        "song_count": 47,
+        "total_frequency": 81,
+        "song_count": 49,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 18,
+          "初期ソロ期 (1998-2003)": 20,
           "ソロ中期・楽曲提供期 (2007-2018)": 14,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 7,
           "東京事変・前期〜中期 (2004-2012)": 8
@@ -2378,8 +2378,8 @@
         "top_cooccurrences": [
           {
             "token": "私",
-            "song_count": 17,
-            "weight": 27
+            "song_count": 18,
+            "weight": 28
           },
           {
             "token": "貴方",
@@ -2398,8 +2398,8 @@
           },
           {
             "token": "今日",
-            "song_count": 14,
-            "weight": 18
+            "song_count": 15,
+            "weight": 19
           },
           {
             "token": "世界",
@@ -2427,7 +2427,7 @@
             "weight": 11
           }
         ],
-        "degree": 90
+        "degree": 93
       }
     },
     {
@@ -3726,10 +3726,10 @@
       "label": "銀座",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 4,
-        "song_count": 3,
+        "total_frequency": 5,
+        "song_count": 4,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 1
         },
         "top_cooccurrences": [
@@ -3784,7 +3784,7 @@
             "weight": 1
           }
         ],
-        "degree": 6
+        "degree": 7
       }
     },
     {
@@ -3793,18 +3793,23 @@
       "label": "電車",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 10,
-        "song_count": 8,
+        "total_frequency": 11,
+        "song_count": 9,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 5,
+          "初期ソロ期 (1998-2003)": 6,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 2,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
         "top_cooccurrences": [
           {
             "token": "今日",
-            "song_count": 4,
-            "weight": 5
+            "song_count": 5,
+            "weight": 6
+          },
+          {
+            "token": "夢",
+            "song_count": 3,
+            "weight": 3
           },
           {
             "token": "愛",
@@ -3842,17 +3847,12 @@
             "weight": 3
           },
           {
-            "token": "一人",
-            "song_count": 2,
-            "weight": 2
-          },
-          {
-            "token": "夢",
+            "token": "みんな",
             "song_count": 2,
             "weight": 2
           }
         ],
-        "degree": 14
+        "degree": 15
       }
     },
     {
@@ -4197,7 +4197,7 @@
             "weight": 6
           }
         ],
-        "degree": 32
+        "degree": 31
       }
     },
     {
@@ -4206,10 +4206,10 @@
       "label": "色",
       "properties": {
         "category": "色彩",
-        "total_frequency": 19,
-        "song_count": 16,
+        "total_frequency": 20,
+        "song_count": 17,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 9,
+          "初期ソロ期 (1998-2003)": 10,
           "ソロ中期・楽曲提供期 (2007-2018)": 3,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 1,
           "東京事変・前期〜中期 (2004-2012)": 3
@@ -4217,8 +4217,8 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 9,
-            "weight": 9
+            "song_count": 10,
+            "weight": 10
           },
           {
             "token": "私",
@@ -4266,7 +4266,7 @@
             "weight": 4
           }
         ],
-        "degree": 21
+        "degree": 23
       }
     },
     {
@@ -4343,10 +4343,10 @@
       "label": "顔",
       "properties": {
         "category": "身体・感覚・医療",
-        "total_frequency": 26,
-        "song_count": 24,
+        "total_frequency": 27,
+        "song_count": 25,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 7,
+          "初期ソロ期 (1998-2003)": 8,
           "ソロ中期・楽曲提供期 (2007-2018)": 3,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 9,
           "東京事変・前期〜中期 (2004-2012)": 5
@@ -4403,7 +4403,7 @@
             "weight": 5
           }
         ],
-        "degree": 30
+        "degree": 31
       }
     },
     {
@@ -4481,10 +4481,10 @@
       "label": "生きる",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 73,
-        "song_count": 48,
+        "total_frequency": 74,
+        "song_count": 49,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 6,
+          "初期ソロ期 (1998-2003)": 7,
           "ソロ中期・楽曲提供期 (2007-2018)": 16,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 18,
           "東京事変・前期〜中期 (2004-2012)": 8
@@ -4497,6 +4497,11 @@
           },
           {
             "token": "貴方",
+            "song_count": 17,
+            "weight": 20
+          },
+          {
+            "token": "愛",
             "song_count": 16,
             "weight": 19
           },
@@ -4509,11 +4514,6 @@
             "token": "今",
             "song_count": 15,
             "weight": 23
-          },
-          {
-            "token": "愛",
-            "song_count": 15,
-            "weight": 18
           },
           {
             "token": "一人",
@@ -4541,7 +4541,7 @@
             "weight": 21
           }
         ],
-        "degree": 76
+        "degree": 77
       }
     },
     {
@@ -4755,10 +4755,10 @@
       "label": "今日",
       "properties": {
         "category": "自然・時間・空間",
-        "total_frequency": 85,
-        "song_count": 60,
+        "total_frequency": 86,
+        "song_count": 61,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 14,
+          "初期ソロ期 (1998-2003)": 15,
           "ソロ中期・楽曲提供期 (2007-2018)": 17,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 15,
           "東京事変・前期〜中期 (2004-2012)": 14
@@ -4786,8 +4786,8 @@
           },
           {
             "token": "今",
-            "song_count": 14,
-            "weight": 18
+            "song_count": 15,
+            "weight": 19
           },
           {
             "token": "笑う",
@@ -4815,7 +4815,7 @@
             "weight": 13
           }
         ],
-        "degree": 126
+        "degree": 127
       }
     },
     {
@@ -5166,10 +5166,10 @@
       "label": "貴方",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 212,
-        "song_count": 78,
+        "total_frequency": 218,
+        "song_count": 81,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 29,
+          "初期ソロ期 (1998-2003)": 32,
           "ソロ中期・楽曲提供期 (2007-2018)": 15,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 12,
           "東京事変・前期〜中期 (2004-2012)": 22
@@ -5186,24 +5186,24 @@
             "weight": 30
           },
           {
+            "token": "愛",
+            "song_count": 17,
+            "weight": 25
+          },
+          {
             "token": "今",
             "song_count": 17,
             "weight": 22
           },
           {
+            "token": "生きる",
+            "song_count": 17,
+            "weight": 20
+          },
+          {
             "token": "笑う",
             "song_count": 17,
             "weight": 18
-          },
-          {
-            "token": "愛",
-            "song_count": 16,
-            "weight": 24
-          },
-          {
-            "token": "生きる",
-            "song_count": 16,
-            "weight": 19
           },
           {
             "token": "本当",
@@ -5226,7 +5226,7 @@
             "weight": 14
           }
         ],
-        "degree": 150
+        "degree": 155
       }
     },
     {
@@ -5304,10 +5304,10 @@
       "label": "夢",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 30,
-        "song_count": 22,
+        "total_frequency": 31,
+        "song_count": 23,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 9,
+          "初期ソロ期 (1998-2003)": 10,
           "ソロ中期・楽曲提供期 (2007-2018)": 6,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 4,
           "東京事変・前期〜中期 (2004-2012)": 3
@@ -5319,6 +5319,11 @@
             "weight": 14
           },
           {
+            "token": "今日",
+            "song_count": 9,
+            "weight": 9
+          },
+          {
             "token": "私",
             "song_count": 8,
             "weight": 11
@@ -5327,11 +5332,6 @@
             "token": "愛",
             "song_count": 8,
             "weight": 9
-          },
-          {
-            "token": "今日",
-            "song_count": 8,
-            "weight": 8
           },
           {
             "token": "息",
@@ -5354,17 +5354,17 @@
             "weight": 6
           },
           {
-            "token": "目",
+            "token": "今",
             "song_count": 6,
             "weight": 6
           },
           {
-            "token": "生きる",
-            "song_count": 5,
+            "token": "目",
+            "song_count": 6,
             "weight": 6
           }
         ],
-        "degree": 29
+        "degree": 30
       }
     },
     {
@@ -5851,10 +5851,10 @@
       "label": "誰か",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 21,
-        "song_count": 16,
+        "total_frequency": 22,
+        "song_count": 17,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 4,
+          "初期ソロ期 (1998-2003)": 5,
           "ソロ中期・楽曲提供期 (2007-2018)": 5,
           "東京事変・前期〜中期 (2004-2012)": 2,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 5
@@ -5862,8 +5862,13 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 9,
-            "weight": 12
+            "song_count": 10,
+            "weight": 13
+          },
+          {
+            "token": "嘘",
+            "song_count": 5,
+            "weight": 6
           },
           {
             "token": "私",
@@ -5886,12 +5891,12 @@
             "weight": 5
           },
           {
-            "token": "嘘",
+            "token": "みんな",
             "song_count": 4,
-            "weight": 5
+            "weight": 4
           },
           {
-            "token": "みんな",
+            "token": "世界",
             "song_count": 4,
             "weight": 4
           },
@@ -5904,14 +5909,9 @@
             "token": "命",
             "song_count": 4,
             "weight": 4
-          },
-          {
-            "token": "夢",
-            "song_count": 4,
-            "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -5987,10 +5987,10 @@
       "label": "頭",
       "properties": {
         "category": "身体・感覚・医療",
-        "total_frequency": 17,
-        "song_count": 16,
+        "total_frequency": 18,
+        "song_count": 17,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 4,
+          "初期ソロ期 (1998-2003)": 5,
           "ソロ中期・楽曲提供期 (2007-2018)": 2,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 8,
           "東京事変・前期〜中期 (2004-2012)": 2
@@ -5998,13 +5998,13 @@
         "top_cooccurrences": [
           {
             "token": "貴方",
-            "song_count": 6,
-            "weight": 7
+            "song_count": 7,
+            "weight": 8
           },
           {
             "token": "愛",
-            "song_count": 6,
-            "weight": 6
+            "song_count": 7,
+            "weight": 7
           },
           {
             "token": "泣く",
@@ -6037,17 +6037,17 @@
             "weight": 4
           },
           {
-            "token": "目",
+            "token": "生きる",
             "song_count": 4,
             "weight": 4
           },
           {
-            "token": "みんな",
-            "song_count": 3,
-            "weight": 3
+            "token": "目",
+            "song_count": 4,
+            "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -6329,10 +6329,10 @@
       "label": "日本",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 12,
-        "song_count": 10,
+        "total_frequency": 13,
+        "song_count": 11,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 2,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 3,
           "東京事変・前期〜中期 (2004-2012)": 3
@@ -6342,6 +6342,11 @@
             "token": "今日",
             "song_count": 5,
             "weight": 6
+          },
+          {
+            "token": "貴方",
+            "song_count": 5,
+            "weight": 5
           },
           {
             "token": "愛",
@@ -6364,9 +6369,9 @@
             "weight": 4
           },
           {
-            "token": "貴方",
-            "song_count": 4,
-            "weight": 4
+            "token": "世界",
+            "song_count": 3,
+            "weight": 3
           },
           {
             "token": "嘘",
@@ -6382,14 +6387,9 @@
             "token": "大人",
             "song_count": 3,
             "weight": 3
-          },
-          {
-            "token": "意味",
-            "song_count": 3,
-            "weight": 3
           }
         ],
-        "degree": 14
+        "degree": 15
       }
     },
     {
@@ -6398,10 +6398,10 @@
       "label": "時計",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 3,
-        "song_count": 3,
+        "total_frequency": 4,
+        "song_count": 4,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 1,
+          "初期ソロ期 (1998-2003)": 2,
           "ソロ中期・楽曲提供期 (2007-2018)": 1,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 1
         },
@@ -6457,7 +6457,7 @@
             "weight": 1
           }
         ],
-        "degree": 7
+        "degree": 8
       }
     },
     {
@@ -8092,7 +8092,7 @@
             "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 19
       }
     },
     {
@@ -8167,23 +8167,33 @@
       "label": "煙草",
       "properties": {
         "category": "都市・事物・文化",
-        "total_frequency": 5,
-        "song_count": 4,
+        "total_frequency": 6,
+        "song_count": 5,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 1,
           "東京事変・前期〜中期 (2004-2012)": 1
         },
         "top_cooccurrences": [
+          {
+            "token": "貴方",
+            "song_count": 4,
+            "weight": 5
+          },
           {
             "token": "私",
             "song_count": 3,
             "weight": 4
           },
           {
-            "token": "貴方",
+            "token": "嘘",
             "song_count": 3,
-            "weight": 4
+            "weight": 3
+          },
+          {
+            "token": "色",
+            "song_count": 3,
+            "weight": 3
           },
           {
             "token": "孤独",
@@ -8201,12 +8211,12 @@
             "weight": 3
           },
           {
-            "token": "光",
+            "token": "世界",
             "song_count": 2,
             "weight": 2
           },
           {
-            "token": "嘘",
+            "token": "光",
             "song_count": 2,
             "weight": 2
           },
@@ -8214,19 +8224,9 @@
             "token": "手",
             "song_count": 2,
             "weight": 2
-          },
-          {
-            "token": "本当",
-            "song_count": 2,
-            "weight": 2
-          },
-          {
-            "token": "色",
-            "song_count": 2,
-            "weight": 2
           }
         ],
-        "degree": 8
+        "degree": 9
       }
     },
     {
@@ -9263,24 +9263,29 @@
       "label": "大人",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 17,
-        "song_count": 15,
+        "total_frequency": 18,
+        "song_count": 16,
         "era_counts": {
-          "初期ソロ期 (1998-2003)": 2,
+          "初期ソロ期 (1998-2003)": 3,
           "ソロ中期・楽曲提供期 (2007-2018)": 4,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 6,
           "東京事変・前期〜中期 (2004-2012)": 3
         },
         "top_cooccurrences": [
           {
+            "token": "世界",
+            "song_count": 7,
+            "weight": 7
+          },
+          {
             "token": "今日",
             "song_count": 7,
             "weight": 7
           },
           {
-            "token": "世界",
+            "token": "貴方",
             "song_count": 6,
-            "weight": 6
+            "weight": 7
           },
           {
             "token": "愛",
@@ -9289,11 +9294,6 @@
           },
           {
             "token": "私",
-            "song_count": 5,
-            "weight": 6
-          },
-          {
-            "token": "貴方",
             "song_count": 5,
             "weight": 6
           },
@@ -9313,17 +9313,17 @@
             "weight": 5
           },
           {
-            "token": "子供",
+            "token": "嘘",
             "song_count": 4,
             "weight": 4
           },
           {
-            "token": "手",
+            "token": "子供",
             "song_count": 4,
             "weight": 4
           }
         ],
-        "degree": 20
+        "degree": 21
       }
     },
     {
@@ -10124,12 +10124,12 @@
       "label": "世界",
       "properties": {
         "category": "感情・概念・思想",
-        "total_frequency": 54,
-        "song_count": 41,
+        "total_frequency": 56,
+        "song_count": 43,
         "era_counts": {
           "ソロ中期・楽曲提供期 (2007-2018)": 13,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 18,
-          "初期ソロ期 (1998-2003)": 1,
+          "初期ソロ期 (1998-2003)": 3,
           "東京事変・前期〜中期 (2004-2012)": 9
         },
         "top_cooccurrences": [
@@ -10169,6 +10169,11 @@
             "weight": 14
           },
           {
+            "token": "貴方",
+            "song_count": 11,
+            "weight": 12
+          },
+          {
             "token": "本当",
             "song_count": 11,
             "weight": 11
@@ -10177,14 +10182,9 @@
             "token": "君",
             "song_count": 10,
             "weight": 12
-          },
-          {
-            "token": "みんな",
-            "song_count": 10,
-            "weight": 11
           }
         ],
-        "degree": 73
+        "degree": 76
       }
     },
     {
@@ -10328,15 +10328,20 @@
       "label": "みんな",
       "properties": {
         "category": "人称・関係",
-        "total_frequency": 46,
-        "song_count": 34,
+        "total_frequency": 47,
+        "song_count": 35,
         "era_counts": {
           "ソロ中期・楽曲提供期 (2007-2018)": 8,
           "円熟・コラボ＆東京事変再生期 (2019-2026)": 20,
           "東京事変・前期〜中期 (2004-2012)": 5,
-          "初期ソロ期 (1998-2003)": 1
+          "初期ソロ期 (1998-2003)": 2
         },
         "top_cooccurrences": [
+          {
+            "token": "今日",
+            "song_count": 11,
+            "weight": 13
+          },
           {
             "token": "一人",
             "song_count": 11,
@@ -10346,11 +10351,6 @@
             "token": "愛",
             "song_count": 10,
             "weight": 13
-          },
-          {
-            "token": "今日",
-            "song_count": 10,
-            "weight": 12
           },
           {
             "token": "世界",
@@ -13083,10 +13083,10 @@
       "source": "token_6bea39084e",
       "target": "token_296304f1e5",
       "type": "CO_OCCURS_WITH",
-      "weight": 10.0,
+      "weight": 11.0,
       "properties": {
-        "cooccurrence_songs": 10,
-        "cooccurrence_weight": 12
+        "cooccurrence_songs": 11,
+        "cooccurrence_weight": 13
       }
     },
     {
@@ -13241,17 +13241,6 @@
       "properties": {
         "cooccurrence_songs": 10,
         "cooccurrence_weight": 10
-      }
-    },
-    {
-      "id": "edge_994771be40ee",
-      "source": "token_6bea39084e",
-      "target": "token_b511e6815b",
-      "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
-      "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 12
       }
     },
     {
@@ -13604,17 +13593,6 @@
       "properties": {
         "cooccurrence_songs": 13,
         "cooccurrence_weight": 13
-      }
-    },
-    {
-      "id": "edge_a40838a2a98b",
-      "source": "token_31746c7e70",
-      "target": "token_58fdbe080e",
-      "type": "CO_OCCURS_WITH",
-      "weight": 7.0,
-      "properties": {
-        "cooccurrence_songs": 7,
-        "cooccurrence_weight": 7
       }
     },
     {
@@ -14245,6 +14223,17 @@
       }
     },
     {
+      "id": "edge_cd7f2b92a84b",
+      "source": "token_c086b3008a",
+      "target": "token_58fdbe080e",
+      "type": "CO_OCCURS_WITH",
+      "weight": 8.0,
+      "properties": {
+        "cooccurrence_songs": 8,
+        "cooccurrence_weight": 8
+      }
+    },
+    {
       "id": "edge_e0b416809104",
       "source": "token_c086b3008a",
       "target": "token_1f02f411cf",
@@ -14260,10 +14249,10 @@
       "source": "token_c086b3008a",
       "target": "token_a3142f9280",
       "type": "CO_OCCURS_WITH",
-      "weight": 6.0,
+      "weight": 7.0,
       "properties": {
-        "cooccurrence_songs": 6,
-        "cooccurrence_weight": 6
+        "cooccurrence_songs": 7,
+        "cooccurrence_weight": 7
       }
     },
     {
@@ -14469,10 +14458,10 @@
       "source": "token_c086b3008a",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 11.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 10
+        "cooccurrence_songs": 11,
+        "cooccurrence_weight": 12
       }
     },
     {
@@ -14799,10 +14788,10 @@
       "source": "token_ba4b5ed1ab",
       "target": "token_296304f1e5",
       "type": "CO_OCCURS_WITH",
-      "weight": 14.0,
+      "weight": 15.0,
       "properties": {
-        "cooccurrence_songs": 14,
-        "cooccurrence_weight": 18
+        "cooccurrence_songs": 15,
+        "cooccurrence_weight": 19
       }
     },
     {
@@ -14960,6 +14949,17 @@
       }
     },
     {
+      "id": "edge_46bdbee48a81",
+      "source": "token_ba4b5ed1ab",
+      "target": "token_4482f82ad2",
+      "type": "CO_OCCURS_WITH",
+      "weight": 5.0,
+      "properties": {
+        "cooccurrence_songs": 5,
+        "cooccurrence_weight": 6
+      }
+    },
+    {
       "id": "edge_d48777b0c18f",
       "source": "token_ba4b5ed1ab",
       "target": "token_63e4479b69",
@@ -15052,10 +15052,10 @@
       "source": "token_ba4b5ed1ab",
       "target": "token_b511e6815b",
       "type": "CO_OCCURS_WITH",
-      "weight": 17.0,
+      "weight": 18.0,
       "properties": {
-        "cooccurrence_songs": 17,
-        "cooccurrence_weight": 27
+        "cooccurrence_songs": 18,
+        "cooccurrence_weight": 28
       }
     },
     {
@@ -15393,10 +15393,10 @@
       "source": "token_296304f1e5",
       "target": "token_6f7e368290",
       "type": "CO_OCCURS_WITH",
-      "weight": 8.0,
+      "weight": 9.0,
       "properties": {
-        "cooccurrence_songs": 8,
-        "cooccurrence_weight": 8
+        "cooccurrence_songs": 9,
+        "cooccurrence_weight": 9
       }
     },
     {
@@ -15910,10 +15910,10 @@
       "source": "token_296304f1e5",
       "target": "token_41a2aca1ea",
       "type": "CO_OCCURS_WITH",
-      "weight": 4.0,
+      "weight": 5.0,
       "properties": {
-        "cooccurrence_songs": 4,
-        "cooccurrence_weight": 5
+        "cooccurrence_songs": 5,
+        "cooccurrence_weight": 6
       }
     },
     {
@@ -17043,10 +17043,10 @@
       "source": "token_58fdbe080e",
       "target": "token_3c7d183f1b",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 10.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 9
+        "cooccurrence_songs": 10,
+        "cooccurrence_weight": 10
       }
     },
     {
@@ -17083,14 +17083,25 @@
       }
     },
     {
+      "id": "edge_d0ac29374d4b",
+      "source": "token_58fdbe080e",
+      "target": "token_e50741fba6",
+      "type": "CO_OCCURS_WITH",
+      "weight": 3.0,
+      "properties": {
+        "cooccurrence_songs": 3,
+        "cooccurrence_weight": 3
+      }
+    },
+    {
       "id": "edge_c1081b137a0a",
       "source": "token_58fdbe080e",
       "target": "token_b511e6815b",
       "type": "CO_OCCURS_WITH",
-      "weight": 11.0,
+      "weight": 12.0,
       "properties": {
-        "cooccurrence_songs": 11,
-        "cooccurrence_weight": 11
+        "cooccurrence_songs": 12,
+        "cooccurrence_weight": 12
       }
     },
     {
@@ -17116,14 +17127,25 @@
       }
     },
     {
+      "id": "edge_34e878634c42",
+      "source": "token_58fdbe080e",
+      "target": "token_7929f2f529",
+      "type": "CO_OCCURS_WITH",
+      "weight": 5.0,
+      "properties": {
+        "cooccurrence_songs": 5,
+        "cooccurrence_weight": 6
+      }
+    },
+    {
       "id": "edge_9c5e7bcb7329",
       "source": "token_58fdbe080e",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 11.0,
+      "weight": 12.0,
       "properties": {
-        "cooccurrence_songs": 11,
-        "cooccurrence_weight": 13
+        "cooccurrence_songs": 12,
+        "cooccurrence_weight": 14
       }
     },
     {
@@ -17380,17 +17402,6 @@
       }
     },
     {
-      "id": "edge_2196da511925",
-      "source": "token_6f7e368290",
-      "target": "token_4dbed2e657",
-      "type": "CO_OCCURS_WITH",
-      "weight": 4.0,
-      "properties": {
-        "cooccurrence_songs": 4,
-        "cooccurrence_weight": 4
-      }
-    },
-    {
       "id": "edge_b6f92a53948c",
       "source": "token_6f7e368290",
       "target": "token_b511e6815b",
@@ -17410,6 +17421,17 @@
       "properties": {
         "cooccurrence_songs": 13,
         "cooccurrence_weight": 14
+      }
+    },
+    {
+      "id": "edge_a1f07653b0a6",
+      "source": "token_6f7e368290",
+      "target": "token_41a2aca1ea",
+      "type": "CO_OCCURS_WITH",
+      "weight": 3.0,
+      "properties": {
+        "cooccurrence_songs": 3,
+        "cooccurrence_weight": 3
       }
     },
     {
@@ -17435,14 +17457,14 @@
       }
     },
     {
-      "id": "edge_c8c643268d86",
+      "id": "edge_5a3124e2a82d",
       "source": "token_a3142f9280",
-      "target": "token_b511e6815b",
+      "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 5.0,
+      "weight": 6.0,
       "properties": {
-        "cooccurrence_songs": 5,
-        "cooccurrence_weight": 6
+        "cooccurrence_songs": 6,
+        "cooccurrence_weight": 7
       }
     },
     {
@@ -17729,17 +17751,6 @@
       "properties": {
         "cooccurrence_songs": 1,
         "cooccurrence_weight": 2
-      }
-    },
-    {
-      "id": "edge_418e17bd483b",
-      "source": "token_f3369639e1",
-      "target": "token_e50741fba6",
-      "type": "CO_OCCURS_WITH",
-      "weight": 2.0,
-      "properties": {
-        "cooccurrence_songs": 2,
-        "cooccurrence_weight": 3
       }
     },
     {
@@ -18231,10 +18242,10 @@
       "source": "token_988e2bd184",
       "target": "token_9487386112",
       "type": "CO_OCCURS_WITH",
-      "weight": 15.0,
+      "weight": 16.0,
       "properties": {
-        "cooccurrence_songs": 15,
-        "cooccurrence_weight": 18
+        "cooccurrence_songs": 16,
+        "cooccurrence_weight": 19
       }
     },
     {
@@ -18315,25 +18326,14 @@
       }
     },
     {
-      "id": "edge_d6c3c7ab2e31",
-      "source": "token_988e2bd184",
-      "target": "token_7929f2f529",
-      "type": "CO_OCCURS_WITH",
-      "weight": 5.0,
-      "properties": {
-        "cooccurrence_songs": 5,
-        "cooccurrence_weight": 5
-      }
-    },
-    {
       "id": "edge_c70c00cea086",
       "source": "token_988e2bd184",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 16.0,
+      "weight": 17.0,
       "properties": {
-        "cooccurrence_songs": 16,
-        "cooccurrence_weight": 24
+        "cooccurrence_songs": 17,
+        "cooccurrence_weight": 25
       }
     },
     {
@@ -18396,10 +18396,10 @@
       "source": "token_988e2bd184",
       "target": "token_2ce17249e6",
       "type": "CO_OCCURS_WITH",
-      "weight": 6.0,
+      "weight": 7.0,
       "properties": {
-        "cooccurrence_songs": 6,
-        "cooccurrence_weight": 6
+        "cooccurrence_songs": 7,
+        "cooccurrence_weight": 7
       }
     },
     {
@@ -18444,17 +18444,6 @@
       "properties": {
         "cooccurrence_songs": 2,
         "cooccurrence_weight": 2
-      }
-    },
-    {
-      "id": "edge_76fdac2de1c1",
-      "source": "token_3c7d183f1b",
-      "target": "token_4482f82ad2",
-      "type": "CO_OCCURS_WITH",
-      "weight": 5.0,
-      "properties": {
-        "cooccurrence_songs": 5,
-        "cooccurrence_weight": 6
       }
     },
     {
@@ -18517,10 +18506,10 @@
       "source": "token_3c7d183f1b",
       "target": "token_b511e6815b",
       "type": "CO_OCCURS_WITH",
-      "weight": 14.0,
+      "weight": 15.0,
       "properties": {
-        "cooccurrence_songs": 14,
-        "cooccurrence_weight": 15
+        "cooccurrence_songs": 15,
+        "cooccurrence_weight": 16
       }
     },
     {
@@ -18696,6 +18685,17 @@
       "weight": 4.0,
       "properties": {
         "cooccurrence_songs": 4,
+        "cooccurrence_weight": 5
+      }
+    },
+    {
+      "id": "edge_6386878dffa9",
+      "source": "token_4dbed2e657",
+      "target": "token_43c464830c",
+      "type": "CO_OCCURS_WITH",
+      "weight": 5.0,
+      "properties": {
+        "cooccurrence_songs": 5,
         "cooccurrence_weight": 5
       }
     },
@@ -19503,13 +19503,13 @@
       }
     },
     {
-      "id": "edge_05cf69acd5f0",
+      "id": "edge_739bd4a96eeb",
       "source": "token_e50741fba6",
-      "target": "token_b7612b71c0",
+      "target": "token_9122c53716",
       "type": "CO_OCCURS_WITH",
-      "weight": 2.0,
+      "weight": 3.0,
       "properties": {
-        "cooccurrence_songs": 2,
+        "cooccurrence_songs": 3,
         "cooccurrence_weight": 3
       }
     },
@@ -19518,10 +19518,10 @@
       "source": "token_e50741fba6",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 3.0,
+      "weight": 4.0,
       "properties": {
-        "cooccurrence_songs": 3,
-        "cooccurrence_weight": 4
+        "cooccurrence_songs": 4,
+        "cooccurrence_weight": 5
       }
     },
     {
@@ -19650,10 +19650,10 @@
       "source": "token_9487386112",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 16.0,
+      "weight": 17.0,
       "properties": {
-        "cooccurrence_songs": 16,
-        "cooccurrence_weight": 19
+        "cooccurrence_songs": 17,
+        "cooccurrence_weight": 20
       }
     },
     {
@@ -20031,17 +20031,6 @@
       }
     },
     {
-      "id": "edge_fa11737e13a9",
-      "source": "token_b511e6815b",
-      "target": "token_41a2aca1ea",
-      "type": "CO_OCCURS_WITH",
-      "weight": 3.0,
-      "properties": {
-        "cooccurrence_songs": 3,
-        "cooccurrence_weight": 3
-      }
-    },
-    {
       "id": "edge_43735a6c05d1",
       "source": "token_b511e6815b",
       "target": "token_1ca69c4be0",
@@ -20288,10 +20277,10 @@
       "source": "token_9122c53716",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 10.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 9
+        "cooccurrence_songs": 10,
+        "cooccurrence_weight": 10
       }
     },
     {
@@ -20365,10 +20354,10 @@
       "source": "token_7929f2f529",
       "target": "token_43c464830c",
       "type": "CO_OCCURS_WITH",
-      "weight": 9.0,
+      "weight": 10.0,
       "properties": {
-        "cooccurrence_songs": 9,
-        "cooccurrence_weight": 12
+        "cooccurrence_songs": 10,
+        "cooccurrence_weight": 13
       }
     },
     {
@@ -20464,10 +20453,10 @@
       "source": "token_43c464830c",
       "target": "token_2ce17249e6",
       "type": "CO_OCCURS_WITH",
-      "weight": 6.0,
+      "weight": 7.0,
       "properties": {
-        "cooccurrence_songs": 6,
-        "cooccurrence_weight": 7
+        "cooccurrence_songs": 7,
+        "cooccurrence_weight": 8
       }
     },
     {

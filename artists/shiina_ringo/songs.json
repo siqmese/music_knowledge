@@ -23960,5 +23960,831 @@
     ],
     "lyrics_verified": true,
     "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_17",
+    "title": "17",
+    "release_year": 1999,
+    "activity_type": "solo",
+    "performer": "椎名林檎",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "私と放電"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "青春と記憶",
+      "自己とアイデンティティ"
+    ],
+    "motifs": [
+      "日常・生活空間",
+      "音楽・楽器"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "en"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "爽快・祝祭的"
+    ],
+    "tie_up": null,
+    "summary": "マキシシングル『幸福論』（1999年12cm盤）カップリングおよび『私と放電』収録の全編英語詞曲。17歳の日常と祈りを軽快なギターポップに乗せて描く。",
+    "related_songs": [],
+    "lyric_tokens": [],
+    "lyrics_verified": true,
+    "lyrics_source": "english_lyrics_verified"
+  },
+  {
+    "id": "song_demo_how_are_you",
+    "title": "How Are You？",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "青春と記憶",
+      "自己とアイデンティティ"
+    ],
+    "motifs": [
+      "音楽・楽器"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "en"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "情熱的・衝動的"
+    ],
+    "tie_up": null,
+    "summary": "高校時代の初期デモテープ（DEMO1）に収録された英語詞中心の未発表オリジナル曲。",
+    "related_songs": [],
+    "lyric_tokens": [],
+    "lyrics_verified": true,
+    "lyrics_source": "english_lyrics_verified"
+  },
+  {
+    "id": "song_demo_girl",
+    "title": "GIRL",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "都市と孤独",
+      "青春と記憶",
+      "自己とアイデンティティ"
+    ],
+    "motifs": [
+      "煙草・酒・嗜好品",
+      "色彩",
+      "都市風景"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体",
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "退廃的・官能的"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープ（DEMO1）収録の未発表曲。煙草の煙と虹色の嘘が横たわる大人の世界の中で、街に佇む少女の孤独と救済を描く。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "token": "世界",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "嘘",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "大人",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "煙草",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "色",
+        "category": "色彩",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "街",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "誰か",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_love_plus_peace",
+    "title": "LOVE plus PEACE",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "社会と風刺",
+      "反骨と自由"
+    ],
+    "motifs": [
+      "身体部位",
+      "金銭・欲望・勝負"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "四字熟語・漢語調",
+      "口語・独白体",
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "sentiment_mood": [
+      "皮肉・風刺",
+      "挑発的・攻撃的"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープ（DEMO1）収録の未発表曲。年功序列・隠忍自重・巧言令色・縦横無尽といった四字熟語を連ね、偽善や野望を痛烈に風刺する初期ロック。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "愛",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "生きる",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "頭",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_shampoo",
+    "title": "シャンプー",
+    "release_year": 1997,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "日常と生活"
+    ],
+    "motifs": [
+      "日常・生活空間",
+      "身体部位"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "ロマンチック・甘美"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープ（DEMO2）に収録された椎名林檎本人歌唱のデモ曲（のちにともさかりえのアルバム『むらさき。』へ楽曲提供）。バスルームのシャンプーの香りから恋人への不安と信頼を揺れ動く心情で綴る。",
+    "related_songs": [
+      {
+        "target_id": "song_prov_cappuccino",
+        "relation": "SERIES_PAIR",
+        "note": "ともさかりえへの初期提供曲群（「カプチーノ」「シャンプー」「少女ロボット」）の1曲"
+      }
+    ],
+    "lyric_tokens": [
+      {
+        "token": "嘘",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "手",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_marvelous_day",
+    "title": "Marvelous Day",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "青春と記憶",
+      "日常と生活"
+    ],
+    "motifs": [
+      "乗り物・移動",
+      "日常・生活空間"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "軽妙・ユーモア"
+    ],
+    "tie_up": null,
+    "summary": "高校時代のデモテープ（DEMO1/DEMO2）収録の未発表曲。電車をわざと見送る16歳の日常と揺れ動く憧れを描く。",
+    "related_songs": [
+      {
+        "target_id": "song_17",
+        "relation": "MOTIF_LINEAGE",
+        "note": "16歳を描く「Marvelous Day」から17歳を描く「Now I'm Seventeen / 17」へと続くティーンエイジ連作"
+      }
+    ],
+    "lyric_tokens": [
+      {
+        "token": "みんな",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "今日",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "夢",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "気持ち",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "電車",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_kaigun_politician",
+    "title": "海軍ポリティシャン（ハイウェイ海軍ポリティシャン）",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "社会と風刺",
+      "反骨と自由"
+    ],
+    "motifs": [
+      "演劇・虚構・仮面"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "演劇的・キャラクター視点",
+      "比喩・象徴表現"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "皮肉・風刺",
+      "挑発的・攻撃的"
+    ],
+    "tie_up": null,
+    "summary": "アマチュア期のバンド「Marvelous Marbles」等で制作された未発表デモ曲。政治家の野心と微笑みの裏側をシニカルに風刺した異色作。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "世界",
+        "category": "感情・概念・思想",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "日本",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "token": "貴方",
+        "category": "人称・関係",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_mikan_no_kawa",
+    "title": "みかんの皮",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモ・ライブ未音源化曲"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "青春と記憶",
+      "日常と生活"
+    ],
+    "motifs": [
+      "身体部位",
+      "日常・生活空間"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "軽妙・ユーモア"
+    ],
+    "tie_up": null,
+    "summary": "椎名林檎が7歳の頃に初めて作詞・作曲したとされる原点的な短曲。10周年記念ライブ『Ringo EXPO 08』などでも披露された。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "顔",
+        "category": "身体・感覚・医療",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_now_im_seventeen",
+    "title": "Now I'm Seventeen（17 の原曲）",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "青春と記憶",
+      "自己とアイデンティティ"
+    ],
+    "motifs": [
+      "日常・生活空間",
+      "音楽・楽器"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "en"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "情熱的・衝動的"
+    ],
+    "tie_up": null,
+    "summary": "高校時代のデモテープ（DEMO1）に収録された「17」の初期デモ原曲。",
+    "related_songs": [
+      {
+        "target_id": "song_17",
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「Now I'm Seventeen」をシングル『幸福論』c/w（『私と放電』収録）の「17」として発表"
+      }
+    ],
+    "lyric_tokens": [],
+    "lyrics_verified": true,
+    "lyrics_source": "english_lyrics_verified"
+  },
+  {
+    "id": "song_demo_a_new_way_to_fly",
+    "title": "A New Way To Fly（丸ノ内サディスティック の原曲）",
+    "release_year": 1997,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "都市と孤独",
+      "反骨と自由",
+      "音楽と芸術"
+    ],
+    "motifs": [
+      "音楽・楽器",
+      "地名・駅・路線",
+      "都市風景"
+    ],
+    "places": [
+      "銀座"
+    ],
+    "linguistic_features": [
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "en"
+    ],
+    "sentiment_mood": [
+      "退廃的・官能的",
+      "挑発的・攻撃的"
+    ],
+    "tie_up": null,
+    "summary": "デビュー前に英国滞在時に英語詞で書かれた「丸ノ内サディスティック」の原曲（プロトタイプ）。銀座（Ginza signs）やリッケンバッカー（Ric）、マーシャル（Marshall）など完成曲の核となるモチーフがすでに英語詞で登場し、のちの『Ringo EXPO 08』等の英語詞ヴァースにも組み込まれた。",
+    "related_songs": [
+      {
+        "target_id": "song_marunouchi_sadistic",
+        "relation": "PROTOTYPE_OF",
+        "note": "英語詞の原曲「A New Way To Fly」に日本語詞を当てて代表曲「丸ノ内サディスティック」が誕生"
+      }
+    ],
+    "lyric_tokens": [
+      {
+        "token": "銀座",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "english_lyrics_verified"
+  },
+  {
+    "id": "song_demo_rimokon",
+    "title": "リモコン（リモートコントローラー の原曲）",
+    "release_year": 1997,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "日常と生活",
+      "自己とアイデンティティ"
+    ],
+    "motifs": [
+      "日常・生活空間",
+      "音楽・楽器"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "焦燥・緊迫",
+      "挑発的・攻撃的"
+    ],
+    "tie_up": null,
+    "summary": "デビュー前のデモテープに収録された、3rdシングル『ここでキスして。』c/w曲「リモートコントローラー」の初期デモ原曲。",
+    "related_songs": [
+      {
+        "target_id": "song_remote_controller",
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「リモコン」を「リモートコントローラー」（1999年）として完成・音源化"
+      }
+    ],
+    "lyric_tokens": [
+      {
+        "token": "私",
+        "category": "人称・関係",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "token": "今",
+        "category": "自然・時間・空間",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
+  },
+  {
+    "id": "song_demo_dont_you_think",
+    "title": "Don't you think？（ギブス の原曲）",
+    "release_year": 1996,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "別れと喪失"
+    ],
+    "motifs": [
+      "恋愛・心中・情念",
+      "季節・自然"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "多言語・外国語詞",
+      "口語・独白体"
+    ],
+    "languages": [
+      "en",
+      "ja"
+    ],
+    "sentiment_mood": [
+      "情熱的・衝動的",
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "17歳の頃に書かれた名曲「ギブス」の初期デモ原曲。サビの英語フレーズ「don't U θink? i 罠 B wiθ U」がそのままタイトルになっている。",
+    "related_songs": [
+      {
+        "target_id": "song_gips",
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「Don't you think？」を5thシングル「ギブス」（2000年）として完成・発表"
+      }
+    ],
+    "lyric_tokens": [],
+    "lyrics_verified": true,
+    "lyrics_source": "english_lyrics_verified"
+  },
+  {
+    "id": "song_demo_unconditional_love",
+    "title": "アンコンディショナル・ラブ（プライベイト の原曲）",
+    "release_year": 1997,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "愛と執着",
+      "青春と記憶"
+    ],
+    "motifs": [
+      "恋愛・心中・情念"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体",
+      "多言語・外国語詞"
+    ],
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "sentiment_mood": [
+      "ロマンチック・甘美",
+      "切ない・哀愁"
+    ],
+    "tie_up": null,
+    "summary": "デビュー前のデモテープに収録された、広末涼子への提供曲（および『逆輸入 ～港湾局～』セルフカバー曲）「プライベイト」の初期デモ原曲。",
+    "related_songs": [
+      {
+        "target_id": "song_prov_private",
+        "relation": "PROTOTYPE_OF",
+        "note": "初期デモ「アンコンディショナル・ラブ」を改作し、広末涼子への提供曲「プライベイト」（1998年）として発表"
+      }
+    ],
+    "lyric_tokens": [],
+    "lyrics_verified": false,
+    "lyrics_source": "title_only"
+  },
+  {
+    "id": "song_demo_negative",
+    "title": "ネガティブ（針のない時計）",
+    "release_year": 1997,
+    "activity_type": "unreleased_demo",
+    "performer": "椎名林檎（未音源化・デモ）",
+    "lyricist": [
+      "椎名林檎"
+    ],
+    "composer": [
+      "椎名林檎"
+    ],
+    "albums": [
+      "初期デモテープ"
+    ],
+    "era": "初期ソロ期 (1998-2003)",
+    "themes": [
+      "日常と生活",
+      "自己とアイデンティティ"
+    ],
+    "motifs": [
+      "時間・時計・季節",
+      "日常・生活空間"
+    ],
+    "places": [],
+    "linguistic_features": [
+      "口語・独白体"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "sentiment_mood": [
+      "切ない・哀愁",
+      "退廃的・官能的"
+    ],
+    "tie_up": null,
+    "summary": "初期デモテープ（DEMO4等）に収録された未音源化デモ曲（「針のない時計」とも呼ばれる）。変化のない日常の反復と倦怠を描く。",
+    "related_songs": [],
+    "lyric_tokens": [
+      {
+        "token": "時計",
+        "category": "都市・事物・文化",
+        "weight": 1,
+        "count": 1
+      }
+    ],
+    "lyrics_verified": true,
+    "lyrics_source": "demo_lyrics_verified"
   }
 ]
