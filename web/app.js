@@ -994,20 +994,24 @@
     return getColorBySizeRatio(t);
   }
 
+  let activeCtx = ctx;
+  let overrideViewport = null; // { w, h }
+
   function render() {
-    const rect = stage.getBoundingClientRect();
+    const rect = overrideViewport || stage.getBoundingClientRect();
     const w = rect.width;
     const h = rect.height;
+    const c = activeCtx;
 
     // Warm matte sumi-black fill
-    ctx.fillStyle = "#121110";
-    ctx.fillRect(0, 0, w, h);
-    drawGrid(w, h);
+    c.fillStyle = "#121110";
+    c.fillRect(0, 0, w, h);
+    drawGrid(w, h, c);
 
-    ctx.save();
-    ctx.translate(w / 2, h / 2);
-    ctx.scale(state.zoom, state.zoom);
-    ctx.translate(-state.camX, -state.camY);
+    c.save();
+    c.translate(w / 2, h / 2);
+    c.scale(state.zoom, state.zoom);
+    c.translate(-state.camX, -state.camY);
 
     const activeFocus = state.hoveredNode || state.selectedNode;
     const focusNeighbors = activeFocus ? state.visibleAdj.get(activeFocus.id) || new Set() : null;
@@ -1025,37 +1029,37 @@
       const isHighlighted =
         activeFocus && (e.source === activeFocus.id || e.target === activeFocus.id);
 
-      ctx.beginPath();
+      c.beginPath();
       if (isRelated) {
-        ctx.setLineDash([5 / state.zoom, 3.5 / state.zoom]);
+        c.setLineDash([5 / state.zoom, 3.5 / state.zoom]);
       } else {
-        ctx.setLineDash([]);
+        c.setLineDash([]);
       }
 
-      ctx.moveTo(s.x, s.y);
-      ctx.lineTo(t.x, t.y);
+      c.moveTo(s.x, s.y);
+      c.lineTo(t.x, t.y);
 
       const coStrength = isCooccur ? Math.min(1, (e.weight || 1) / 22) : 0;
 
       if (isHighlighted) {
-        ctx.strokeStyle = isRelated ? "#d6743e" : "#eae5dc";
+        c.strokeStyle = isRelated ? "#d6743e" : "#eae5dc";
         const baseW = isCooccur ? 1.3 + coStrength * 3.2 : isRelated ? 2.0 : 1.5;
-        ctx.lineWidth = baseW / Math.sqrt(state.zoom);
+        c.lineWidth = baseW / Math.sqrt(state.zoom);
       } else if (activeFocus) {
-        ctx.strokeStyle = "rgba(168, 161, 150, 0.04)";
-        ctx.lineWidth = 0.6 / Math.sqrt(state.zoom);
+        c.strokeStyle = "rgba(168, 161, 150, 0.04)";
+        c.lineWidth = 0.6 / Math.sqrt(state.zoom);
       } else if (isRelated) {
-        ctx.strokeStyle = "rgba(214, 116, 62, 0.68)";
-        ctx.lineWidth = 1.4 / Math.sqrt(state.zoom);
+        c.strokeStyle = "rgba(214, 116, 62, 0.68)";
+        c.lineWidth = 1.4 / Math.sqrt(state.zoom);
       } else if (isCooccur) {
         const a = Math.min(0.55, state.edgeAlpha * 0.75 + coStrength * 0.36);
-        ctx.strokeStyle = `rgba(186, 179, 166, ${a})`;
-        ctx.lineWidth = (0.65 + coStrength * 2.8) / Math.sqrt(state.zoom);
+        c.strokeStyle = `rgba(186, 179, 166, ${a})`;
+        c.lineWidth = (0.65 + coStrength * 2.8) / Math.sqrt(state.zoom);
       } else {
-        ctx.strokeStyle = `rgba(186, 179, 166, ${state.edgeAlpha})`;
-        ctx.lineWidth = 0.75 / Math.sqrt(state.zoom);
+        c.strokeStyle = `rgba(186, 179, 166, ${state.edgeAlpha})`;
+        c.lineWidth = 0.75 / Math.sqrt(state.zoom);
       }
-      ctx.stroke();
+      c.stroke();
 
       // Edge annotation for RELATED_SONG or highlighted CO_OCCURS_WITH
       if (isRelated && (isHighlighted || state.preset === "relations") && state.zoom > 0.55) {
@@ -1068,36 +1072,36 @@
           relTag === "PROTOTYPE_OF" ? "原曲" :
           relTag === "SERIES_PAIR" ? "連作" :
           relTag === "MOTIF_LINEAGE" ? "系譜" : "対";
-        ctx.save();
-        ctx.setLineDash([]);
+        c.save();
+        c.setLineDash([]);
         const fs = Math.max(8, 9.5 / Math.sqrt(state.zoom));
-        ctx.font = `600 ${fs}px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        const tw = ctx.measureText(shortLabel).width + 6 / state.zoom;
-        ctx.fillStyle = "#181715";
-        ctx.fillRect(mx - tw / 2, my - fs * 0.65, tw, fs * 1.3);
-        ctx.fillStyle = "#d6743e";
-        ctx.fillText(shortLabel, mx, my);
-        ctx.restore();
+        c.font = `600 ${fs}px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif`;
+        c.textAlign = "center";
+        c.textBaseline = "middle";
+        const tw = c.measureText(shortLabel).width + 6 / state.zoom;
+        c.fillStyle = "#181715";
+        c.fillRect(mx - tw / 2, my - fs * 0.65, tw, fs * 1.3);
+        c.fillStyle = "#d6743e";
+        c.fillText(shortLabel, mx, my);
+        c.restore();
       } else if (isCooccur && isHighlighted && state.zoom > 0.55 && (e.weight || 0) >= 3) {
         const mx = (s.x + t.x) / 2;
         const my = (s.y + t.y) / 2;
         const txt = `${Math.round(e.weight)}曲`;
-        ctx.save();
+        c.save();
         const fs = Math.max(8, 9.5 / Math.sqrt(state.zoom));
-        ctx.font = `600 ${fs}px "JetBrains Mono", Consolas, monospace`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        const tw = ctx.measureText(txt).width + 6 / state.zoom;
-        ctx.fillStyle = "#181715";
-        ctx.fillRect(mx - tw / 2, my - fs * 0.65, tw, fs * 1.3);
-        ctx.fillStyle = "#eae5dc";
-        ctx.fillText(txt, mx, my);
-        ctx.restore();
+        c.font = `600 ${fs}px "JetBrains Mono", Consolas, monospace`;
+        c.textAlign = "center";
+        c.textBaseline = "middle";
+        const tw = c.measureText(txt).width + 6 / state.zoom;
+        c.fillStyle = "#181715";
+        c.fillRect(mx - tw / 2, my - fs * 0.65, tw, fs * 1.3);
+        c.fillStyle = "#eae5dc";
+        c.fillText(txt, mx, my);
+        c.restore();
       }
     }
-    ctx.setLineDash([]);
+    c.setLineDash([]);
 
     // 2. Draw Nodes (Flat mineral pigment + crisp dark borders + technical compass rings)
     const sortedNodes = [...state.nodes].sort((a, b) => {
@@ -1116,52 +1120,51 @@
       const isNeighbor = focusNeighbors && focusNeighbors.has(n.id);
       const isDimmed = activeFocus && !isSelected && !isHovered && !isNeighbor;
 
-      ctx.save();
-      ctx.globalAlpha = isDimmed ? 0.15 : 1.0;
+      c.save();
+      c.globalAlpha = isDimmed ? 0.15 : 1.0;
 
-      // Technical drafting reticle ring on selected or hovered node (no neon blur!)
+      // Technical drafting reticle ring on selected or hovered node
       if (isSelected || isHovered) {
         const outerR = n.radius + 4.5 / Math.sqrt(state.zoom);
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, outerR, 0, Math.PI * 2);
-        ctx.lineWidth = (isSelected ? 1.5 : 1.1) / Math.sqrt(state.zoom);
-        ctx.strokeStyle = isSelected ? "#eae5dc" : "#a8a196";
-        ctx.stroke();
+        c.beginPath();
+        c.arc(n.x, n.y, outerR, 0, Math.PI * 2);
+        c.lineWidth = (isSelected ? 1.5 : 1.1) / Math.sqrt(state.zoom);
+        c.strokeStyle = isSelected ? "#eae5dc" : "#a8a196";
+        c.stroke();
 
-        // Crosshair ticks at 4 cardinal points
         const tickLen = 3.5 / Math.sqrt(state.zoom);
-        ctx.beginPath();
-        ctx.moveTo(n.x - outerR - tickLen, n.y); ctx.lineTo(n.x - outerR, n.y);
-        ctx.moveTo(n.x + outerR, n.y);          ctx.lineTo(n.x + outerR + tickLen, n.y);
-        ctx.moveTo(n.x, n.y - outerR - tickLen); ctx.lineTo(n.x, n.y - outerR);
-        ctx.moveTo(n.x, n.y + outerR);          ctx.lineTo(n.x, n.y + outerR + tickLen);
-        ctx.stroke();
+        c.beginPath();
+        c.moveTo(n.x - outerR - tickLen, n.y); c.lineTo(n.x - outerR, n.y);
+        c.moveTo(n.x + outerR, n.y);          c.lineTo(n.x + outerR + tickLen, n.y);
+        c.moveTo(n.x, n.y - outerR - tickLen); c.lineTo(n.x, n.y - outerR);
+        c.moveTo(n.x, n.y + outerR);          c.lineTo(n.x, n.y + outerR + tickLen);
+        c.stroke();
       }
 
       // Main solid pigment disc
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-      ctx.fillStyle = fillColor;
-      ctx.fill();
+      c.beginPath();
+      c.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+      c.fillStyle = fillColor;
+      c.fill();
 
       // Crisp border outline
-      ctx.lineWidth = (isSelected ? 1.8 : 1.1) / Math.sqrt(state.zoom);
-      ctx.strokeStyle = isSelected ? "#eae5dc" : "#0b0a09";
-      ctx.stroke();
+      c.lineWidth = (isSelected ? 1.8 : 1.1) / Math.sqrt(state.zoom);
+      c.strokeStyle = isSelected ? "#eae5dc" : "#0b0a09";
+      c.stroke();
 
       // Fine inset print ring on large nodes (r >= 17)
       if (n.radius >= 17) {
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius - 2.4 / Math.sqrt(state.zoom), 0, Math.PI * 2);
-        ctx.lineWidth = 0.7 / Math.sqrt(state.zoom);
-        ctx.strokeStyle = "rgba(234, 229, 220, 0.42)";
-        ctx.stroke();
+        c.beginPath();
+        c.arc(n.x, n.y, n.radius - 2.4 / Math.sqrt(state.zoom), 0, Math.PI * 2);
+        c.lineWidth = 0.7 / Math.sqrt(state.zoom);
+        c.strokeStyle = "rgba(234, 229, 220, 0.42)";
+        c.stroke();
       }
 
-      ctx.restore();
+      c.restore();
     }
 
-    // 3. Draw Typography Labels (Editorial Serif on dark sumi ground)
+    // 3. Draw Typography Labels
     for (let i = 0; i < sortedNodes.length; i++) {
       const n = sortedNodes[i];
       const isSelected = state.selectedNode && state.selectedNode.id === n.id;
@@ -1196,58 +1199,202 @@
 
       if (drawInside) {
         const innerFont = Math.max(9.5, Math.min(18.5, n.radius * (n.label.length <= 2 ? 0.62 : 0.45)));
-        ctx.font = `700 ${innerFont}px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
+        c.font = `700 ${innerFont}px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif`;
+        c.textAlign = "center";
+        c.textBaseline = "middle";
         const yOff = n.radius >= 26 ? -3.5 : 0;
-        ctx.fillStyle = "#f7f4ec";
-        ctx.fillText(n.label, n.x, n.y + yOff);
+        c.fillStyle = "#f7f4ec";
+        c.fillText(n.label, n.x, n.y + yOff);
 
         if (n.radius >= 26) {
           const subFont = Math.max(7.5, innerFont * 0.45);
-          ctx.font = `600 ${subFont}px "JetBrains Mono", Consolas, monospace`;
-          ctx.fillStyle = "rgba(247, 244, 236, 0.88)";
-          ctx.fillText(`${n.dynSongCount || n.properties.song_count || 0}曲`, n.x, n.y + innerFont * 0.56);
+          c.font = `600 ${subFont}px "JetBrains Mono", Consolas, monospace`;
+          c.fillStyle = "rgba(247, 244, 236, 0.88)";
+          c.fillText(`${n.dynSongCount || n.properties.song_count || 0}曲`, n.x, n.y + innerFont * 0.56);
         }
       } else {
         const fontSize = Math.max(9, (isHub ? 11.5 : 10.2) / Math.pow(state.zoom, 0.35));
-        ctx.font = `${isHub || isSelected ? "700" : "600"} ${fontSize}px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "top";
+        c.font = `${isHub || isSelected ? "700" : "600"} ${fontSize}px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif`;
+        c.textAlign = "center";
+        c.textBaseline = "top";
         const ty = n.y + n.radius + 3.5 / Math.sqrt(state.zoom);
 
-        // Dark archival slip plate behind exterior labels
-        const textW = ctx.measureText(n.label).width;
+        const textW = c.measureText(n.label).width;
         const padX = 3 / Math.sqrt(state.zoom);
         const padY = 1.2 / Math.sqrt(state.zoom);
-        ctx.fillStyle = isSelected ? "#eae5dc" : "rgba(18, 17, 16, 0.86)";
-        ctx.fillRect(n.x - textW / 2 - padX, ty - padY, textW + padX * 2, fontSize + padY * 2);
+        c.fillStyle = isSelected ? "#eae5dc" : "rgba(18, 17, 16, 0.86)";
+        c.fillRect(n.x - textW / 2 - padX, ty - padY, textW + padX * 2, fontSize + padY * 2);
 
-        ctx.fillStyle = isSelected ? "#121110" : "#eae5dc";
-        ctx.fillText(n.label, n.x, ty);
+        c.fillStyle = isSelected ? "#121110" : "#eae5dc";
+        c.fillText(n.label, n.x, ty);
       }
     }
 
-    ctx.restore();
+    c.restore();
   }
 
-  function drawGrid(w, h) {
+  function drawGrid(w, h, targetC = ctx) {
     const spacing = 72 * state.zoom;
     if (spacing < 22) return;
     const ox = (w / 2 - state.camX * state.zoom) % spacing;
     const oy = (h / 2 - state.camY * state.zoom) % spacing;
-    ctx.strokeStyle = "rgba(234, 229, 220, 0.035)";
-    ctx.lineWidth = 0.7;
-    ctx.beginPath();
+    targetC.strokeStyle = "rgba(234, 229, 220, 0.035)";
+    targetC.lineWidth = 0.7;
+    targetC.beginPath();
     for (let x = ox; x < w; x += spacing) {
-      ctx.moveTo(x, 0);
-      ctx.lineTo(x, h);
+      targetC.moveTo(x, 0);
+      targetC.lineTo(x, h);
     }
     for (let y = oy; y < h; y += spacing) {
-      ctx.moveTo(0, y);
-      ctx.lineTo(w, y);
+      targetC.moveTo(0, y);
+      targetC.lineTo(w, y);
     }
-    ctx.stroke();
+    targetC.stroke();
+  }
+
+  // =========================================================================
+  // Ultra-High-Resolution (4K/5K) Print-Grade PNG Exporter
+  // =========================================================================
+  function exportHighResPng() {
+    if (state.nodes.length === 0) return;
+
+    // 1. Compute full bounding box of all visible nodes + labels
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const n of state.nodes) {
+      const marginX = Math.max(n.radius + 24, n.label.length * 9 + 20);
+      const marginY = n.radius + 36;
+      minX = Math.min(minX, n.x - marginX);
+      maxX = Math.max(maxX, n.x + marginX);
+      minY = Math.min(minY, n.y - marginY);
+      maxY = Math.max(maxY, n.y + marginY);
+    }
+
+    const worldW = Math.max(300, maxX - minX);
+    const worldH = Math.max(300, maxY - minY);
+
+    // 2. Render at 2.4x oversampled logical viewport + 2x pixel density -> ~4000-5200px crisp 4K/5K output
+    const targetLongSide = 2200; // logical px (multiplied by exportDpr = 2 -> 4400px physical pixels!)
+    const exportDpr = 2.0;
+    const aspect = worldW / worldH;
+    let logW, logH;
+    if (aspect >= 1) {
+      logW = targetLongSide;
+      logH = Math.max(1200, Math.round(targetLongSide / aspect));
+    } else {
+      logH = targetLongSide;
+      logW = Math.max(1200, Math.round(targetLongSide * aspect));
+    }
+
+    const pad = 150;
+    const fitZoom = Math.min((logW - pad * 2) / worldW, (logH - pad * 2) / worldH);
+
+    const offCanvas = document.createElement("canvas");
+    offCanvas.width = Math.round(logW * exportDpr);
+    offCanvas.height = Math.round(logH * exportDpr);
+    const offCtx = offCanvas.getContext("2d");
+    offCtx.setTransform(exportDpr, 0, 0, exportDpr, 0, 0);
+
+    // Temporarily swap camera & context to render full crisp diagram with all labels
+    const prevCamX = state.camX;
+    const prevCamY = state.camY;
+    const prevZoom = state.zoom;
+    const prevLabelMode = state.labelMode;
+
+    state.camX = (minX + maxX) / 2;
+    state.camY = (minY + maxY) / 2;
+    state.zoom = Math.max(0.85, Math.min(2.2, fitZoom));
+    state.labelMode = "all";
+    activeCtx = offCtx;
+    overrideViewport = { width: logW, height: logH };
+
+    render();
+
+    // 3. Stamp clean editorial header & size-color legend onto exported figure
+    const artistName = (state.rawGraph && state.rawGraph.meta && state.rawGraph.meta.artist_name) || "";
+    const activeTab = elPresetTabs.querySelector(".preset-tab.active");
+    const modeTitle = activeTab ? activeTab.textContent : "カスタム図譜";
+
+    offCtx.save();
+    // Top-left title plate
+    offCtx.fillStyle = "rgba(18, 17, 16, 0.9)";
+    offCtx.fillRect(28, 24, 520, 68);
+    offCtx.strokeStyle = "#4f4a42";
+    offCtx.lineWidth = 1;
+    offCtx.strokeRect(28, 24, 520, 68);
+    offCtx.fillStyle = "#c93b33";
+    offCtx.fillRect(28, 24, 4, 68);
+
+    offCtx.font = `700 20px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif`;
+    offCtx.fillStyle = "#eae5dc";
+    offCtx.textAlign = "left";
+    offCtx.textBaseline = "top";
+    offCtx.fillText(`${artistName} — 作詞語彙・楽曲構造図譜`, 44, 36);
+
+    offCtx.font = `500 13px "JetBrains Mono", "Hiragino Kaku Gothic ProN", sans-serif`;
+    offCtx.fillStyle = "#a8a196";
+    offCtx.fillText(
+      `${modeTitle}  |  年代: ${state.yearMin}–${state.yearMax}  |  要素: ${state.nodes.length}  |  結線: ${state.edges.length}`,
+      44,
+      64
+    );
+
+    // Bottom-right size tier legend plate
+    const legW = 390;
+    const legH = 42;
+    const lx = logW - legW - 28;
+    const ly = logH - legH - 24;
+    offCtx.fillStyle = "rgba(18, 17, 16, 0.9)";
+    offCtx.fillRect(lx, ly, legW, legH);
+    offCtx.strokeStyle = "#4f4a42";
+    offCtx.strokeRect(lx, ly, legW, legH);
+
+    const tiers = [
+      { label: "特大(深緋)", color: "#c93b33" },
+      { label: "大(代赭)",   color: "#d6743e" },
+      { label: "中(黄土)",   color: "#cca343" },
+      { label: "小(青磁)",   color: "#568f87" },
+      { label: "極小(藍鼠)", color: "#5e708a" },
+    ];
+    offCtx.font = `600 11.5px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", sans-serif`;
+    offCtx.textBaseline = "middle";
+    let cx = lx + 14;
+    const cy = ly + legH / 2;
+    for (const t of tiers) {
+      offCtx.fillStyle = t.color;
+      offCtx.fillRect(cx, cy - 5, 10, 10);
+      offCtx.fillStyle = "#eae5dc";
+      offCtx.fillText(t.label, cx + 14, cy);
+      cx += 74;
+    }
+    offCtx.restore();
+
+    // Restore live state
+    state.camX = prevCamX;
+    state.camY = prevCamY;
+    state.zoom = prevZoom;
+    state.labelMode = prevLabelMode;
+    activeCtx = ctx;
+    overrideViewport = null;
+
+    // Trigger download
+    const slug = (state.rawGraph && state.rawGraph.meta && state.rawGraph.meta.artist_slug) || "graph";
+    const filename = `knowledge_atlas_${slug}_${state.preset}_4K.png`;
+    if (offCanvas.toBlob) {
+      offCanvas.toBlob((blob) => {
+        if (!blob) return;
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.download = filename;
+        link.href = url;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+      }, "image/png");
+    } else {
+      const link = document.createElement("a");
+      link.download = filename;
+      link.href = offCanvas.toDataURL("image/png");
+      link.click();
+    }
   }
 
   function tick() {
@@ -2276,13 +2423,7 @@
     };
     btnPause.addEventListener("click", togglePause);
 
-    document.getElementById("btnExportPng").addEventListener("click", () => {
-      const link = document.createElement("a");
-      const slug = (state.rawGraph && state.rawGraph.meta && state.rawGraph.meta.artist_slug) || "graph";
-      link.download = `knowledge_graph_${slug}_${state.preset}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
-    });
+    document.getElementById("btnExportPng").addEventListener("click", exportHighResPng);
 
     // Stats modal
     document.getElementById("btnStats").addEventListener("click", openStatsModal);
