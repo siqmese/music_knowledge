@@ -11,12 +11,12 @@
   --vermilion: #c93b33;
   --vermilion-soft: rgba(201, 59, 51, 0.18);
 
-  /* 5-tier mineral pigment palette on dark sumi ground (by node size) */
-  --tier-5: #c93b33; /* 深緋 (Kokihi / Vermilion Lacquer) */
-  --tier-4: #d6743e; /* 代赭 (Taisha / Burnt Ochre) */
-  --tier-3: #cca343; /* 黄土 (Oudo / Gold Ochre) */
-  --tier-2: #568f87; /* 青磁 (Seiji / Celadon) */
-  --tier-1: #5e708a; /* 藍鼠 (Ainezu / Indigo Slate) */
+  /* 5-tier mineral pigment palette on dark sumi ground (by node size, high visibility) */
+  --tier-5: #e0483e; /* 特大: 深緋 (Vivid Vermilion) */
+  --tier-4: #ee8444; /* 大:   代赭 (Luminous Amber Ochre) */
+  --tier-3: #e8be4a; /* 中:   黄土 (Bright Gold Ochre) */
+  --tier-2: #4ec9b0; /* 小:   青磁 (Bright Celadon Jade) */
+  --tier-1: #6ea8f7; /* 極小: 藍鼠/群青 (Bright Periwinkle Blue) */
 
   --font-serif: "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", "Meiryo", system-ui, -apple-system, sans-serif;
   --font-sans: "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", "Meiryo", system-ui, -apple-system, sans-serif;
@@ -1046,12 +1046,13 @@ html, body {
   text-overflow: ellipsis;
 }
 .bar-track {
-  height: 6px;
-  background: var(--paper-panel);
-  border: 1px solid var(--rule-line);
+  height: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(234, 229, 220, 0.18);
 }
 .bar-fill {
   height: 100%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
 }
 .bar-val {
   font-family: var(--font-mono);

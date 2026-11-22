@@ -5,34 +5,34 @@
   // Constants & Visual Palette
   // =========================================================================
   const NODE_TYPE_META = {
-    Token:    { label: "歌詞ワード",    color: "#b82925", radiusBase: 8,    priority: 6 },
-    Song:     { label: "楽曲",          color: "#4d5b6e", radiusBase: 5.5,  priority: 1 },
-    Theme:    { label: "テーマ",        color: "#b82925", radiusBase: 14,   priority: 5 },
-    Motif:    { label: "モチーフ",      color: "#c86432", radiusBase: 13,   priority: 4 },
-    Place:    { label: "地名・場所",    color: "#487872", radiusBase: 12,   priority: 5 },
-    Artist:   { label: "アーティスト",  color: "#4d5b6e", radiusBase: 11,   priority: 4 },
-    Album:    { label: "アルバム",      color: "#b89130", radiusBase: 11,   priority: 3 },
-    Style:    { label: "作詞技法",      color: "#c86432", radiusBase: 13,   priority: 4 },
-    Mood:     { label: "雰囲気",        color: "#b89130", radiusBase: 12,   priority: 3 },
-    Era:      { label: "活動期",        color: "#487872", radiusBase: 14,   priority: 4 },
-    Language: { label: "使用言語",      color: "#4d5b6e", radiusBase: 11,   priority: 3 },
+    Token:    { label: "歌詞ワード",    color: "#e0483e", radiusBase: 8,    priority: 6 },
+    Song:     { label: "楽曲",          color: "#6ea8f7", radiusBase: 5.5,  priority: 1 },
+    Theme:    { label: "テーマ",        color: "#e0483e", radiusBase: 14,   priority: 5 },
+    Motif:    { label: "モチーフ",      color: "#ee8444", radiusBase: 13,   priority: 4 },
+    Place:    { label: "地名・場所",    color: "#4ec9b0", radiusBase: 12,   priority: 5 },
+    Artist:   { label: "アーティスト",  color: "#6ea8f7", radiusBase: 11,   priority: 4 },
+    Album:    { label: "アルバム",      color: "#e8be4a", radiusBase: 11,   priority: 3 },
+    Style:    { label: "作詞技法",      color: "#ee8444", radiusBase: 13,   priority: 4 },
+    Mood:     { label: "雰囲気",        color: "#e8be4a", radiusBase: 12,   priority: 3 },
+    Era:      { label: "活動期",        color: "#4ec9b0", radiusBase: 14,   priority: 4 },
+    Language: { label: "使用言語",      color: "#b392f0", radiusBase: 11,   priority: 3 },
   };
 
   const TOKEN_CATEGORY_META = {
-    "人称・関係":       { color: "#b82925" },
-    "身体・感覚・医療": { color: "#c86432" },
-    "自然・時間・空間": { color: "#487872" },
-    "感情・概念・思想": { color: "#1a1917" },
-    "都市・事物・文化": { color: "#4d5b6e" },
-    "色彩":             { color: "#b89130" },
+    "人称・関係":       { color: "#e0483e" },
+    "身体・感覚・医療": { color: "#ee8444" },
+    "自然・時間・空間": { color: "#4ec9b0" },
+    "感情・概念・思想": { color: "#b392f0" },
+    "都市・事物・文化": { color: "#6ea8f7" },
+    "色彩":             { color: "#e8be4a" },
   };
 
   const ACTIVITY_META = {
-    solo:            { label: "ソロ名義",       color: "#b82925" },
-    tokyo_jihen:     { label: "東京事変",       color: "#4d5b6e" },
-    collaboration:   { label: "コラボ・客演",   color: "#b89130" },
-    written_for:     { label: "楽曲提供",       color: "#487872" },
-    unreleased_demo: { label: "未発表・デモ等", color: "#c86432" },
+    solo:            { label: "ソロ名義",       color: "#e0483e" },
+    tokyo_jihen:     { label: "東京事変",       color: "#6ea8f7" },
+    collaboration:   { label: "コラボ・客演",   color: "#e8be4a" },
+    written_for:     { label: "楽曲提供",       color: "#4ec9b0" },
+    unreleased_demo: { label: "未発表・デモ等", color: "#ee8444" },
   };
 
   const RELATION_LABELS = {
@@ -1148,12 +1148,13 @@
   }
 
   // 5-tier mineral pigment color scale strictly mapped by node radius (small -> large)
+  // All 5 tiers are tuned for high contrast and clear visibility against the dark sumi background.
   function getColorBySizeRatio(t) {
-    if (t >= 0.76) return "#c93b33"; // 特大: 深緋 (Vermilion Lacquer)
-    if (t >= 0.54) return "#d6743e"; // 大:   代赭 (Burnt Ochre)
-    if (t >= 0.34) return "#cca343"; // 中:   黄土 (Gold Ochre)
-    if (t >= 0.16) return "#568f87"; // 小:   青磁 (Celadon)
-    return "#5e708a";                // 極小: 藍鼠 (Indigo Slate)
+    if (t >= 0.76) return "#e0483e"; // 特大: 深緋 (Vivid Vermilion)
+    if (t >= 0.54) return "#ee8444"; // 大:   代赭 (Luminous Amber Ochre)
+    if (t >= 0.34) return "#e8be4a"; // 中:   黄土 (Bright Gold Ochre)
+    if (t >= 0.16) return "#4ec9b0"; // 小:   青磁 (Bright Celadon Jade)
+    return "#6ea8f7";                // 極小: 藍鼠/群青 (Bright Periwinkle Blue)
   }
 
   function getNodeColor(n) {
